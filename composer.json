@@ -1,5 +1,5 @@
 {
-  "name": "common-libs\/users",
+  "name": "common-libs\/user",
   "description": "A user class, see github for more infos",
   "type": "lib",
   "license": "GPL-3.0+",
