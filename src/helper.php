@@ -1,14 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: googl
- * Date: 24.10.2016
- * Time: 17:46
- */
 
 namespace common\user;
 
 
+/**
+ * Class helper
+ *
+ * @package common\user
+ */
 class helper
 {
 	/**
