@@ -67,31 +67,35 @@ class user
 	/**
 	 * find a user
 	 *
-	 * @param string $username
+	 * @param string $usernameOrId
 	 * @param string $password
 	 *
 	 * @return bool|\common\user\user
 	 */
-	public static function find(string $username, string $password = "")
-	{
-		self::check();
-		$userdbname = setup::getValidation("username");
-		if ($password != "") {
-			$pwdbname = setup::getValidation("password");
-			$bean     = R::findOne('user', ' ' . $userdbname . ' = ? AND ' . $pwdbname . ' = ? ', [
-				$username,
-				helper::hash($password)
-			]);
-		}
-		else {
-			$bean = R::findOne('user', ' ' . $userdbname . ' = ? ', [$username]);
-		}
-		if (!is_null($bean)) {
-			return new self("", $bean);
-		}
+	public static function find($usernameOrId, string $password = "")
+    {
+        self::check();
+        if(is_numeric($usernameOrId)) {
+            $bean = R::load('user',$usernameOrId);
+        } else {
+            $userdbname = setup::getValidation("username");
+            if ($password != "") {
+                $pwdbname = setup::getValidation("password");
+                $bean     = R::findOne('user', ' ' . $userdbname . ' = ? AND ' . $pwdbname . ' = ? ', [
+                    $usernameOrId,
+                    helper::hash($password)
+                ]);
+            }
+            else {
+                $bean = R::findOne('user', ' ' . $userdbname . ' = ? ', [$usernameOrId]);
+            }
+        }
+        if (!is_null($bean)) {
+            return new self("", $bean);
+        }
 
-		return false;
-	}
+        return false;
+    }
 
 	/**
 	 * return a guest user
@@ -113,7 +117,7 @@ class user
 	 */
 	public function getRole() : role
 	{
-		return new role($this->user->role);
+		return $this->user->role;
 	}
 
 	/**
@@ -182,4 +186,11 @@ class user
 			R::store($this->user);
 		}
 	}
+
+    /**
+     * remove user
+     */
+    public function remove() {
+        R::trash($this->user);
+    }
 }

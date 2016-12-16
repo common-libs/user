@@ -19,9 +19,9 @@
 
 namespace common\user\legacy;
 use Closure;
-use common\storage\storage;
-use common\storage\file;
-use common\storage\json;
+use common\storage\legacy\storage;
+use common\storage\legacy\file;
+use common\storage\legacy\json;
 
 
 /**

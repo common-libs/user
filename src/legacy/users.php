@@ -35,7 +35,7 @@ class users
 	 *
 	 * @return array
 	 */
-	public static function lists($orderBy = "id") : array
+	public static function lists($orderBy = "id")
 	{
 		return R::findAll('user', ' ORDER BY ? ASC ', [$orderBy]);
 	}

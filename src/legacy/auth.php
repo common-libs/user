@@ -56,7 +56,7 @@ class auth
 	/**
 	 * get the user
 	 *
-	 * @return \common\user\user
+	 * @return \common\user\legacy\user
 	 */
 	public static function user()
 	{
@@ -100,6 +100,7 @@ class auth
 		session_destroy();
 		session_unset();
 		self::$isGuest = true;
+        self::$user    = user::guest();
 	}
 
 	/**
@@ -109,8 +110,10 @@ class auth
 	 *
 	 * @return bool
 	 */
-	public static function require($permission)
+	public static function requires($permission)
 	{
+	    if(empty($permission))
+	        return true;
 		return self::$user->hasPermission($permission);
 	}
 

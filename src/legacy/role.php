@@ -88,7 +88,7 @@ class role
 			$role                             = R::dispense("role");
 			$role->name                       = "guest";
 			$per                              = new permission("guest");
-			$role->role->ownPermissionList [] = $per->get();
+			$role->role->sharedPermissionList [] = $per->get();
 			R::store($role);
 		}
 	}
@@ -102,7 +102,7 @@ class role
 	{
 		foreach ($permissions as $permission) {
 			$per                              = new permission($permission);
-			$this->role->ownPermissionList [] = $per->get();
+			$this->role->sharedPermissionList [] = $per->get();
 		}
 		R::store($this->role);
 	}
@@ -115,7 +115,7 @@ class role
 	public function addPermission($permission)
 	{
 		$per                              = new permission($permission);
-		$this->role->ownPermissionList [] = $per->get();
+		$this->role->sharedPermissionList [] = $per->get();
 		R::store($this->role);
 	}
 
@@ -127,7 +127,7 @@ class role
 	public function getPermissions()
 	{
 		$permissions = [];
-		foreach ($this->role->ownPermissionList as $permission) {
+		foreach ($this->role->sharedPermissionList as $permission) {
 			$permissions[] = $permission->name;
 		}
 
@@ -153,7 +153,7 @@ class role
 	 */
 	public function hasPermission($permissionName)
 	{
-		foreach ($this->role->ownPermissionList as $permission) {
+		foreach ($this->role->sharedPermissionList as $permission) {
 			if ($permission->name == $permissionName) {
 				return true;
 			}

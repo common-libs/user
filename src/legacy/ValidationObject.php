@@ -104,7 +104,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\legacy\ValidationObject
 	 */
-	public function default($default)
+	public function defaults($default)
 	{
 		$this->default = $default;
 

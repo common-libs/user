@@ -94,6 +94,8 @@ class auth
 	 */
 	public static function require(string $permission): bool
 	{
+        if(empty($permission))
+            return true;
 		return self::$user->hasPermission($permission);
 	}
 
