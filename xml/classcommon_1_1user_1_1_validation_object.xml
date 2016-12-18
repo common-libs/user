@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1_validation_object" kind="class" prot="public">
+    <compoundname>common::user::ValidationObject</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1_validation_object_1a56ba76399d12529c48ecea581ecd08cf" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$min</definition>
+        <argsstring></argsstring>
+        <name>$min</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="14" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1_validation_object_1a9fb747ef5633c244639185a7fe54f6b0" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$max</definition>
+        <argsstring></argsstring>
+        <name>$max</name>
+        <initializer> 255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="18" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1_validation_object_1a9df479534ecf05fd7575c6275d381687" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$default</definition>
+        <argsstring></argsstring>
+        <name>$default</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="22" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1_validation_object_1a38addc8a958af4b42bda4fca677b4208" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$required</definition>
+        <argsstring></argsstring>
+        <name>$required</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="26" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1_validation_object_1ad634f418b20382e2802f80532d76d3cd" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$email</definition>
+        <argsstring></argsstring>
+        <name>$email</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="30" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1_validation_object_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$password</definition>
+        <argsstring></argsstring>
+        <name>$password</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="34" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1_validation_object_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$username</definition>
+        <argsstring></argsstring>
+        <name>$username</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="38" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1_validation_object_1a315e8d3dcffff8aee2f2db82e8654d4d" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$unique</definition>
+        <argsstring></argsstring>
+        <name>$unique</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="42" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1_validation_object_1a86d355bfc3694145c81bf7ba65d3cded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($string)</argsstring>
+        <name>__construct</name>
+        <param>
+          <type>$</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classcommon_1_1user_1_1_validation_object" kindref="compound">ValidationObject</ref> constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="50" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1_validation_object_1ac484db1921d1bf332bf2057c5d76f00b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>min</definition>
+        <argsstring>(int $min)</argsstring>
+        <name>min</name>
+        <param>
+          <type>int $</type>
+          <declname>min</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set min characters</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>int</parametertype>
+<parametername>$min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum size</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="62" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="61" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1_validation_object_1a828368d4b97de602a22ef361ddc77fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>max</definition>
+        <argsstring>(int $max)</argsstring>
+        <name>max</name>
+        <param>
+          <type>int $</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set max characters</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>int</parametertype>
+<parametername>$max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum size</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="76" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="75" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1_validation_object_1aa6f71964368c3c77a22ab04d33916f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>default</definition>
+        <argsstring>($default)</argsstring>
+        <name>default</name>
+        <param>
+          <type>$</type>
+          <declname>default</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>if empty set this value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>mixed</parametertype>
+<parametername>$default</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>default value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="90" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="89" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1_validation_object_1abd2999eed85fa7437ba20d06fc517623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>required</definition>
+        <argsstring>()</argsstring>
+        <name>required</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>cannot be empty</para><para><simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="102" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="101" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1_validation_object_1a0814d3be8538f244db1f0f63a9588a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>email</definition>
+        <argsstring>()</argsstring>
+        <name>email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this is email field</para><para><simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="114" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="113" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1_validation_object_1af692b38313fcd34758e3269d74da796f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>password</definition>
+        <argsstring>()</argsstring>
+        <name>password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this is password field</para><para><simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="126" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="125" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1_validation_object_1a7475524fbb2e38dd6c9f7a6661b0bb81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>username</definition>
+        <argsstring>()</argsstring>
+        <name>username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this is username field</para><para><simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="138" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="137" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1_validation_object_1a4687cd60c977d2d7171628bc42c81129" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>unique</definition>
+        <argsstring>()</argsstring>
+        <name>unique</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>no duplicate of this field in database</para><para><simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="150" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="149" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1_validation_object_1ac33ee765f5ad9f134540bac393721cfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>array </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="160" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="159" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/ValidationObject.php" line="10" bodyfile="/home/travis/build/common-libs/user/src/ValidationObject.php" bodystart="9" bodyend="172"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a9df479534ecf05fd7575c6275d381687" prot="protected" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>$default</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1ad634f418b20382e2802f80532d76d3cd" prot="protected" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>$email</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a9fb747ef5633c244639185a7fe54f6b0" prot="protected" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>$max</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a56ba76399d12529c48ecea581ecd08cf" prot="protected" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>$min</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="protected" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>$password</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a38addc8a958af4b42bda4fca677b4208" prot="protected" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>$required</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a315e8d3dcffff8aee2f2db82e8654d4d" prot="protected" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>$unique</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="protected" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>$username</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a86d355bfc3694145c81bf7ba65d3cded" prot="public" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>__construct</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1aa6f71964368c3c77a22ab04d33916f8c" prot="public" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>default</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a0814d3be8538f244db1f0f63a9588a30" prot="public" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>email</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1ac33ee765f5ad9f134540bac393721cfe" prot="public" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>get</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a828368d4b97de602a22ef361ddc77fbb" prot="public" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>max</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1ac484db1921d1bf332bf2057c5d76f00b" prot="public" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>min</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1af692b38313fcd34758e3269d74da796f" prot="public" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>password</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1abd2999eed85fa7437ba20d06fc517623" prot="public" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>required</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a4687cd60c977d2d7171628bc42c81129" prot="public" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>unique</name></member>
+      <member refid="classcommon_1_1user_1_1_validation_object_1a7475524fbb2e38dd6c9f7a6661b0bb81" prot="public" virt="non-virtual"><scope>common::user::ValidationObject</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

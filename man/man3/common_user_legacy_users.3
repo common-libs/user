@@ -1,0 +1,118 @@
+.TH "users" 3 "Sun Dec 18 2016" "Version 1.0.0 alpha" "Common Libs / User" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+users \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBlists\fP ($orderBy='id')"
+.br
+.ti -1c
+.RI "static \fBisUser\fP ($username)"
+.br
+.ti -1c
+.RI "static \fBremoveByUsername\fP ($username)"
+.br
+.ti -1c
+.RI "static \fBremoveById\fP ($id)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 29 of file users\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBisUser\fP ($username)\fC [static]\fP"checks if a user exists
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$username\fP Username
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file users\&.php\&.
+.PP
+.nf
+    {
+        $userdbname = setup::getValidation('username');
+        if (R::findOne('user', ' ' \&. $userdbname \&. ' = ? ', [$username])) {
+            return true;
+        }
+
+        return false;
+    }
+.fi
+.SS "static \fBlists\fP ($orderBy = \fC'id'\fP)\fC [static]\fP"Returns an array of all user beans
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$orderBy\fP Order By $orderBy ASC
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+array 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file users\&.php\&.
+.PP
+.nf
+    {
+        return R::findAll('user', ' ORDER BY ? ASC ', [$orderBy]);
+    }
+.fi
+.SS "static \fBremoveById\fP ($id)\fC [static]\fP"Removes an user by his id
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$id\fP id of user 
+.RE
+.PP
+
+.PP
+Definition at line 78 of file users\&.php\&.
+.PP
+.nf
+    {
+        if ($user = R::findOne('user', ' id = ? ', [$id])) {
+            R::trash($user);
+        }
+    }
+.fi
+.SS "static \fBremoveByUsername\fP ($username)\fC [static]\fP"Removes an user by his name
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$username\fP Username 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file users\&.php\&.
+.PP
+.nf
+    {
+        $userdbname = setup::getValidation('username');
+        if ($user = R::findOne('user', ' ' \&. $userdbname \&. ' = ? ', [$username])) {
+            R::trash($user);
+        }
+    }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Common Libs / User from the source code\&.

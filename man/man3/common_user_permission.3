@@ -1,0 +1,116 @@
+.TH "permission" 3 "Sun Dec 18 2016" "Version 1.0.0 alpha" "Common Libs / User" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+permission \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP (string $name)"
+.br
+.ti -1c
+.RI "\fBgetPermission\fP ()"
+.br
+.ti -1c
+.RI "\fBget\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBcheck\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$permission\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file permission\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fB__construct\fP (string $name)"permission constructor\&.
+.PP
+auto creates a new permission if necessary
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$name\fP 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file permission\&.php\&.
+.PP
+.nf
+    {
+        self::check();
+        if (!$permission = R::findOne('permission', ' name = ? ', [$name])) {
+            $permission       = R::dispense('permission');
+            $permission->name = $name;
+            R::store($permission);
+        }
+        $this->permission = $permission;
+    }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBcheck\fP ()\fC [static]\fP"checks if table is created 
+.PP
+Definition at line 42 of file permission\&.php\&.
+.PP
+.nf
+    {
+        if (R::count('permission') < 1) {
+            $role       = R::dispense('permission');
+            $role->name = 'guest';
+            R::store($role);
+        }
+    }
+.fi
+.SS "\fBget\fP ()"alias for getPermission
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 66 of file permission\&.php\&.
+.PP
+.nf
+                          : OODBBean
+    {
+        return $this->getPermission();
+    }
+.fi
+.SS "\fBgetPermission\fP ()"return permission db object
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 56 of file permission\&.php\&.
+.PP
+.nf
+                                    : OODBBean
+    {
+        return $this->permission;
+    }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Common Libs / User from the source code\&.

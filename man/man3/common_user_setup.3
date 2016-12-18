@@ -1,0 +1,198 @@
+.TH "setup" 3 "Sun Dec 18 2016" "Version 1.0.0 alpha" "Common Libs / User" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+setup \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBvalidate\fP (Closure $param)"
+.br
+.ti -1c
+.RI "static \fBvalidation\fP ($name=false, $value=false)"
+.br
+.ti -1c
+.RI "static \fBgetValidation\fP (string $name, $value=false)"
+.br
+.ti -1c
+.RI "static \fBroles\fP ($param)"
+.br
+.ti -1c
+.RI "static \fBhash\fP (Closure $param)"
+.br
+.ti -1c
+.RI "static \fBdoHash\fP (string $password)"
+.br
+.ti -1c
+.RI "static \fBconfig\fP (Closure $param)"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fB$validate\fP"
+.br
+.ti -1c
+.RI "static \fB$role\fP"
+.br
+.ti -1c
+.RI "static \fB$hash\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file setup\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBconfig\fP (Closure $param)\fC [static]\fP"setup config 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\\Closure\fP $param function to call for config setup 
+.RE
+.PP
+
+.PP
+Definition at line 111 of file setup\&.php\&.
+.PP
+.nf
+    {
+        call_user_func($param, new Config());
+    }
+.fi
+.SS "static \fBdoHash\fP (string $password)\fC [static]\fP"hashes a sting to custom hash function
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$password\fP string to hash
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definition at line 102 of file setup\&.php\&.
+.PP
+.nf
+                                                    : string
+    {
+        return call_user_func(self::$hash, $password);
+    }
+.fi
+.SS "static \fBgetValidation\fP (string $name, $value = \fCfalse\fP)\fC [static]\fP"get validation field(s)
+.PP
+calling with one parameters this method returns the field name of username|password|email calling with two parameters this method returns one validation parameter from one field
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$name\fP field name 
+.br
+\fI$value\fP field parameter
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+mixed|string 
+.RE
+.PP
+
+.PP
+Definition at line 69 of file setup\&.php\&.
+.PP
+.nf
+    {
+        return $value !== false ? self::$validate->is($name, $value) : self::$validate->get($name);
+    }
+.fi
+.SS "static \fBhash\fP (Closure $param)\fC [static]\fP"setup hash function
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$param\fP function to call for hash 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file setup\&.php\&.
+.PP
+.nf
+    {
+        self::$hash = $param;
+    }
+.fi
+.SS "static \fBroles\fP ($param)\fC [static]\fP"setup roles
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$param\fP function to call for role creating 
+.RE
+.PP
+
+.PP
+Definition at line 79 of file setup\&.php\&.
+.PP
+.nf
+    {
+        call_user_func($param, $role = new Roles());
+        self::$role = $role;
+    }
+.fi
+.SS "static \fBvalidate\fP (Closure $param)\fC [static]\fP"setup validation
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\\Closure\fP $param function to call for validation 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file setup\&.php\&.
+.PP
+.nf
+    {
+        call_user_func($param, $validation = new Validation());
+        self::$validate = $validation;
+    }
+.fi
+.SS "static \fBvalidation\fP ($name = \fCfalse\fP, $value = \fCfalse\fP)\fC [static]\fP"do validation
+.PP
+calling without parameters this method returns all validation parameters calling with two parameters this method validate an value
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$name\fP name of field 
+.br
+\fI$value\fP value of field
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+array|string 
+.RE
+.PP
+
+.PP
+Definition at line 49 of file setup\&.php\&.
+.PP
+.nf
+    {
+        if (!$name && !$value) {
+            return self::$validate->getAll();
+        }
+
+        return self::$validate->validate($name, $value);
+    }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Common Libs / User from the source code\&.

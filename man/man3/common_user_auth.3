@@ -1,0 +1,120 @@
+.TH "auth" 3 "Sun Dec 18 2016" "Version 1.0.0 alpha" "Common Libs / User" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+auth \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBinit\fP ()"
+.br
+.RI "\fIinit the class and set php session \fP"
+.ti -1c
+.RI "static \fBuser\fP ()"
+.br
+.ti -1c
+.RI "static \fBisGuest\fP ()"
+.br
+.ti -1c
+.RI "static \fBlogin\fP (string $username, string $password)"
+.br
+.ti -1c
+.RI "static \fBlogout\fP ()"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fB$user\fP"
+.br
+.ti -1c
+.RI "static \fB$isGuest\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 10 of file auth\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBisGuest\fP ()\fC [static]\fP"check if the current user is guest
+.PP
+\fBReturns:\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file auth\&.php\&.
+.PP
+.nf
+    {
+        return self::$isGuest;
+    }
+.fi
+.SS "static \fBlogin\fP (string $username, string $password)\fC [static]\fP"\fBParameters:\fP
+.RS 4
+\fI$username\fP username 
+.br
+\fI$password\fP password
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file auth\&.php\&.
+.PP
+.nf
+                                                                     : bool
+    {
+        if ($user = user::find($username, $password)) {
+            self::$user    = $user;
+            self::$isGuest = false;
+
+            return true;
+        }
+
+        return false;
+    }
+.fi
+.SS "static \fBlogout\fP ()\fC [static]\fP"logout the current user 
+.PP
+Definition at line 80 of file auth\&.php\&.
+.PP
+.nf
+    {
+        $_SESSION = [];
+        session_destroy();
+        session_unset();
+        self::$isGuest = true;
+    }
+.fi
+.SS "static \fBuser\fP ()\fC [static]\fP"get the user
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 44 of file auth\&.php\&.
+.PP
+.nf
+    {
+        return self::$user;
+    }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Common Libs / User from the source code\&.

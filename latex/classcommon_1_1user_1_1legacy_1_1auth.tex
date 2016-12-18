@@ -1,0 +1,200 @@
+\hypertarget{classcommon_1_1user_1_1legacy_1_1auth}{\section{auth \-Class \-Reference}
+\label{classcommon_1_1user_1_1legacy_1_1auth}\index{auth@{auth}}
+}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1legacy_1_1auth_a9f0be6ae273d3669e11c29910a0be338}{static \hyperlink{classcommon_1_1user_1_1legacy_1_1auth_a9f0be6ae273d3669e11c29910a0be338}{init} ()}\label{classcommon_1_1user_1_1legacy_1_1auth_a9f0be6ae273d3669e11c29910a0be338}
+
+\begin{DoxyCompactList}\small\item\em init the class and set php session \end{DoxyCompactList}\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1auth_a7949f68385a98a60ff42ea3c3a768ec7}{user} ()
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1auth_a3d6c9ff1005fcc403d30d5dd8ef70210}{is\-Guest} ()
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1auth_aad19326559a5beda6d7cfc3e83fefd12}{login} (\$username, \$password)
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1auth_a1e34160e903835a43123f538e93457a2}{logout} ()
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1auth_a7a85e2ad55bb6f47464978a83f3a8924}{requires} (\$\hyperlink{classcommon_1_1user_1_1legacy_1_1permission}{permission})
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1auth_ae0ca697f3332a55efcbb374972946a99}{required} (\$\hyperlink{classcommon_1_1user_1_1legacy_1_1permission}{permission})
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1legacy_1_1auth_a598ca4e71b15a1313ec95f0df1027ca5}{static {\bfseries \$user}}\label{classcommon_1_1user_1_1legacy_1_1auth_a598ca4e71b15a1313ec95f0df1027ca5}
+
+\item 
+\hypertarget{classcommon_1_1user_1_1legacy_1_1auth_acd6f0a47fb21845165c3716723d50393}{static {\bfseries \$is\-Guest}}\label{classcommon_1_1user_1_1legacy_1_1auth_acd6f0a47fb21845165c3716723d50393}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 27 of file auth.\-php.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1auth_a3d6c9ff1005fcc403d30d5dd8ef70210}{\index{common\-::user\-::legacy\-::auth@{common\-::user\-::legacy\-::auth}!is\-Guest@{is\-Guest}}
+\index{is\-Guest@{is\-Guest}!common::user::legacy::auth@{common\-::user\-::legacy\-::auth}}
+\subsubsection[{is\-Guest}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf is\-Guest} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1auth_a3d6c9ff1005fcc403d30d5dd8ef70210}
+check if the current user is guest
+
+\begin{DoxyReturn}{\-Returns}
+bool 
+\end{DoxyReturn}
+
+
+\-Definition at line 71 of file auth.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return self::$isGuest;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1auth_aad19326559a5beda6d7cfc3e83fefd12}{\index{common\-::user\-::legacy\-::auth@{common\-::user\-::legacy\-::auth}!login@{login}}
+\index{login@{login}!common::user::legacy::auth@{common\-::user\-::legacy\-::auth}}
+\subsubsection[{login}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf login} (
+\begin{DoxyParamCaption}
+\item[{\$}]{username, }
+\item[{\$}]{password}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1auth_aad19326559a5beda6d7cfc3e83fefd12}
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$username} & username \\
+\hline
+string & {\em \$password} & password\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool 
+\end{DoxyReturn}
+
+
+\-Definition at line 82 of file auth.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if ($user = user::find($username, $password)) {
+            self::$user    = $user;
+            self::$isGuest = false;
+
+            return true;
+        }
+
+        return false;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1auth_a1e34160e903835a43123f538e93457a2}{\index{common\-::user\-::legacy\-::auth@{common\-::user\-::legacy\-::auth}!logout@{logout}}
+\index{logout@{logout}!common::user::legacy::auth@{common\-::user\-::legacy\-::auth}}
+\subsubsection[{logout}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf logout} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1auth_a1e34160e903835a43123f538e93457a2}
+logout the current user 
+
+\-Definition at line 97 of file auth.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $_SESSION = [];
+        session_destroy();
+        session_unset();
+        self::$isGuest = true;
+        self::$user    = user::guest();
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1auth_ae0ca697f3332a55efcbb374972946a99}{\index{common\-::user\-::legacy\-::auth@{common\-::user\-::legacy\-::auth}!required@{required}}
+\index{required@{required}!common::user::legacy::auth@{common\-::user\-::legacy\-::auth}}
+\subsubsection[{required}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf required} (
+\begin{DoxyParamCaption}
+\item[{\$}]{permission}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1auth_ae0ca697f3332a55efcbb374972946a99}
+check if current user has a permission
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$permission} & name of permission \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 126 of file auth.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if (!self::$user->hasPermission($permission)) {
+            die("No permission. Quit.");
+        }
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1auth_a7a85e2ad55bb6f47464978a83f3a8924}{\index{common\-::user\-::legacy\-::auth@{common\-::user\-::legacy\-::auth}!requires@{requires}}
+\index{requires@{requires}!common::user::legacy::auth@{common\-::user\-::legacy\-::auth}}
+\subsubsection[{requires}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf requires} (
+\begin{DoxyParamCaption}
+\item[{\$}]{permission}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1auth_a7a85e2ad55bb6f47464978a83f3a8924}
+check if current user has a permission
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$permission} & name of permission\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool 
+\end{DoxyReturn}
+
+
+\-Definition at line 113 of file auth.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if(empty($permission))
+            return true;
+        return self::$user->hasPermission($permission);
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1auth_a7949f68385a98a60ff42ea3c3a768ec7}{\index{common\-::user\-::legacy\-::auth@{common\-::user\-::legacy\-::auth}!user@{user}}
+\index{user@{user}!common::user::legacy::auth@{common\-::user\-::legacy\-::auth}}
+\subsubsection[{user}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf user} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1auth_a7949f68385a98a60ff42ea3c3a768ec7}
+get the user
+
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+
+
+\-Definition at line 61 of file auth.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return self::$user;
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/legacy/auth.\-php\end{DoxyCompactItemize}

@@ -1,0 +1,298 @@
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role}{\section{role \-Class \-Reference}
+\label{classcommon_1_1user_1_1legacy_1_1role}\index{role@{role}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1role_a0696987c5e6ce3efd6da1ca1a8d47fcb}{\-\_\-\-\_\-construct} (\$role\-Name)
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1role_a63a43d301f3974506cc8942dddc82dff}{equals} (\$\hyperlink{classcommon_1_1user_1_1legacy_1_1role}{role})
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1role_a594d31710145cca1611de0f5ac26474b}{add\-Permissions} (\$permissions)
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1role_acafe18e4082708191900b3a13406a115}{add\-Permission} (\$\hyperlink{classcommon_1_1user_1_1legacy_1_1permission}{permission})
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1role_a98e8f81c4e0869a6adf4a36ca1a6860a}{get\-Permissions} ()
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1role_a0b2e7098f1c48a7439a42bada5b69689}{get\-Role} ()
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1role_acefac8c3f81c7bd751403a683623fcbf}{has\-Permission} (\$permission\-Name)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1role_a08d78dc7411f3317df9509f962ecccf4}{get} (\$\hyperlink{classcommon_1_1user_1_1legacy_1_1role}{role})
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1role_a3a934bd1e982502106ee5dfac2e4e2ed}{check} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role_a1ea903cca285c7c0b4c9203932100309}{{\bfseries \$role}}\label{classcommon_1_1user_1_1legacy_1_1role_a1ea903cca285c7c0b4c9203932100309}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 31 of file role.\-php.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role_a0696987c5e6ce3efd6da1ca1a8d47fcb}{\index{common\-::user\-::legacy\-::role@{common\-::user\-::legacy\-::role}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!common::user::legacy::role@{common\-::user\-::legacy\-::role}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-construct} (
+\begin{DoxyParamCaption}
+\item[{\$}]{role\-Name}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1role_a0696987c5e6ce3efd6da1ca1a8d47fcb}
+role constructor.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$role\-Name} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 44 of file role.\-php.
+
+
+\begin{DoxyCode}
+    {
+        self::check();
+        if (!$role = R::findOne("role", " name = ? ", [$roleName])) {
+            $role       = R::dispense("role");
+            $role->name = $roleName;
+            R::store($role);
+        }
+        $this->role = $role;
+    }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role_acafe18e4082708191900b3a13406a115}{\index{common\-::user\-::legacy\-::role@{common\-::user\-::legacy\-::role}!add\-Permission@{add\-Permission}}
+\index{add\-Permission@{add\-Permission}!common::user::legacy::role@{common\-::user\-::legacy\-::role}}
+\subsubsection[{add\-Permission}]{\setlength{\rightskip}{0pt plus 5cm}{\bf add\-Permission} (
+\begin{DoxyParamCaption}
+\item[{\$}]{permission}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1role_acafe18e4082708191900b3a13406a115}
+add a permission to role
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$permission} & permission name \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 115 of file role.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $per                              = new permission($permission);
+        $this->role->sharedPermissionList [] = $per->get();
+        R::store($this->role);
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role_a594d31710145cca1611de0f5ac26474b}{\index{common\-::user\-::legacy\-::role@{common\-::user\-::legacy\-::role}!add\-Permissions@{add\-Permissions}}
+\index{add\-Permissions@{add\-Permissions}!common::user::legacy::role@{common\-::user\-::legacy\-::role}}
+\subsubsection[{add\-Permissions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf add\-Permissions} (
+\begin{DoxyParamCaption}
+\item[{\$}]{permissions}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1role_a594d31710145cca1611de0f5ac26474b}
+add permissions to role
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+array & {\em \$permissions} & array of permission names \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 101 of file role.\-php.
+
+
+\begin{DoxyCode}
+    {
+        foreach ($permissions as $permission) {
+            $per                              = new permission($permission);
+            $this->role->sharedPermissionList [] = $per->get();
+        }
+        R::store($this->role);
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role_a3a934bd1e982502106ee5dfac2e4e2ed}{\index{common\-::user\-::legacy\-::role@{common\-::user\-::legacy\-::role}!check@{check}}
+\index{check@{check}!common::user::legacy::role@{common\-::user\-::legacy\-::role}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf check} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1role_a3a934bd1e982502106ee5dfac2e4e2ed}
+check if table was created 
+
+\-Definition at line 85 of file role.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if (R::count("role") < 1) {
+            $role                             = R::dispense("role");
+            $role->name                       = "guest";
+            $per                              = new permission("guest");
+            $role->role->sharedPermissionList [] = $per->get();
+            R::store($role);
+        }
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role_a63a43d301f3974506cc8942dddc82dff}{\index{common\-::user\-::legacy\-::role@{common\-::user\-::legacy\-::role}!equals@{equals}}
+\index{equals@{equals}!common::user::legacy::role@{common\-::user\-::legacy\-::role}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf equals} (
+\begin{DoxyParamCaption}
+\item[{\$}]{role}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1role_a63a43d301f3974506cc8942dddc82dff}
+checks if given role object is equal to current one
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em $\backslash$common$\backslash$user$\backslash$legacy$\backslash$role} & \$role role object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool 
+\end{DoxyReturn}
+
+
+\-Definition at line 77 of file role.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return $role->getRole()->id == $this->role->id && $role->getRole()->
+      name == $this->role->name;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role_a08d78dc7411f3317df9509f962ecccf4}{\index{common\-::user\-::legacy\-::role@{common\-::user\-::legacy\-::role}!get@{get}}
+\index{get@{get}!common::user::legacy::role@{common\-::user\-::legacy\-::role}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf get} (
+\begin{DoxyParamCaption}
+\item[{\$}]{role}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1role_a08d78dc7411f3317df9509f962ecccf4}
+alias for new role(\$role)
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$role} & role name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+
+
+\-Definition at line 62 of file role.\-php.
+
+
+\begin{DoxyCode}
+    {
+        self::check();
+        $r = new self($role);
+
+        return $r->getRole();
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role_a98e8f81c4e0869a6adf4a36ca1a6860a}{\index{common\-::user\-::legacy\-::role@{common\-::user\-::legacy\-::role}!get\-Permissions@{get\-Permissions}}
+\index{get\-Permissions@{get\-Permissions}!common::user::legacy::role@{common\-::user\-::legacy\-::role}}
+\subsubsection[{get\-Permissions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf get\-Permissions} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1role_a98e8f81c4e0869a6adf4a36ca1a6860a}
+return all permission assigned to this role
+
+\begin{DoxyReturn}{\-Returns}
+array 
+\end{DoxyReturn}
+
+
+\-Definition at line 127 of file role.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $permissions = [];
+        foreach ($this->role->sharedPermissionList as $permission) {
+            $permissions[] = $permission->name;
+        }
+
+        return $permissions;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role_a0b2e7098f1c48a7439a42bada5b69689}{\index{common\-::user\-::legacy\-::role@{common\-::user\-::legacy\-::role}!get\-Role@{get\-Role}}
+\index{get\-Role@{get\-Role}!common::user::legacy::role@{common\-::user\-::legacy\-::role}}
+\subsubsection[{get\-Role}]{\setlength{\rightskip}{0pt plus 5cm}{\bf get\-Role} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1role_a0b2e7098f1c48a7439a42bada5b69689}
+get db role object
+
+\begin{DoxyReturn}{\-Returns}
+\-O\-O\-D\-B\-Bean 
+\end{DoxyReturn}
+
+
+\-Definition at line 142 of file role.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return $this->role;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1role_acefac8c3f81c7bd751403a683623fcbf}{\index{common\-::user\-::legacy\-::role@{common\-::user\-::legacy\-::role}!has\-Permission@{has\-Permission}}
+\index{has\-Permission@{has\-Permission}!common::user::legacy::role@{common\-::user\-::legacy\-::role}}
+\subsubsection[{has\-Permission}]{\setlength{\rightskip}{0pt plus 5cm}{\bf has\-Permission} (
+\begin{DoxyParamCaption}
+\item[{\$}]{permission\-Name}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1role_acefac8c3f81c7bd751403a683623fcbf}
+check if a role has a permission
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$permission\-Name} & name of permission\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool 
+\end{DoxyReturn}
+
+
+\-Definition at line 154 of file role.\-php.
+
+
+\begin{DoxyCode}
+    {
+        foreach ($this->role->sharedPermissionList as $permission) {
+            if ($permission->name == $permissionName) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/legacy/role.\-php\end{DoxyCompactItemize}

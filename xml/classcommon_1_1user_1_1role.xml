@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1role" kind="class" prot="public">
+    <compoundname>common::user::role</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1role_1a1ea903cca285c7c0b4c9203932100309" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$role</definition>
+        <argsstring></argsstring>
+        <name>$role</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/role.php" line="21" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1role_1a0fe6fe9dff99830d0b7bb71f2877f3e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>(string $roleName)</argsstring>
+        <name>__construct</name>
+        <param>
+          <type>string $</type>
+          <declname>roleName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>role constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$roleName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/role.php" line="29" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="28" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1role_1a96d7229cb9b1d75345cfac9f683ca398" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>equals</definition>
+        <argsstring>(role $role)</argsstring>
+        <name>equals</name>
+        <param>
+          <type><ref refid="classcommon_1_1user_1_1role" kindref="compound">role</ref> $</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>checks if given role object is equal to current one</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>\common\user\role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$role role object</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/role.php" line="62" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1role_1a32bcfee1aac89ef68ed2494b3402ea47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>addPermissions</definition>
+        <argsstring>(array $permissions)</argsstring>
+        <name>addPermissions</name>
+        <param>
+          <type>array $</type>
+          <declname>permissions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>add permissions to role</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$permissions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of permission names </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/role.php" line="86" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="85" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1role_1a185e9ed46609058776b2f27429c34fd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>addPermission</definition>
+        <argsstring>(string $permission)</argsstring>
+        <name>addPermission</name>
+        <param>
+          <type>string $</type>
+          <declname>permission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>add a permission to role</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$permission</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>permission name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/role.php" line="100" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="99" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1role_1a98e8f81c4e0869a6adf4a36ca1a6860a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getPermissions</definition>
+        <argsstring>()</argsstring>
+        <name>getPermissions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return all permission assigned to this role</para><para><simplesect kind="return"><para>array </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/role.php" line="112" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="111" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1role_1a0b2e7098f1c48a7439a42bada5b69689" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getRole</definition>
+        <argsstring>()</argsstring>
+        <name>getRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get db role object</para><para><simplesect kind="return"><para>OODBBean </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/role.php" line="127" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1role_1aaaa6de319c1361e48f90c59048755e86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hasPermission</definition>
+        <argsstring>(string $permissionName)</argsstring>
+        <name>hasPermission</name>
+        <param>
+          <type>string $</type>
+          <declname>permissionName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check if a role has a permission</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$permissionName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of permission</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/role.php" line="139" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="138" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1role_1a2635489967ff48beefcd67afbdcec1ba" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static get</definition>
+        <argsstring>(string $role)</argsstring>
+        <name>get</name>
+        <param>
+          <type>string $</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>alias for new role($role)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>role name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/role.php" line="47" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="46" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1role_1a3a934bd1e982502106ee5dfac2e4e2ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static check</definition>
+        <argsstring>()</argsstring>
+        <name>check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check if table was created </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/role.php" line="70" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="69" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/role.php" line="16" bodyfile="/home/travis/build/common-libs/user/src/role.php" bodystart="15" bodyend="148"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1role_1a1ea903cca285c7c0b4c9203932100309" prot="protected" virt="non-virtual"><scope>common::user::role</scope><name>$role</name></member>
+      <member refid="classcommon_1_1user_1_1role_1a0fe6fe9dff99830d0b7bb71f2877f3e3" prot="public" virt="non-virtual"><scope>common::user::role</scope><name>__construct</name></member>
+      <member refid="classcommon_1_1user_1_1role_1a185e9ed46609058776b2f27429c34fd6" prot="public" virt="non-virtual"><scope>common::user::role</scope><name>addPermission</name></member>
+      <member refid="classcommon_1_1user_1_1role_1a32bcfee1aac89ef68ed2494b3402ea47" prot="public" virt="non-virtual"><scope>common::user::role</scope><name>addPermissions</name></member>
+      <member refid="classcommon_1_1user_1_1role_1a3a934bd1e982502106ee5dfac2e4e2ed" prot="public" virt="non-virtual"><scope>common::user::role</scope><name>check</name></member>
+      <member refid="classcommon_1_1user_1_1role_1a96d7229cb9b1d75345cfac9f683ca398" prot="public" virt="non-virtual"><scope>common::user::role</scope><name>equals</name></member>
+      <member refid="classcommon_1_1user_1_1role_1a2635489967ff48beefcd67afbdcec1ba" prot="public" virt="non-virtual"><scope>common::user::role</scope><name>get</name></member>
+      <member refid="classcommon_1_1user_1_1role_1a98e8f81c4e0869a6adf4a36ca1a6860a" prot="public" virt="non-virtual"><scope>common::user::role</scope><name>getPermissions</name></member>
+      <member refid="classcommon_1_1user_1_1role_1a0b2e7098f1c48a7439a42bada5b69689" prot="public" virt="non-virtual"><scope>common::user::role</scope><name>getRole</name></member>
+      <member refid="classcommon_1_1user_1_1role_1aaaa6de319c1361e48f90c59048755e86" prot="public" virt="non-virtual"><scope>common::user::role</scope><name>hasPermission</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

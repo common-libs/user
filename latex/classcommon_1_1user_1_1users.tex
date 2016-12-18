@@ -1,0 +1,144 @@
+\hypertarget{classcommon_1_1user_1_1users}{\section{users \-Class \-Reference}
+\label{classcommon_1_1user_1_1users}\index{users@{users}}
+}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcommon_1_1user_1_1users_a97b9a380b098d79ea69735b68a5b2d1e}{lists} (string \$order\-By=\char`\"{}id\char`\"{})
+\item 
+static \hyperlink{classcommon_1_1user_1_1users_acb939963af00a7a18a1a410e356da435}{is\-User} (string \$username)
+\item 
+static \hyperlink{classcommon_1_1user_1_1users_aec4e30df562c0f23ffab51dcade67279}{remove\-By\-Username} (string \$username)
+\item 
+static \hyperlink{classcommon_1_1user_1_1users_aca3d86fc93c50d015432557136427b72}{remove\-By\-Id} (int \$id)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 8 of file users.\-php.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1users_acb939963af00a7a18a1a410e356da435}{\index{common\-::user\-::users@{common\-::user\-::users}!is\-User@{is\-User}}
+\index{is\-User@{is\-User}!common::user::users@{common\-::user\-::users}}
+\subsubsection[{is\-User}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf is\-User} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{username}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1users_acb939963af00a7a18a1a410e356da435}
+checks if a user exists
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$username} & \-Username\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool 
+\end{DoxyReturn}
+
+
+\-Definition at line 29 of file users.\-php.
+
+
+\begin{DoxyCode}
+                                                    : bool
+    {
+        $userdbname = setup::getValidation("username");
+        if (R::findOne('user', ' ' . $userdbname . ' = ? ', [$username])) {
+            return true;
+        }
+
+        return false;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1users_a97b9a380b098d79ea69735b68a5b2d1e}{\index{common\-::user\-::users@{common\-::user\-::users}!lists@{lists}}
+\index{lists@{lists}!common::user::users@{common\-::user\-::users}}
+\subsubsection[{lists}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf lists} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{order\-By = {\ttfamily \char`\"{}id\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1users_a97b9a380b098d79ea69735b68a5b2d1e}
+\-Returns an array of all user beans
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$order\-By} & \-Order \-By \$order\-By \-A\-S\-C\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+array 
+\end{DoxyReturn}
+
+
+\-Definition at line 17 of file users.\-php.
+
+
+\begin{DoxyCode}
+                                                         : array
+    {
+        return R::findAll('user', ' ORDER BY ? ASC ', [$orderBy]);
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1users_aca3d86fc93c50d015432557136427b72}{\index{common\-::user\-::users@{common\-::user\-::users}!remove\-By\-Id@{remove\-By\-Id}}
+\index{remove\-By\-Id@{remove\-By\-Id}!common::user::users@{common\-::user\-::users}}
+\subsubsection[{remove\-By\-Id}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf remove\-By\-Id} (
+\begin{DoxyParamCaption}
+\item[{int \$}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1users_aca3d86fc93c50d015432557136427b72}
+\-Removes an user by his id
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+integer & {\em \$id} & id of user \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 57 of file users.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if ($user = R::findOne('user', ' id = ? ', [$id])) {
+            R::trash($user);
+        }
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1users_aec4e30df562c0f23ffab51dcade67279}{\index{common\-::user\-::users@{common\-::user\-::users}!remove\-By\-Username@{remove\-By\-Username}}
+\index{remove\-By\-Username@{remove\-By\-Username}!common::user::users@{common\-::user\-::users}}
+\subsubsection[{remove\-By\-Username}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf remove\-By\-Username} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{username}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1users_aec4e30df562c0f23ffab51dcade67279}
+\-Removes an user by his name
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$username} & \-Username \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 44 of file users.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $userdbname = setup::getValidation("username");
+        if ($user = R::findOne('user', ' ' . $userdbname . ' = ? ', [$username]
+      )) {
+            R::trash($user);
+        }
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/users.\-php\end{DoxyCompactItemize}

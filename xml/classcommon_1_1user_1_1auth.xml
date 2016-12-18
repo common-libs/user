@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1auth" kind="class" prot="public">
+    <compoundname>common::user::auth</compoundname>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1auth_1a598ca4e71b15a1313ec95f0df1027ca5" prot="protected" static="yes" mutable="no">
+        <type>static</type>
+        <definition>$user</definition>
+        <argsstring></argsstring>
+        <name>$user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/auth.php" line="15" bodyfile="/home/travis/build/common-libs/user/src/auth.php" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1auth_1acd6f0a47fb21845165c3716723d50393" prot="protected" static="yes" mutable="no">
+        <type>static</type>
+        <definition>$isGuest</definition>
+        <argsstring></argsstring>
+        <name>$isGuest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/auth.php" line="19" bodyfile="/home/travis/build/common-libs/user/src/auth.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1auth_1a9f0be6ae273d3669e11c29910a0be338" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>init the class and set php session </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/auth.php" line="25" bodyfile="/home/travis/build/common-libs/user/src/auth.php" bodystart="24" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1auth_1a7949f68385a98a60ff42ea3c3a768ec7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static user</definition>
+        <argsstring>()</argsstring>
+        <name>user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the user</para><para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/auth.php" line="45" bodyfile="/home/travis/build/common-libs/user/src/auth.php" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1auth_1a3d6c9ff1005fcc403d30d5dd8ef70210" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static isGuest</definition>
+        <argsstring>()</argsstring>
+        <name>isGuest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check if the current user is guest</para><para><simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/auth.php" line="55" bodyfile="/home/travis/build/common-libs/user/src/auth.php" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1auth_1a6f60964b6e0f9798caaf3c0e7c876326" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static login</definition>
+        <argsstring>(string $username, string $password)</argsstring>
+        <name>login</name>
+        <param>
+          <type>string $</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>string $</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>username </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>password</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/auth.php" line="66" bodyfile="/home/travis/build/common-libs/user/src/auth.php" bodystart="65" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1auth_1a1e34160e903835a43123f538e93457a2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static logout</definition>
+        <argsstring>()</argsstring>
+        <name>logout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>logout the current user </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/auth.php" line="81" bodyfile="/home/travis/build/common-libs/user/src/auth.php" bodystart="80" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/auth.php" line="11" bodyfile="/home/travis/build/common-libs/user/src/auth.php" bodystart="10" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1auth_1acd6f0a47fb21845165c3716723d50393" prot="protected" virt="non-virtual"><scope>common::user::auth</scope><name>$isGuest</name></member>
+      <member refid="classcommon_1_1user_1_1auth_1a598ca4e71b15a1313ec95f0df1027ca5" prot="protected" virt="non-virtual"><scope>common::user::auth</scope><name>$user</name></member>
+      <member refid="classcommon_1_1user_1_1auth_1a9f0be6ae273d3669e11c29910a0be338" prot="public" virt="non-virtual"><scope>common::user::auth</scope><name>init</name></member>
+      <member refid="classcommon_1_1user_1_1auth_1a3d6c9ff1005fcc403d30d5dd8ef70210" prot="public" virt="non-virtual"><scope>common::user::auth</scope><name>isGuest</name></member>
+      <member refid="classcommon_1_1user_1_1auth_1a6f60964b6e0f9798caaf3c0e7c876326" prot="public" virt="non-virtual"><scope>common::user::auth</scope><name>login</name></member>
+      <member refid="classcommon_1_1user_1_1auth_1a1e34160e903835a43123f538e93457a2" prot="public" virt="non-virtual"><scope>common::user::auth</scope><name>logout</name></member>
+      <member refid="classcommon_1_1user_1_1auth_1a7949f68385a98a60ff42ea3c3a768ec7" prot="public" virt="non-virtual"><scope>common::user::auth</scope><name>user</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,250 @@
+.TH "role" 3 "Sun Dec 18 2016" "Version 1.0.0 alpha" "Common Libs / User" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+role \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP (string $roleName)"
+.br
+.ti -1c
+.RI "\fBequals\fP (\fBrole\fP $\fBrole\fP)"
+.br
+.ti -1c
+.RI "\fBaddPermissions\fP (array $permissions)"
+.br
+.ti -1c
+.RI "\fBaddPermission\fP (string $\fBpermission\fP)"
+.br
+.ti -1c
+.RI "\fBgetPermissions\fP ()"
+.br
+.ti -1c
+.RI "\fBgetRole\fP ()"
+.br
+.ti -1c
+.RI "\fBhasPermission\fP (string $permissionName)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBget\fP (string $\fBrole\fP)"
+.br
+.ti -1c
+.RI "static \fBcheck\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$role\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 15 of file role\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fB__construct\fP (string $roleName)"role constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$roleName\fP 
+.RE
+.PP
+
+.PP
+Definition at line 28 of file role\&.php\&.
+.PP
+.nf
+    {
+        self::check();
+        if (!$role = R::findOne('role', ' name = ? ', [$roleName])) {
+            $role       = R::dispense('role');
+            $role->name = $roleName;
+            R::store($role);
+        }
+        $this->role = $role;
+    }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBaddPermission\fP (string $permission)"add a permission to role
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$permission\fP permission name 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file role\&.php\&.
+.PP
+.nf
+    {
+        $per                              = new permission($permission);
+        $this->role->sharedPermissionList [] = $per->get();
+        R::store($this->role);
+    }
+.fi
+.SS "\fBaddPermissions\fP (array $permissions)"add permissions to role
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$permissions\fP array of permission names 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file role\&.php\&.
+.PP
+.nf
+    {
+        foreach ($permissions as $permission) {
+            $per                              = new permission($permission);
+            $this->role->sharedPermissionList [] = $per->get();
+        }
+        R::store($this->role);
+    }
+.fi
+.SS "static \fBcheck\fP ()\fC [static]\fP"check if table was created 
+.PP
+Definition at line 69 of file role\&.php\&.
+.PP
+.nf
+    {
+        if (R::count('role') < 1) {
+            $role                             = R::dispense('role');
+            $role->name                       = 'guest';
+            $per                              = new permission('guest');
+            $role->role->sharedPermissionList [] = $per->get();
+            R::store($role);
+        }
+    }
+.fi
+.SS "\fBequals\fP (\fBrole\fP $role)"checks if given role object is equal to current one
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\\common\\user\\role\fP $role role object
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file role\&.php\&.
+.PP
+.nf
+                                       : bool
+    {
+        return $role->getRole()->id == $this->role->id && $role->getRole()->name == $this->role->name;
+    }
+.fi
+.SS "static \fBget\fP (string $role)\fC [static]\fP"alias for new role($role)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$role\fP role name
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 46 of file role\&.php\&.
+.PP
+.nf
+                                             : OODBBean
+    {
+        self::check();
+        $r = new self($role);
+
+        return $r->getRole();
+    }
+.fi
+.SS "\fBgetPermissions\fP ()"return all permission assigned to this role
+.PP
+\fBReturns:\fP
+.RS 4
+array 
+.RE
+.PP
+
+.PP
+Definition at line 111 of file role\&.php\&.
+.PP
+.nf
+                                     : array
+    {
+        $permissions = [];
+        foreach ($this->role->sharedPermissionList as $permission) {
+            $permissions[] = $permission->name;
+        }
+
+        return $permissions;
+    }
+.fi
+.SS "\fBgetRole\fP ()"get db role object
+.PP
+\fBReturns:\fP
+.RS 4
+OODBBean 
+.RE
+.PP
+
+.PP
+Definition at line 126 of file role\&.php\&.
+.PP
+.nf
+                             : OODBBean
+    {
+        return $this->role;
+    }
+.fi
+.SS "\fBhasPermission\fP (string $permissionName)"check if a role has a permission
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$permissionName\fP name of permission
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Definition at line 138 of file role\&.php\&.
+.PP
+.nf
+                                                          : bool
+    {
+        foreach ($this->role->sharedPermissionList as $permission) {
+            if ($permission->name == $permissionName) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Common Libs / User from the source code\&.

@@ -1,0 +1,142 @@
+\hypertarget{classcommon_1_1user_1_1legacy_1_1users}{\section{users \-Class \-Reference}
+\label{classcommon_1_1user_1_1legacy_1_1users}\index{users@{users}}
+}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1users_a40b92b73e3f7a98a9ffa658a5fad5a6d}{lists} (\$order\-By=\char`\"{}id\char`\"{})
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1users_a6051c5d0c8fad68cb9abb30ea88074b6}{is\-User} (\$username)
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1users_afbb19ebbe6aa86e0b25248a0826c10d6}{remove\-By\-Username} (\$username)
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1users_ace46b3447183597a25fbac394e4151b8}{remove\-By\-Id} (\$id)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 29 of file users.\-php.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1users_a6051c5d0c8fad68cb9abb30ea88074b6}{\index{common\-::user\-::legacy\-::users@{common\-::user\-::legacy\-::users}!is\-User@{is\-User}}
+\index{is\-User@{is\-User}!common::user::legacy::users@{common\-::user\-::legacy\-::users}}
+\subsubsection[{is\-User}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf is\-User} (
+\begin{DoxyParamCaption}
+\item[{\$}]{username}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1users_a6051c5d0c8fad68cb9abb30ea88074b6}
+checks if a user exists
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$username} & \-Username\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool 
+\end{DoxyReturn}
+
+
+\-Definition at line 50 of file users.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $userdbname = setup::getValidation("username");
+        if (R::findOne('user', ' ' . $userdbname . ' = ? ', [$username])) {
+            return true;
+        }
+
+        return false;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1users_a40b92b73e3f7a98a9ffa658a5fad5a6d}{\index{common\-::user\-::legacy\-::users@{common\-::user\-::legacy\-::users}!lists@{lists}}
+\index{lists@{lists}!common::user::legacy::users@{common\-::user\-::legacy\-::users}}
+\subsubsection[{lists}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf lists} (
+\begin{DoxyParamCaption}
+\item[{\$}]{order\-By = {\ttfamily \char`\"{}id\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1users_a40b92b73e3f7a98a9ffa658a5fad5a6d}
+\-Returns an array of all user beans
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$order\-By} & \-Order \-By \$order\-By \-A\-S\-C\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+array 
+\end{DoxyReturn}
+
+
+\-Definition at line 38 of file users.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return R::findAll('user', ' ORDER BY ? ASC ', [$orderBy]);
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1users_ace46b3447183597a25fbac394e4151b8}{\index{common\-::user\-::legacy\-::users@{common\-::user\-::legacy\-::users}!remove\-By\-Id@{remove\-By\-Id}}
+\index{remove\-By\-Id@{remove\-By\-Id}!common::user::legacy::users@{common\-::user\-::legacy\-::users}}
+\subsubsection[{remove\-By\-Id}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf remove\-By\-Id} (
+\begin{DoxyParamCaption}
+\item[{\$}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1users_ace46b3447183597a25fbac394e4151b8}
+\-Removes an user by his id
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+integer & {\em \$id} & id of user \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 78 of file users.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if ($user = R::findOne('user', ' id = ? ', [$id])) {
+            R::trash($user);
+        }
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1users_afbb19ebbe6aa86e0b25248a0826c10d6}{\index{common\-::user\-::legacy\-::users@{common\-::user\-::legacy\-::users}!remove\-By\-Username@{remove\-By\-Username}}
+\index{remove\-By\-Username@{remove\-By\-Username}!common::user::legacy::users@{common\-::user\-::legacy\-::users}}
+\subsubsection[{remove\-By\-Username}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf remove\-By\-Username} (
+\begin{DoxyParamCaption}
+\item[{\$}]{username}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1users_afbb19ebbe6aa86e0b25248a0826c10d6}
+\-Removes an user by his name
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$username} & \-Username \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 65 of file users.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $userdbname = setup::getValidation("username");
+        if ($user = R::findOne('user', ' ' . $userdbname . ' = ? ', [$username]
+      )) {
+            R::trash($user);
+        }
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/legacy/users.\-php\end{DoxyCompactItemize}

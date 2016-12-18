@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1legacy_1_1_config" kind="class" prot="public">
+    <compoundname>common::user::legacy::Config</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_config_1a1c276df94c6901e87b364e6302fbd2e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static setConfig</definition>
+        <argsstring>()</argsstring>
+        <name>setConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Closure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/Config.php" line="43" bodyfile="/home/travis/build/common-libs/user/src/legacy/Config.php" bodystart="42" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/Config.php" line="37" bodyfile="/home/travis/build/common-libs/user/src/legacy/Config.php" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_config_1a1c276df94c6901e87b364e6302fbd2e4" prot="public" virt="non-virtual"><scope>common::user::legacy::Config</scope><name>setConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

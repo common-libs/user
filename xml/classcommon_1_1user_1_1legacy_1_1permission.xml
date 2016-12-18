@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1legacy_1_1permission" kind="class" prot="public">
+    <compoundname>common::user::legacy::permission</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1permission_1aad04b6f3304fe6a13d5be37f7cd28938" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$permission</definition>
+        <argsstring></argsstring>
+        <name>$permission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/permission.php" line="36" bodyfile="/home/travis/build/common-libs/user/src/legacy/permission.php" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1permission_1a4717bbfc70a40a57ee741ed70766c309" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($name)</argsstring>
+        <name>__construct</name>
+        <param>
+          <type>$</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>permission constructor.</para><para>auto creates a new permission if necessary</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/permission.php" line="46" bodyfile="/home/travis/build/common-libs/user/src/legacy/permission.php" bodystart="45" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1permission_1a478067ecf173884c2ee3e5b94e746200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getPermission</definition>
+        <argsstring>()</argsstring>
+        <name>getPermission</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return permission db object</para><para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/permission.php" line="74" bodyfile="/home/travis/build/common-libs/user/src/legacy/permission.php" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1permission_1ac33ee765f5ad9f134540bac393721cfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>alias for getPermission</para><para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/permission.php" line="84" bodyfile="/home/travis/build/common-libs/user/src/legacy/permission.php" bodystart="83" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1permission_1a3a934bd1e982502106ee5dfac2e4e2ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static check</definition>
+        <argsstring>()</argsstring>
+        <name>check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>checks if table is created </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/permission.php" line="60" bodyfile="/home/travis/build/common-libs/user/src/legacy/permission.php" bodystart="59" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/permission.php" line="32" bodyfile="/home/travis/build/common-libs/user/src/legacy/permission.php" bodystart="31" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1legacy_1_1permission_1aad04b6f3304fe6a13d5be37f7cd28938" prot="protected" virt="non-virtual"><scope>common::user::legacy::permission</scope><name>$permission</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1permission_1a4717bbfc70a40a57ee741ed70766c309" prot="public" virt="non-virtual"><scope>common::user::legacy::permission</scope><name>__construct</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1permission_1a3a934bd1e982502106ee5dfac2e4e2ed" prot="public" virt="non-virtual"><scope>common::user::legacy::permission</scope><name>check</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1permission_1ac33ee765f5ad9f134540bac393721cfe" prot="public" virt="non-virtual"><scope>common::user::legacy::permission</scope><name>get</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1permission_1a478067ecf173884c2ee3e5b94e746200" prot="public" virt="non-virtual"><scope>common::user::legacy::permission</scope><name>getPermission</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

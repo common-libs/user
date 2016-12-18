@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="namespacecommon_1_1user_1_1exception" kind="namespace">
+    <compoundname>common::user::exception</compoundname>
+    <innerclass refid="classcommon_1_1user_1_1exception_1_1_bad_charactes_username_validation_exception" prot="public">common::user::exception::BadCharactesUsernameValidationException</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1exception_1_1_field_not_allowed_validation_exception" prot="public">common::user::exception::FieldNotAllowedValidationException</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1exception_1_1_max_length_validation_exception" prot="public">common::user::exception::MaxLengthValidationException</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1exception_1_1_min_length_validation_exception" prot="public">common::user::exception::MinLengthValidationException</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1exception_1_1_no_valid_email_validation_exception" prot="public">common::user::exception::NoValidEmailValidationException</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1exception_1_1_required_validation_exception" prot="public">common::user::exception::RequiredValidationException</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1exception_1_1_username_taken_validation_exception" prot="public">common::user::exception::UsernameTakenValidationException</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/exception/BadCharactesUsernameValidationException.php" line="2"/>
+  </compounddef>
+</doxygen>

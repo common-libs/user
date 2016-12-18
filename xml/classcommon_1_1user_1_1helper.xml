@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1helper" kind="class" prot="public">
+    <compoundname>common::user::helper</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1helper_1a8ac26ffb82d068a496693fa9ff0848bc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static hash</definition>
+        <argsstring>(string $str)</argsstring>
+        <name>hash</name>
+        <param>
+          <type>string $</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hashes an string/password</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to hash</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/helper.php" line="21" bodyfile="/home/travis/build/common-libs/user/src/helper.php" bodystart="20" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/helper.php" line="12" bodyfile="/home/travis/build/common-libs/user/src/helper.php" bodystart="11" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1helper_1a8ac26ffb82d068a496693fa9ff0848bc" prot="public" virt="non-virtual"><scope>common::user::helper</scope><name>hash</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

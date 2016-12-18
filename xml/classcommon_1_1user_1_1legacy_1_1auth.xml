@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1legacy_1_1auth" kind="class" prot="public">
+    <compoundname>common::user::legacy::auth</compoundname>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1auth_1a598ca4e71b15a1313ec95f0df1027ca5" prot="protected" static="yes" mutable="no">
+        <type>static</type>
+        <definition>$user</definition>
+        <argsstring></argsstring>
+        <name>$user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="32" bodyfile="/home/travis/build/common-libs/user/src/legacy/auth.php" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1auth_1acd6f0a47fb21845165c3716723d50393" prot="protected" static="yes" mutable="no">
+        <type>static</type>
+        <definition>$isGuest</definition>
+        <argsstring></argsstring>
+        <name>$isGuest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="36" bodyfile="/home/travis/build/common-libs/user/src/legacy/auth.php" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1auth_1a9f0be6ae273d3669e11c29910a0be338" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>init the class and set php session </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="42" bodyfile="/home/travis/build/common-libs/user/src/legacy/auth.php" bodystart="41" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1auth_1a7949f68385a98a60ff42ea3c3a768ec7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static user</definition>
+        <argsstring>()</argsstring>
+        <name>user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the user</para><para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="62" bodyfile="/home/travis/build/common-libs/user/src/legacy/auth.php" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1auth_1a3d6c9ff1005fcc403d30d5dd8ef70210" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static isGuest</definition>
+        <argsstring>()</argsstring>
+        <name>isGuest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check if the current user is guest</para><para><simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="72" bodyfile="/home/travis/build/common-libs/user/src/legacy/auth.php" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1auth_1aad19326559a5beda6d7cfc3e83fefd12" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static login</definition>
+        <argsstring>($username, $password)</argsstring>
+        <name>login</name>
+        <param>
+          <type>$</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>username </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>password</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="83" bodyfile="/home/travis/build/common-libs/user/src/legacy/auth.php" bodystart="82" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1auth_1a1e34160e903835a43123f538e93457a2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static logout</definition>
+        <argsstring>()</argsstring>
+        <name>logout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>logout the current user </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="98" bodyfile="/home/travis/build/common-libs/user/src/legacy/auth.php" bodystart="97" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1auth_1a7a85e2ad55bb6f47464978a83f3a8924" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static requires</definition>
+        <argsstring>($permission)</argsstring>
+        <name>requires</name>
+        <param>
+          <type>$</type>
+          <declname>permission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check if current user has a permission</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$permission</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of permission</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="114" bodyfile="/home/travis/build/common-libs/user/src/legacy/auth.php" bodystart="113" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1auth_1ae0ca697f3332a55efcbb374972946a99" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static required</definition>
+        <argsstring>($permission)</argsstring>
+        <name>required</name>
+        <param>
+          <type>$</type>
+          <declname>permission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check if current user has a permission</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$permission</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of permission </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="127" bodyfile="/home/travis/build/common-libs/user/src/legacy/auth.php" bodystart="126" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="28" bodyfile="/home/travis/build/common-libs/user/src/legacy/auth.php" bodystart="27" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1legacy_1_1auth_1acd6f0a47fb21845165c3716723d50393" prot="protected" virt="non-virtual"><scope>common::user::legacy::auth</scope><name>$isGuest</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a598ca4e71b15a1313ec95f0df1027ca5" prot="protected" virt="non-virtual"><scope>common::user::legacy::auth</scope><name>$user</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a9f0be6ae273d3669e11c29910a0be338" prot="public" virt="non-virtual"><scope>common::user::legacy::auth</scope><name>init</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a3d6c9ff1005fcc403d30d5dd8ef70210" prot="public" virt="non-virtual"><scope>common::user::legacy::auth</scope><name>isGuest</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1auth_1aad19326559a5beda6d7cfc3e83fefd12" prot="public" virt="non-virtual"><scope>common::user::legacy::auth</scope><name>login</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a1e34160e903835a43123f538e93457a2" prot="public" virt="non-virtual"><scope>common::user::legacy::auth</scope><name>logout</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1auth_1ae0ca697f3332a55efcbb374972946a99" prot="public" virt="non-virtual"><scope>common::user::legacy::auth</scope><name>required</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a7a85e2ad55bb6f47464978a83f3a8924" prot="public" virt="non-virtual"><scope>common::user::legacy::auth</scope><name>requires</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a7949f68385a98a60ff42ea3c3a768ec7" prot="public" virt="non-virtual"><scope>common::user::legacy::auth</scope><name>user</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

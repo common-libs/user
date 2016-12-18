@@ -1,0 +1,56 @@
+\hypertarget{classcommon_1_1user_1_1helper}{\section{helper \-Class \-Reference}
+\label{classcommon_1_1user_1_1helper}\index{helper@{helper}}
+}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcommon_1_1user_1_1helper_a8ac26ffb82d068a496693fa9ff0848bc}{hash} (string \$str)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 11 of file helper.\-php.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1helper_a8ac26ffb82d068a496693fa9ff0848bc}{\index{common\-::user\-::helper@{common\-::user\-::helper}!hash@{hash}}
+\index{hash@{hash}!common::user::helper@{common\-::user\-::helper}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf hash} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1helper_a8ac26ffb82d068a496693fa9ff0848bc}
+\-Hashes an string/password
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$str} & \-String to hash\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+string 
+\end{DoxyReturn}
+
+
+\-Definition at line 20 of file helper.\-php.
+
+
+\begin{DoxyCode}
+                                             : string
+    {
+        if (empty(Config::init()->secret)) {
+            Config::init()->secret = uniqid();
+        }
+
+        return hash("sha512", Config::init()->secret . $str . "common-libs" . 
+      $str . "user");
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/helper.\-php\end{DoxyCompactItemize}

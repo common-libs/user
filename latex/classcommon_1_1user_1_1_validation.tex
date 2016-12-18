@@ -1,0 +1,245 @@
+\hypertarget{classcommon_1_1user_1_1_validation}{\section{\-Validation \-Class \-Reference}
+\label{classcommon_1_1user_1_1_validation}\index{\-Validation@{\-Validation}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcommon_1_1user_1_1_validation_a678d8bf3db3b3e6c453c1dd55f054482}{name} (string \$string)
+\item 
+\hyperlink{classcommon_1_1user_1_1_validation_ab52e598c4419ae387fe527c3883ae2c7}{validate} (string \$\hyperlink{classcommon_1_1user_1_1_validation_a678d8bf3db3b3e6c453c1dd55f054482}{name}, \$value)
+\item 
+\hyperlink{classcommon_1_1user_1_1_validation_a004397797e263171281784084cf4a502}{get} (string \$\hyperlink{classcommon_1_1user_1_1_validation_a678d8bf3db3b3e6c453c1dd55f054482}{name})
+\item 
+\hyperlink{classcommon_1_1user_1_1_validation_ab2fbcc854e20c3445beb3d3e1f042f8b}{is} (string \$field, string \$\hyperlink{classcommon_1_1user_1_1_validation_a678d8bf3db3b3e6c453c1dd55f054482}{name})
+\item 
+\hyperlink{classcommon_1_1user_1_1_validation_aba0d5b303383fb5b1fabb5fd01cd3800}{get\-All} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1_validation_a8dcd469e6c336555e43c3003b0a0da54}{{\bfseries \$forms} = \mbox{[}$\,$\mbox{]}}\label{classcommon_1_1user_1_1_validation_a8dcd469e6c336555e43c3003b0a0da54}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 36 of file \-Validation.\-php.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1_validation_a004397797e263171281784084cf4a502}{\index{common\-::user\-::\-Validation@{common\-::user\-::\-Validation}!get@{get}}
+\index{get@{get}!common::user::Validation@{common\-::user\-::\-Validation}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf get} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{name}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1_validation_a004397797e263171281784084cf4a502}
+get field name of username$|$password$|$email
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$name} & field\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+string 
+\end{DoxyReturn}
+
+
+\-Definition at line 118 of file \-Validation.\-php.
+
+
+\begin{DoxyCode}
+                                      : string
+    {
+        $forms = $this->forms;
+        foreach ($forms as $id => $item) {
+            $val = $item->get();
+            if (isset($val[$name]) && $val[$name]) {
+                return $id;
+            }
+        }
+
+        return false;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1_validation_aba0d5b303383fb5b1fabb5fd01cd3800}{\index{common\-::user\-::\-Validation@{common\-::user\-::\-Validation}!get\-All@{get\-All}}
+\index{get\-All@{get\-All}!common::user::Validation@{common\-::user\-::\-Validation}}
+\subsubsection[{get\-All}]{\setlength{\rightskip}{0pt plus 5cm}{\bf get\-All} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1_validation_aba0d5b303383fb5b1fabb5fd01cd3800}
+get all validation parameters from all fields
+
+\begin{DoxyReturn}{\-Returns}
+array 
+\end{DoxyReturn}
+
+
+\-Definition at line 149 of file \-Validation.\-php.
+
+
+\begin{DoxyCode}
+                             : array
+    {
+        $forms = $this->forms;
+        $a     = [];
+        foreach ($forms as $id => $item) {
+            $a[$id] = $item->get();
+        }
+
+        return $a;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1_validation_ab2fbcc854e20c3445beb3d3e1f042f8b}{\index{common\-::user\-::\-Validation@{common\-::user\-::\-Validation}!is@{is}}
+\index{is@{is}!common::user::Validation@{common\-::user\-::\-Validation}}
+\subsubsection[{is}]{\setlength{\rightskip}{0pt plus 5cm}{\bf is} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{field, }
+\item[{string \$}]{name}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1_validation_ab2fbcc854e20c3445beb3d3e1f042f8b}
+get one validation parameter from one field
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$field} & field \\
+\hline
+string & {\em \$name} & validation parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+mixed 
+\end{DoxyReturn}
+
+
+\-Definition at line 139 of file \-Validation.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return $this->forms[$field]->get()[$name];
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1_validation_a678d8bf3db3b3e6c453c1dd55f054482}{\index{common\-::user\-::\-Validation@{common\-::user\-::\-Validation}!name@{name}}
+\index{name@{name}!common::user::Validation@{common\-::user\-::\-Validation}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf name} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{string}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1_validation_a678d8bf3db3b3e6c453c1dd55f054482}
+create new validation
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$string} & name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{classcommon_1_1user_1_1_validation_object}{\-Validation\-Object} 
+\end{DoxyReturn}
+
+
+\-Definition at line 50 of file \-Validation.\-php.
+
+
+\begin{DoxyCode}
+                                         : ValidationObject
+    {
+        if (!isset($this->forms[$string])) {
+            $this->forms[$string] = new ValidationObject($string);
+        }
+
+        return $this->forms[$string];
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1_validation_ab52e598c4419ae387fe527c3883ae2c7}{\index{common\-::user\-::\-Validation@{common\-::user\-::\-Validation}!validate@{validate}}
+\index{validate@{validate}!common::user::Validation@{common\-::user\-::\-Validation}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf validate} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{name, }
+\item[{\$}]{value}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1_validation_ab52e598c4419ae387fe527c3883ae2c7}
+validate a field
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$name} & field \\
+\hline
+mixed & {\em \$value} & value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+mixed 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{\-Exceptions}
+{\em $\backslash$common$\backslash$user$\backslash$exception$\backslash$\-Bad\-Charactes\-Username\-Validation\-Exception} & \\
+\hline
+{\em $\backslash$common$\backslash$user$\backslash$exception$\backslash$\-Field\-Not\-Allowed\-Validation\-Exception} & \\
+\hline
+{\em $\backslash$common$\backslash$user$\backslash$exception$\backslash$\-Max\-Length\-Validation\-Exception} & \\
+\hline
+{\em $\backslash$common$\backslash$user$\backslash$exception$\backslash$\-Min\-Length\-Validation\-Exception} & \\
+\hline
+{\em $\backslash$common$\backslash$user$\backslash$exception$\backslash$\-No\-Valid\-Email\-Validation\-Exception} & \\
+\hline
+{\em $\backslash$common$\backslash$user$\backslash$exception$\backslash$\-Required\-Validation\-Exception} & \\
+\hline
+{\em $\backslash$common$\backslash$user$\backslash$exception$\backslash$\-Username\-Taken\-Validation\-Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\-Definition at line 74 of file \-Validation.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if (!isset($this->forms[$name]) && Config::init()->protectUserFields) {
+            throw new FieldNotAllowedValidationException();
+        }
+        if (!isset($this->forms[$name])) {
+            return $value;
+        }
+        $val = $this->forms[$name]->get();
+        if (strlen($value) > $val["max"]) {
+            throw new MaxLengthValidationException();
+        }
+        if (strlen($value) < $val["min"]) {
+            throw new MinLengthValidationException();
+        }
+        if ($val["username"] && preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', 
+      $value)) {
+            throw new BadCharactesUsernameValidationException();
+        }
+        if ($val["username"] && R::findOne('user', ' username = ? ', [$value]))
+       {
+            throw new UsernameTakenValidationException();
+        }
+        if ($val["required"] && empty($value)) {
+            throw new RequiredValidationException();
+        }
+        if (!empty($val["default"]) && empty($value)) {
+            $value = $val["default"];
+        }
+        if ($val["email"] && !filter_var($value, FILTER_VALIDATE_EMAIL)) {
+            throw new NoValidEmailValidationException();
+        }
+        if ($val["password"]) {
+            $value = setup::doHash($value);
+        }
+
+        return $value;
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/\-Validation.\-php\end{DoxyCompactItemize}

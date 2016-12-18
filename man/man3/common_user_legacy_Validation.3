@@ -1,0 +1,215 @@
+.TH "Validation" 3 "Sun Dec 18 2016" "Version 1.0.0 alpha" "Common Libs / User" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Validation \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBname\fP ($string)"
+.br
+.ti -1c
+.RI "\fBvalidate\fP ($\fBname\fP, $value)"
+.br
+.ti -1c
+.RI "\fBget\fP ($\fBname\fP)"
+.br
+.ti -1c
+.RI "\fBis\fP ($field, $\fBname\fP)"
+.br
+.ti -1c
+.RI "\fBgetAll\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$forms\fP = []"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 36 of file Validation\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBget\fP ($name)"get field name of username|password|email
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$name\fP field
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definition at line 118 of file Validation\&.php\&.
+.PP
+.nf
+    {
+        $forms = $this->forms;
+        foreach ($forms as $id => $item) {
+            $val = $item->get();
+            if (isset($val[$name]) && $val[$name]) {
+                return $id;
+            }
+        }
+
+        return false;
+    }
+.fi
+.SS "\fBgetAll\fP ()"get all validation parameters from all fields
+.PP
+\fBReturns:\fP
+.RS 4
+array 
+.RE
+.PP
+
+.PP
+Definition at line 149 of file Validation\&.php\&.
+.PP
+.nf
+    {
+        $forms = $this->forms;
+        $a     = [];
+        foreach ($forms as $id => $item) {
+            $a[$id] = $item->get();
+        }
+
+        return $a;
+    }
+.fi
+.SS "\fBis\fP ($field, $name)"get one validation parameter from one field
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$field\fP field 
+.br
+\fI$name\fP validation parameter
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+mixed 
+.RE
+.PP
+
+.PP
+Definition at line 139 of file Validation\&.php\&.
+.PP
+.nf
+    {
+        return $this->forms[$field]->get()[$name];
+    }
+.fi
+.SS "\fBname\fP ($string)"create new validation
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$string\fP name
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBValidationObject\fP 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file Validation\&.php\&.
+.PP
+.nf
+    {
+        if (!isset($this->forms[$string])) {
+            $this->forms[$string] = new ValidationObject($string);
+        }
+
+        return $this->forms[$string];
+    }
+.fi
+.SS "\fBvalidate\fP ($name, $value)"validate a field
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$name\fP field 
+.br
+\fI$value\fP value
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+mixed 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\\common\\user\\exception\\BadCharactesUsernameValidationException\fP 
+.br
+\fI\\common\\user\\exception\\FieldNotAllowedValidationException\fP 
+.br
+\fI\\common\\user\\exception\\MaxLengthValidationException\fP 
+.br
+\fI\\common\\user\\exception\\MinLengthValidationException\fP 
+.br
+\fI\\common\\user\\exception\\NoValidEmailValidationException\fP 
+.br
+\fI\\common\\user\\exception\\RequiredValidationException\fP 
+.br
+\fI\\common\\user\\exception\\UsernameTakenValidationException\fP 
+.RE
+.PP
+
+.PP
+Definition at line 74 of file Validation\&.php\&.
+.PP
+.nf
+    {
+        if (!isset($this->forms[$name]) && Config::init()->protectUserFields) {
+            throw new FieldNotAllowedValidationException();
+        }
+        if (!isset($this->forms[$name])) {
+            return $value;
+        }
+        $val = $this->forms[$name]->get();
+        if (strlen($value) > $val['max']) {
+            throw new MaxLengthValidationException();
+        }
+        if (strlen($value) < $val['min']) {
+            throw new MinLengthValidationException();
+        }
+        if ($val['username'] && preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $value)) {
+            throw new BadCharactesUsernameValidationException();
+        }
+        if ($val['username'] && R::findOne('user', ' username = ? ', [$value])) {
+            throw new UsernameTakenValidationException();
+        }
+        if ($val['required'] && empty($value)) {
+            throw new RequiredValidationException();
+        }
+        if (!empty($val['default']) && empty($value)) {
+            $value = $val['default'];
+        }
+        if ($val['email'] && !filter_var($value, FILTER_VALIDATE_EMAIL)) {
+            throw new NoValidEmailValidationException();
+        }
+        if ($val['password']) {
+            $value = setup::doHash($value);
+        }
+
+        return $value;
+    }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Common Libs / User from the source code\&.

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="legacy_2_config_8php" kind="file">
+    <compoundname>Config.php</compoundname>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1_config" prot="public">common::user::legacy::Config</innerclass>
+    <innernamespace refid="namespacecommon_1_1user_1_1legacy">common::user::legacy</innernamespace>
+    <innernamespace refid="namespacecommon">common</innernamespace>
+    <innernamespace refid="namespacecommon_1_1storage_1_1legacy_1_1storage">common::storage::legacy::storage</innernamespace>
+    <innernamespace refid="namespacecommon_1_1storage_1_1legacy_1_1file">common::storage::legacy::file</innernamespace>
+    <innernamespace refid="namespacecommon_1_1storage_1_1legacy_1_1json">common::storage::legacy::json</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="20"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">common\user\legacy;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">use<sp/>Closure;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">use<sp/>common\storage\legacy\storage;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">use<sp/>common\storage\legacy\file;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">use<sp/>common\storage\legacy\json;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classcommon_1_1user_1_1legacy_1_1_config" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcommon_1_1user_1_1legacy_1_1_config" kindref="compound">Config</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>storage</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>use<sp/>json;</highlight></codeline>
+<codeline lineno="42" refid="classcommon_1_1user_1_1legacy_1_1_config_1a1c276df94c6901e87b364e6302fbd2e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>setConfig()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>($options)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$options-&gt;setCreateIfNotExists(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$options-&gt;setPath(getcwd().</highlight><highlight class="stringliteral">&quot;/.common/user/config.json&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$options-&gt;setCache(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/travis/build/common-libs/user/src/legacy/Config.php"/>
+  </compounddef>
+</doxygen>

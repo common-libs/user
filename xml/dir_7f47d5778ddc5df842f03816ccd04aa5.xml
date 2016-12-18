@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="dir_7f47d5778ddc5df842f03816ccd04aa5" kind="dir">
+    <compoundname>src/legacy/</compoundname>
+    <innerfile refid="legacy_2auth_8php">auth.php</innerfile>
+    <innerfile refid="legacy_2_config_8php">Config.php</innerfile>
+    <innerfile refid="legacy_2helper_8php">helper.php</innerfile>
+    <innerfile refid="legacy_2permission_8php">permission.php</innerfile>
+    <innerfile refid="legacy_2role_8php">role.php</innerfile>
+    <innerfile refid="legacy_2_role_object_8php">RoleObject.php</innerfile>
+    <innerfile refid="legacy_2_roles_8php">Roles.php</innerfile>
+    <innerfile refid="legacy_2setup_8php">setup.php</innerfile>
+    <innerfile refid="legacy_2user_8php">user.php</innerfile>
+    <innerfile refid="legacy_2users_8php">users.php</innerfile>
+    <innerfile refid="legacy_2_validation_8php">Validation.php</innerfile>
+    <innerfile refid="legacy_2_validation_object_8php">ValidationObject.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/"/>
+  </compounddef>
+</doxygen>

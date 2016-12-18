@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1setup" kind="class" prot="public">
+    <compoundname>common::user::setup</compoundname>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1setup_1a320b75b46e1832c327d9d47b4cea9e7d" prot="protected" static="yes" mutable="no">
+        <type>static</type>
+        <definition>$validate</definition>
+        <argsstring></argsstring>
+        <name>$validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/setup.php" line="17" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1setup_1a1ea903cca285c7c0b4c9203932100309" prot="protected" static="yes" mutable="no">
+        <type>static</type>
+        <definition>$role</definition>
+        <argsstring></argsstring>
+        <name>$role</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/setup.php" line="21" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1setup_1ac9fdf6f2c8fb45c1d3bb9a176802b2ad" prot="protected" static="yes" mutable="no">
+        <type>static</type>
+        <definition>$hash</definition>
+        <argsstring></argsstring>
+        <name>$hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/setup.php" line="25" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1setup_1aa314bea9f4df81cbd2cb155678082912" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static validate</definition>
+        <argsstring>(Closure $param)</argsstring>
+        <name>validate</name>
+        <param>
+          <type>Closure $</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>setup validation</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>\Closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$param function to call for validation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/setup.php" line="33" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="32" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1setup_1a0d63aec80fb945ee3a1f6043e2156051" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static validation</definition>
+        <argsstring>($name=false, $value=false)</argsstring>
+        <name>validation</name>
+        <param>
+          <type>$</type>
+          <declname>name</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>value</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>do validation</para><para>calling without parameters this method returns all validation parameters calling with two parameters this method validate an value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>bool</parametertype>
+<parametertype>string</parametertype>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of field </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>bool</parametertype>
+<parametertype>string</parametertype>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of field</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array|string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/setup.php" line="50" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="49" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1setup_1a1f7f0422f10a5b412cc661235b0fda2f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static getValidation</definition>
+        <argsstring>(string $name, $value=false)</argsstring>
+        <name>getValidation</name>
+        <param>
+          <type>string $</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>value</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get validation field(s)</para><para>calling with one parameters this method returns the field name of username|password|email calling with two parameters this method returns one validation parameter from one field</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>bool</parametertype>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mixed|string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/setup.php" line="70" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1setup_1a716abcfa0c82470936af05770e097fb4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static roles</definition>
+        <argsstring>($param)</argsstring>
+        <name>roles</name>
+        <param>
+          <type>$</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>setup roles</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>Closure</parametertype>
+<parametername>$param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function to call for role creating </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/setup.php" line="80" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1setup_1a7e6401bd44979a11d91987321a39be9f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static hash</definition>
+        <argsstring>(Closure $param)</argsstring>
+        <name>hash</name>
+        <param>
+          <type>Closure $</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>setup hash function</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>Closure</parametertype>
+<parametername>$param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function to call for hash </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/setup.php" line="91" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1setup_1a192e5e42e0507d342adb1141524723d7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static doHash</definition>
+        <argsstring>(string $password)</argsstring>
+        <name>doHash</name>
+        <param>
+          <type>string $</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>hashes a sting to custom hash function</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to hash</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/setup.php" line="103" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1setup_1a8a811c28ecf188643b22c3f7316855cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static config</definition>
+        <argsstring>(Closure $param)</argsstring>
+        <name>config</name>
+        <param>
+          <type>Closure $</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>setup config <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>\Closure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$param function to call for config setup </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/setup.php" line="112" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="111" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/setup.php" line="13" bodyfile="/home/travis/build/common-libs/user/src/setup.php" bodystart="12" bodyend="115"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1setup_1ac9fdf6f2c8fb45c1d3bb9a176802b2ad" prot="protected" virt="non-virtual"><scope>common::user::setup</scope><name>$hash</name></member>
+      <member refid="classcommon_1_1user_1_1setup_1a1ea903cca285c7c0b4c9203932100309" prot="protected" virt="non-virtual"><scope>common::user::setup</scope><name>$role</name></member>
+      <member refid="classcommon_1_1user_1_1setup_1a320b75b46e1832c327d9d47b4cea9e7d" prot="protected" virt="non-virtual"><scope>common::user::setup</scope><name>$validate</name></member>
+      <member refid="classcommon_1_1user_1_1setup_1a8a811c28ecf188643b22c3f7316855cb" prot="public" virt="non-virtual"><scope>common::user::setup</scope><name>config</name></member>
+      <member refid="classcommon_1_1user_1_1setup_1a192e5e42e0507d342adb1141524723d7" prot="public" virt="non-virtual"><scope>common::user::setup</scope><name>doHash</name></member>
+      <member refid="classcommon_1_1user_1_1setup_1a1f7f0422f10a5b412cc661235b0fda2f" prot="public" virt="non-virtual"><scope>common::user::setup</scope><name>getValidation</name></member>
+      <member refid="classcommon_1_1user_1_1setup_1a7e6401bd44979a11d91987321a39be9f" prot="public" virt="non-virtual"><scope>common::user::setup</scope><name>hash</name></member>
+      <member refid="classcommon_1_1user_1_1setup_1a716abcfa0c82470936af05770e097fb4" prot="public" virt="non-virtual"><scope>common::user::setup</scope><name>roles</name></member>
+      <member refid="classcommon_1_1user_1_1setup_1aa314bea9f4df81cbd2cb155678082912" prot="public" virt="non-virtual"><scope>common::user::setup</scope><name>validate</name></member>
+      <member refid="classcommon_1_1user_1_1setup_1a0d63aec80fb945ee3a1f6043e2156051" prot="public" virt="non-virtual"><scope>common::user::setup</scope><name>validation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

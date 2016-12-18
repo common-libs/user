@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1legacy_1_1_validation" kind="class" prot="public">
+    <compoundname>common::user::legacy::Validation</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1_validation_1a8dcd469e6c336555e43c3003b0a0da54" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$forms</definition>
+        <argsstring></argsstring>
+        <name>$forms</name>
+        <initializer> []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/Validation.php" line="41" bodyfile="/home/travis/build/common-libs/user/src/legacy/Validation.php" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_1a3c49872dc41e063d02a5336a54780f15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>name</definition>
+        <argsstring>($string)</argsstring>
+        <name>name</name>
+        <param>
+          <type>$</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>create new validation</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classcommon_1_1user_1_1legacy_1_1_validation_object" kindref="compound">ValidationObject</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/Validation.php" line="51" bodyfile="/home/travis/build/common-libs/user/src/legacy/Validation.php" bodystart="50" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_1a1ba8ea5a7fb74d491411290ec8c76402" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>validate</definition>
+        <argsstring>($name, $value)</argsstring>
+        <name>validate</name>
+        <param>
+          <type>$</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>validate a field</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>mixed</parametertype>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mixed </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>\common\user\exception\BadCharactesUsernameValidationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>\common\user\exception\FieldNotAllowedValidationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>\common\user\exception\MaxLengthValidationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>\common\user\exception\MinLengthValidationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>\common\user\exception\NoValidEmailValidationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>\common\user\exception\RequiredValidationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>\common\user\exception\UsernameTakenValidationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/Validation.php" line="75" bodyfile="/home/travis/build/common-libs/user/src/legacy/Validation.php" bodystart="74" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_1af5ea6a083ddb07beb8a30dd32e309ceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get</definition>
+        <argsstring>($name)</argsstring>
+        <name>get</name>
+        <param>
+          <type>$</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get field name of username|password|email</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/Validation.php" line="119" bodyfile="/home/travis/build/common-libs/user/src/legacy/Validation.php" bodystart="118" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_1af51af2c766e3db5ae103d28479add0db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>is</definition>
+        <argsstring>($field, $name)</argsstring>
+        <name>is</name>
+        <param>
+          <type>$</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get one validation parameter from one field</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>validation parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mixed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/Validation.php" line="140" bodyfile="/home/travis/build/common-libs/user/src/legacy/Validation.php" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_1aba0d5b303383fb5b1fabb5fd01cd3800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getAll</definition>
+        <argsstring>()</argsstring>
+        <name>getAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get all validation parameters from all fields</para><para><simplesect kind="return"><para>array </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/Validation.php" line="150" bodyfile="/home/travis/build/common-libs/user/src/legacy/Validation.php" bodystart="149" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/Validation.php" line="37" bodyfile="/home/travis/build/common-libs/user/src/legacy/Validation.php" bodystart="36" bodyend="159"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1a8dcd469e6c336555e43c3003b0a0da54" prot="protected" virt="non-virtual"><scope>common::user::legacy::Validation</scope><name>$forms</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1af5ea6a083ddb07beb8a30dd32e309ceb" prot="public" virt="non-virtual"><scope>common::user::legacy::Validation</scope><name>get</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1aba0d5b303383fb5b1fabb5fd01cd3800" prot="public" virt="non-virtual"><scope>common::user::legacy::Validation</scope><name>getAll</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1af51af2c766e3db5ae103d28479add0db" prot="public" virt="non-virtual"><scope>common::user::legacy::Validation</scope><name>is</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1a3c49872dc41e063d02a5336a54780f15" prot="public" virt="non-virtual"><scope>common::user::legacy::Validation</scope><name>name</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1a1ba8ea5a7fb74d491411290ec8c76402" prot="public" virt="non-virtual"><scope>common::user::legacy::Validation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

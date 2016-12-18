@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1legacy_1_1users" kind="class" prot="public">
+    <compoundname>common::user::legacy::users</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1users_1a40b92b73e3f7a98a9ffa658a5fad5a6d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static lists</definition>
+        <argsstring>($orderBy=&quot;id&quot;)</argsstring>
+        <name>lists</name>
+        <param>
+          <type>$</type>
+          <declname>orderBy</declname>
+          <defval>&quot;id&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an array of all user beans</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$orderBy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Order By $orderBy ASC</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/users.php" line="39" bodyfile="/home/travis/build/common-libs/user/src/legacy/users.php" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1users_1a6051c5d0c8fad68cb9abb30ea88074b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static isUser</definition>
+        <argsstring>($username)</argsstring>
+        <name>isUser</name>
+        <param>
+          <type>$</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>checks if a user exists</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Username</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/users.php" line="51" bodyfile="/home/travis/build/common-libs/user/src/legacy/users.php" bodystart="50" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1users_1afbb19ebbe6aa86e0b25248a0826c10d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static removeByUsername</definition>
+        <argsstring>($username)</argsstring>
+        <name>removeByUsername</name>
+        <param>
+          <type>$</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes an user by his name</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Username </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/users.php" line="66" bodyfile="/home/travis/build/common-libs/user/src/legacy/users.php" bodystart="65" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1users_1ace46b3447183597a25fbac394e4151b8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static removeById</definition>
+        <argsstring>($id)</argsstring>
+        <name>removeById</name>
+        <param>
+          <type>$</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes an user by his id</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>integer</parametertype>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of user </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/users.php" line="79" bodyfile="/home/travis/build/common-libs/user/src/legacy/users.php" bodystart="78" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/users.php" line="30" bodyfile="/home/travis/build/common-libs/user/src/legacy/users.php" bodystart="29" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1legacy_1_1users_1a6051c5d0c8fad68cb9abb30ea88074b6" prot="public" virt="non-virtual"><scope>common::user::legacy::users</scope><name>isUser</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1users_1a40b92b73e3f7a98a9ffa658a5fad5a6d" prot="public" virt="non-virtual"><scope>common::user::legacy::users</scope><name>lists</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1users_1ace46b3447183597a25fbac394e4151b8" prot="public" virt="non-virtual"><scope>common::user::legacy::users</scope><name>removeById</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1users_1afbb19ebbe6aa86e0b25248a0826c10d6" prot="public" virt="non-virtual"><scope>common::user::legacy::users</scope><name>removeByUsername</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

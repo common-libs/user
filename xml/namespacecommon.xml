@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="namespacecommon" kind="namespace">
+    <compoundname>common</compoundname>
+    <innernamespace refid="namespacecommon_1_1user">common::user</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class auth</para><para>Class Config</para><para>Class BadCharactesUsernameValidationException</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>Class FieldNotAllowedValidationException</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>Class MaxLengthValidationException</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>Class MinLengthValidationException</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>Class NoValidEmailValidationException</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>Class RequiredValidationException</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>Class UsernameTakenValidationException</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+<para>Class helper</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para>Class auth</para><para>Class Config</para><para>Class helper</para><para>Class permission</para><para>Class role</para><para>Class RoleObject</para><para>Class Roles</para><para>Class setup</para><para>Class user</para><para>Class users</para><para>Class Validation</para><para>\</para><para>Class ValidationObject</para><para>Class permission</para><para>Class role</para><para>Class RoleObject</para><para>Class Roles</para><para>Class setup</para><para>Class user</para><para>Class Validation</para><para>Class ValidationObject</para>    </detaileddescription>
+    <location file="[generated]" line="1"/>
+  </compounddef>
+</doxygen>

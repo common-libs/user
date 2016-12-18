@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1legacy_1_1role" kind="class" prot="public">
+    <compoundname>common::user::legacy::role</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1role_1a1ea903cca285c7c0b4c9203932100309" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$role</definition>
+        <argsstring></argsstring>
+        <name>$role</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="37" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1role_1a0696987c5e6ce3efd6da1ca1a8d47fcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($roleName)</argsstring>
+        <name>__construct</name>
+        <param>
+          <type>$</type>
+          <declname>roleName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>role constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$roleName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="45" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="44" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1role_1a63a43d301f3974506cc8942dddc82dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>equals</definition>
+        <argsstring>($role)</argsstring>
+        <name>equals</name>
+        <param>
+          <type>$</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>checks if given role object is equal to current one</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>\common\user\legacy\role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$role role object</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="78" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1role_1a594d31710145cca1611de0f5ac26474b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>addPermissions</definition>
+        <argsstring>($permissions)</argsstring>
+        <name>addPermissions</name>
+        <param>
+          <type>$</type>
+          <declname>permissions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>add permissions to role</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$permissions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of permission names </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="102" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="101" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1role_1acafe18e4082708191900b3a13406a115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>addPermission</definition>
+        <argsstring>($permission)</argsstring>
+        <name>addPermission</name>
+        <param>
+          <type>$</type>
+          <declname>permission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>add a permission to role</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$permission</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>permission name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="116" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="115" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1role_1a98e8f81c4e0869a6adf4a36ca1a6860a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getPermissions</definition>
+        <argsstring>()</argsstring>
+        <name>getPermissions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return all permission assigned to this role</para><para><simplesect kind="return"><para>array </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="128" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="127" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1role_1a0b2e7098f1c48a7439a42bada5b69689" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getRole</definition>
+        <argsstring>()</argsstring>
+        <name>getRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get db role object</para><para><simplesect kind="return"><para>OODBBean </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="143" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="142" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1role_1acefac8c3f81c7bd751403a683623fcbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hasPermission</definition>
+        <argsstring>($permissionName)</argsstring>
+        <name>hasPermission</name>
+        <param>
+          <type>$</type>
+          <declname>permissionName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check if a role has a permission</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$permissionName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of permission</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="155" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="154" bodyend="163"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1role_1a08d78dc7411f3317df9509f962ecccf4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static get</definition>
+        <argsstring>($role)</argsstring>
+        <name>get</name>
+        <param>
+          <type>$</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>alias for new role($role)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>role name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="63" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="62" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1role_1a3a934bd1e982502106ee5dfac2e4e2ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static check</definition>
+        <argsstring>()</argsstring>
+        <name>check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check if table was created </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="86" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="85" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/role.php" line="32" bodyfile="/home/travis/build/common-libs/user/src/legacy/role.php" bodystart="31" bodyend="164"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1legacy_1_1role_1a1ea903cca285c7c0b4c9203932100309" prot="protected" virt="non-virtual"><scope>common::user::legacy::role</scope><name>$role</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1role_1a0696987c5e6ce3efd6da1ca1a8d47fcb" prot="public" virt="non-virtual"><scope>common::user::legacy::role</scope><name>__construct</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1role_1acafe18e4082708191900b3a13406a115" prot="public" virt="non-virtual"><scope>common::user::legacy::role</scope><name>addPermission</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1role_1a594d31710145cca1611de0f5ac26474b" prot="public" virt="non-virtual"><scope>common::user::legacy::role</scope><name>addPermissions</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1role_1a3a934bd1e982502106ee5dfac2e4e2ed" prot="public" virt="non-virtual"><scope>common::user::legacy::role</scope><name>check</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1role_1a63a43d301f3974506cc8942dddc82dff" prot="public" virt="non-virtual"><scope>common::user::legacy::role</scope><name>equals</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1role_1a08d78dc7411f3317df9509f962ecccf4" prot="public" virt="non-virtual"><scope>common::user::legacy::role</scope><name>get</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1role_1a98e8f81c4e0869a6adf4a36ca1a6860a" prot="public" virt="non-virtual"><scope>common::user::legacy::role</scope><name>getPermissions</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1role_1a0b2e7098f1c48a7439a42bada5b69689" prot="public" virt="non-virtual"><scope>common::user::legacy::role</scope><name>getRole</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1role_1acefac8c3f81c7bd751403a683623fcbf" prot="public" virt="non-virtual"><scope>common::user::legacy::role</scope><name>hasPermission</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

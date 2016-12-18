@@ -1,0 +1,138 @@
+\hypertarget{classcommon_1_1user_1_1legacy_1_1permission}{\section{permission \-Class \-Reference}
+\label{classcommon_1_1user_1_1legacy_1_1permission}\index{permission@{permission}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1permission_a4717bbfc70a40a57ee741ed70766c309}{\-\_\-\-\_\-construct} (\$name)
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1permission_a478067ecf173884c2ee3e5b94e746200}{get\-Permission} ()
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1permission_ac33ee765f5ad9f134540bac393721cfe}{get} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1permission_a3a934bd1e982502106ee5dfac2e4e2ed}{check} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1legacy_1_1permission_aad04b6f3304fe6a13d5be37f7cd28938}{{\bfseries \$permission}}\label{classcommon_1_1user_1_1legacy_1_1permission_aad04b6f3304fe6a13d5be37f7cd28938}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 31 of file permission.\-php.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1permission_a4717bbfc70a40a57ee741ed70766c309}{\index{common\-::user\-::legacy\-::permission@{common\-::user\-::legacy\-::permission}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!common::user::legacy::permission@{common\-::user\-::legacy\-::permission}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-construct} (
+\begin{DoxyParamCaption}
+\item[{\$}]{name}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1permission_a4717bbfc70a40a57ee741ed70766c309}
+permission constructor.
+
+auto creates a new permission if necessary
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \$name} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 45 of file permission.\-php.
+
+
+\begin{DoxyCode}
+    {
+        self::check();
+        if (!$permission = R::findOne("permission", " name = ? ", [$name])) {
+            $permission       = R::dispense("permission");
+            $permission->name = $name;
+            R::store($permission);
+        }
+        $this->permission = $permission;
+    }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1permission_a3a934bd1e982502106ee5dfac2e4e2ed}{\index{common\-::user\-::legacy\-::permission@{common\-::user\-::legacy\-::permission}!check@{check}}
+\index{check@{check}!common::user::legacy::permission@{common\-::user\-::legacy\-::permission}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf check} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1permission_a3a934bd1e982502106ee5dfac2e4e2ed}
+checks if table is created 
+
+\-Definition at line 59 of file permission.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if (R::count("permission") < 1) {
+            $role       = R::dispense("permission");
+            $role->name = "guest";
+            R::store($role);
+        }
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1permission_ac33ee765f5ad9f134540bac393721cfe}{\index{common\-::user\-::legacy\-::permission@{common\-::user\-::legacy\-::permission}!get@{get}}
+\index{get@{get}!common::user::legacy::permission@{common\-::user\-::legacy\-::permission}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf get} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1permission_ac33ee765f5ad9f134540bac393721cfe}
+alias for get\-Permission
+
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+
+
+\-Definition at line 83 of file permission.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return $this->getPermission();
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1permission_a478067ecf173884c2ee3e5b94e746200}{\index{common\-::user\-::legacy\-::permission@{common\-::user\-::legacy\-::permission}!get\-Permission@{get\-Permission}}
+\index{get\-Permission@{get\-Permission}!common::user::legacy::permission@{common\-::user\-::legacy\-::permission}}
+\subsubsection[{get\-Permission}]{\setlength{\rightskip}{0pt plus 5cm}{\bf get\-Permission} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1permission_a478067ecf173884c2ee3e5b94e746200}
+return permission db object
+
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+
+
+\-Definition at line 73 of file permission.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return $this->permission;
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/legacy/permission.\-php\end{DoxyCompactItemize}

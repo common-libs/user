@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="dir_7e4735ac8fafda76147cba9ec50ed235" kind="dir">
+    <compoundname>src/exception/</compoundname>
+    <innerfile refid="_bad_charactes_username_validation_exception_8php">BadCharactesUsernameValidationException.php</innerfile>
+    <innerfile refid="_field_not_allowed_validation_exception_8php">FieldNotAllowedValidationException.php</innerfile>
+    <innerfile refid="_max_length_validation_exception_8php">MaxLengthValidationException.php</innerfile>
+    <innerfile refid="_min_length_validation_exception_8php">MinLengthValidationException.php</innerfile>
+    <innerfile refid="_no_valid_email_validation_exception_8php">NoValidEmailValidationException.php</innerfile>
+    <innerfile refid="_required_validation_exception_8php">RequiredValidationException.php</innerfile>
+    <innerfile refid="_username_taken_validation_exception_8php">UsernameTakenValidationException.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/exception/"/>
+  </compounddef>
+</doxygen>

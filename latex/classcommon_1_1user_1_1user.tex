@@ -1,0 +1,388 @@
+\hypertarget{classcommon_1_1user_1_1user}{\section{user \-Class \-Reference}
+\label{classcommon_1_1user_1_1user}\index{user@{user}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcommon_1_1user_1_1user_a23e72c446cb3946f437c096da49c0771}{\-\_\-\-\_\-construct} (string \$username, \$bean=\-N\-U\-L\-L)
+\item 
+\hyperlink{classcommon_1_1user_1_1user_a0b2e7098f1c48a7439a42bada5b69689}{get\-Role} ()
+\item 
+\hyperlink{classcommon_1_1user_1_1user_a693ce7b594330a057ff5e70434a532ac}{set\-Role} (string \$\hyperlink{classcommon_1_1user_1_1role}{role})
+\item 
+\hyperlink{classcommon_1_1user_1_1user_a3b22cd89cfbe4b444fdfd54c11f217d2}{has\-Permission} (string \$\hyperlink{classcommon_1_1user_1_1permission}{permission})
+\item 
+\hyperlink{classcommon_1_1user_1_1user_a0acd7052f38245fd3723ea29c83bf3f3}{\-\_\-\-\_\-get} (string \$name)
+\item 
+\hyperlink{classcommon_1_1user_1_1user_a2c4e9c30cf213decde815cdcb37e1ac8}{\-\_\-\-\_\-set} (string \$name, \$value)
+\item 
+\hyperlink{classcommon_1_1user_1_1user_a421831a265621325e1fdd19aace0c758}{\-\_\-\-\_\-destruct} ()
+\item 
+\hyperlink{classcommon_1_1user_1_1user_aff9a1fb07dca963c2c9a8ffe66b45ded}{remove} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcommon_1_1user_1_1user_a3a934bd1e982502106ee5dfac2e4e2ed}{check} ()
+\item 
+static \hyperlink{classcommon_1_1user_1_1user_a60cee38002f8c7486c144fac39fa1b70}{find} (\$username\-Or\-Id, string \$password=\char`\"{}\char`\"{})
+\item 
+static \hyperlink{classcommon_1_1user_1_1user_add24390720d880435ddea36f244998c7}{guest} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1user_a598ca4e71b15a1313ec95f0df1027ca5}{{\bfseries \$user} = false}\label{classcommon_1_1user_1_1user_a598ca4e71b15a1313ec95f0df1027ca5}
+
+\item 
+\hypertarget{classcommon_1_1user_1_1user_a7053d2e0b9d626b7657a8f5077a64879}{{\bfseries \$created}}\label{classcommon_1_1user_1_1user_a7053d2e0b9d626b7657a8f5077a64879}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1user_ad21c156ce4d87fe72c04f9296751352a}{static {\bfseries \$setuped} = false}\label{classcommon_1_1user_1_1user_ad21c156ce4d87fe72c04f9296751352a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 12 of file user.\-php.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classcommon_1_1user_1_1user_a23e72c446cb3946f437c096da49c0771}{\index{common\-::user\-::user@{common\-::user\-::user}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-construct} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{username, }
+\item[{\$}]{bean = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1user_a23e72c446cb3946f437c096da49c0771}
+user constructor.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$username} & username \\
+\hline
+ & {\em null$|$$\backslash$\-Red\-Bean\-P\-H\-P$\backslash$\-O\-O\-D\-B\-Bean} & \$bean user bean \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 33 of file user.\-php.
+
+
+\begin{DoxyCode}
+    {
+        self::check();
+        if (is_null($bean)) {
+            $userdbname = setup::getValidation("username");
+            $this->user = R::findOne('user', ' ' . $userdbname . ' = ? ', [
+      $username]);
+            if (!setup::getValidation($userdbname, "unique") || is_null($this->
+      user)) {
+                $this->user                = R::dispense("user");
+                $this->user->{$userdbname} = setup::validation($userdbname, 
+      $username);
+                $this->created             = true;
+                R::store($this->user);
+            }
+        }
+        else {
+            $this->user = $bean;
+        }
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1user_a421831a265621325e1fdd19aace0c758}{\index{common\-::user\-::user@{common\-::user\-::user}!\-\_\-\-\_\-destruct@{\-\_\-\-\_\-destruct}}
+\index{\-\_\-\-\_\-destruct@{\-\_\-\-\_\-destruct}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{\-\_\-\-\_\-destruct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-destruct} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1user_a421831a265621325e1fdd19aace0c758}
+auto created missing field 
+
+\-Definition at line 176 of file user.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if ($this->created && Config::init()->createdMissingUserFields) {
+            $a = [];
+            foreach ($this->user as $id => $properties) {
+                $a[$id] = $properties;
+            }
+            foreach (array_diff_key(setup::validation(), $a) as $id => $item) {
+                $this->user->$id = $item["default"];
+            }
+            R::store($this->user);
+        }
+    }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1user_a0acd7052f38245fd3723ea29c83bf3f3}{\index{common\-::user\-::user@{common\-::user\-::user}!\-\_\-\-\_\-get@{\-\_\-\-\_\-get}}
+\index{\-\_\-\-\_\-get@{\-\_\-\-\_\-get}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{\-\_\-\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-get} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{name}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1user_a0acd7052f38245fd3723ea29c83bf3f3}
+magic field for get value of user
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+mixed 
+\end{DoxyReturn}
+
+
+\-Definition at line 155 of file user.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return $this->user->$name;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1user_a2c4e9c30cf213decde815cdcb37e1ac8}{\index{common\-::user\-::user@{common\-::user\-::user}!\-\_\-\-\_\-set@{\-\_\-\-\_\-set}}
+\index{\-\_\-\-\_\-set@{\-\_\-\-\_\-set}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{\-\_\-\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-set} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{name, }
+\item[{\$}]{value}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1user_a2c4e9c30cf213decde815cdcb37e1ac8}
+magic field for add value to user
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$name} & \\
+\hline
+mixed & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 166 of file user.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $this->user->$name = setup::validation($name, $value);
+
+        R::store($this->user);
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1user_a3a934bd1e982502106ee5dfac2e4e2ed}{\index{common\-::user\-::user@{common\-::user\-::user}!check@{check}}
+\index{check@{check}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf check} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1user_a3a934bd1e982502106ee5dfac2e4e2ed}
+check if table was created 
+
+\-Definition at line 54 of file user.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if (R::count("user") < 1) {
+            $pwdbname             = setup::getValidation("password");
+            $userdbname           = setup::getValidation("username");
+            $guest                = R::dispense("user");
+            $guest->{$userdbname} = "guest";
+            $guest->{$pwdbname}   = "";
+            $guest->role          = role::get("guest");
+            R::store($guest);
+        }
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1user_a60cee38002f8c7486c144fac39fa1b70}{\index{common\-::user\-::user@{common\-::user\-::user}!find@{find}}
+\index{find@{find}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf find} (
+\begin{DoxyParamCaption}
+\item[{\$}]{username\-Or\-Id, }
+\item[{string \$}]{password = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1user_a60cee38002f8c7486c144fac39fa1b70}
+find a user
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$username\-Or\-Id} & \\
+\hline
+string & {\em \$password} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool$|$ 
+\end{DoxyReturn}
+
+
+\-Definition at line 75 of file user.\-php.
+
+
+\begin{DoxyCode}
+    {
+        self::check();
+        if(is_numeric($usernameOrId)) {
+            $bean = R::load('user',$usernameOrId);
+        } else {
+            $userdbname = setup::getValidation("username");
+            if ($password != "") {
+                $pwdbname = setup::getValidation("password");
+                $bean     = R::findOne('user', ' ' . $userdbname . ' = ? AND ' 
+      . $pwdbname . ' = ? ', [
+                    $usernameOrId,
+                    helper::hash($password)
+                ]);
+            }
+            else {
+                $bean = R::findOne('user', ' ' . $userdbname . ' = ? ', [
+      $usernameOrId]);
+            }
+        }
+        if (!is_null($bean)) {
+            return new self("", $bean);
+        }
+
+        return false;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1user_a0b2e7098f1c48a7439a42bada5b69689}{\index{common\-::user\-::user@{common\-::user\-::user}!get\-Role@{get\-Role}}
+\index{get\-Role@{get\-Role}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{get\-Role}]{\setlength{\rightskip}{0pt plus 5cm}{\bf get\-Role} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1user_a0b2e7098f1c48a7439a42bada5b69689}
+get role of user
+
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+
+
+\-Definition at line 118 of file user.\-php.
+
+
+\begin{DoxyCode}
+                              : role
+    {
+        return $this->user->role;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1user_add24390720d880435ddea36f244998c7}{\index{common\-::user\-::user@{common\-::user\-::user}!guest@{guest}}
+\index{guest@{guest}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{guest}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf guest} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1user_add24390720d880435ddea36f244998c7}
+return a guest user
+
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+
+
+\-Definition at line 105 of file user.\-php.
+
+
+\begin{DoxyCode}
+                                   : user
+    {
+        self::check();
+        $userdbname = setup::getValidation("username");
+
+        return new self("", R::findOne('user', ' ' . $userdbname . ' = ? ', ["
+      guest"]));
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1user_a3b22cd89cfbe4b444fdfd54c11f217d2}{\index{common\-::user\-::user@{common\-::user\-::user}!has\-Permission@{has\-Permission}}
+\index{has\-Permission@{has\-Permission}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{has\-Permission}]{\setlength{\rightskip}{0pt plus 5cm}{\bf has\-Permission} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{permission}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1user_a3b22cd89cfbe4b444fdfd54c11f217d2}
+checks if user has a permission
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$permission} & permission name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool 
+\end{DoxyReturn}
+
+
+\-Definition at line 141 of file user.\-php.
+
+
+\begin{DoxyCode}
+                                                      : bool
+    {
+        $role = new role($this->user->role->name);
+
+        return $role->hasPermission($permission);
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1user_aff9a1fb07dca963c2c9a8ffe66b45ded}{\index{common\-::user\-::user@{common\-::user\-::user}!remove@{remove}}
+\index{remove@{remove}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}{\bf remove} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1user_aff9a1fb07dca963c2c9a8ffe66b45ded}
+remove user 
+
+\-Definition at line 193 of file user.\-php.
+
+
+\begin{DoxyCode}
+                             {
+        R::trash($this->user);
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1user_a693ce7b594330a057ff5e70434a532ac}{\index{common\-::user\-::user@{common\-::user\-::user}!set\-Role@{set\-Role}}
+\index{set\-Role@{set\-Role}!common::user::user@{common\-::user\-::user}}
+\subsubsection[{set\-Role}]{\setlength{\rightskip}{0pt plus 5cm}{\bf set\-Role} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{role}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1user_a693ce7b594330a057ff5e70434a532ac}
+set role of user
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$role} & rolename \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 128 of file user.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $this->user->role = role::get($role);
+        R::store($this->user);
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/user.\-php\end{DoxyCompactItemize}

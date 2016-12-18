@@ -1,0 +1,240 @@
+\hypertarget{classcommon_1_1user_1_1setup}{\section{setup \-Class \-Reference}
+\label{classcommon_1_1user_1_1setup}\index{setup@{setup}}
+}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcommon_1_1user_1_1setup_aa314bea9f4df81cbd2cb155678082912}{validate} (\-Closure \$param)
+\item 
+static \hyperlink{classcommon_1_1user_1_1setup_a0d63aec80fb945ee3a1f6043e2156051}{validation} (\$name=false, \$value=false)
+\item 
+static \hyperlink{classcommon_1_1user_1_1setup_a1f7f0422f10a5b412cc661235b0fda2f}{get\-Validation} (string \$name, \$value=false)
+\item 
+static \hyperlink{classcommon_1_1user_1_1setup_a716abcfa0c82470936af05770e097fb4}{roles} (\$param)
+\item 
+static \hyperlink{classcommon_1_1user_1_1setup_a7e6401bd44979a11d91987321a39be9f}{hash} (\-Closure \$param)
+\item 
+static \hyperlink{classcommon_1_1user_1_1setup_a192e5e42e0507d342adb1141524723d7}{do\-Hash} (string \$password)
+\item 
+static \hyperlink{classcommon_1_1user_1_1setup_a8a811c28ecf188643b22c3f7316855cb}{config} (\-Closure \$param)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1setup_a320b75b46e1832c327d9d47b4cea9e7d}{static {\bfseries \$validate}}\label{classcommon_1_1user_1_1setup_a320b75b46e1832c327d9d47b4cea9e7d}
+
+\item 
+\hypertarget{classcommon_1_1user_1_1setup_a1ea903cca285c7c0b4c9203932100309}{static {\bfseries \$role}}\label{classcommon_1_1user_1_1setup_a1ea903cca285c7c0b4c9203932100309}
+
+\item 
+\hypertarget{classcommon_1_1user_1_1setup_ac9fdf6f2c8fb45c1d3bb9a176802b2ad}{static {\bfseries \$hash}}\label{classcommon_1_1user_1_1setup_ac9fdf6f2c8fb45c1d3bb9a176802b2ad}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 12 of file setup.\-php.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1setup_a8a811c28ecf188643b22c3f7316855cb}{\index{common\-::user\-::setup@{common\-::user\-::setup}!config@{config}}
+\index{config@{config}!common::user::setup@{common\-::user\-::setup}}
+\subsubsection[{config}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf config} (
+\begin{DoxyParamCaption}
+\item[{\-Closure \$}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1setup_a8a811c28ecf188643b22c3f7316855cb}
+setup config 
+\begin{DoxyParams}{\-Parameters}
+{\em $\backslash$\-Closure} & \$param function to call for config setup \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 111 of file setup.\-php.
+
+
+\begin{DoxyCode}
+    {
+        call_user_func($param, new Config());
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1setup_a192e5e42e0507d342adb1141524723d7}{\index{common\-::user\-::setup@{common\-::user\-::setup}!do\-Hash@{do\-Hash}}
+\index{do\-Hash@{do\-Hash}!common::user::setup@{common\-::user\-::setup}}
+\subsubsection[{do\-Hash}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf do\-Hash} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{password}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1setup_a192e5e42e0507d342adb1141524723d7}
+hashes a sting to custom hash function
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$password} & string to hash\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+string 
+\end{DoxyReturn}
+
+
+\-Definition at line 102 of file setup.\-php.
+
+
+\begin{DoxyCode}
+                                                    : string
+    {
+        return call_user_func(self::$hash, $password);
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1setup_a1f7f0422f10a5b412cc661235b0fda2f}{\index{common\-::user\-::setup@{common\-::user\-::setup}!get\-Validation@{get\-Validation}}
+\index{get\-Validation@{get\-Validation}!common::user::setup@{common\-::user\-::setup}}
+\subsubsection[{get\-Validation}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf get\-Validation} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{name, }
+\item[{\$}]{value = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1setup_a1f7f0422f10a5b412cc661235b0fda2f}
+get validation field(s)
+
+calling with one parameters this method returns the field name of username$|$password$|$email calling with two parameters this method returns one validation parameter from one field
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$name} & field name \\
+\hline
+bool & {\em \$value} & field parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+mixed$|$string 
+\end{DoxyReturn}
+
+
+\-Definition at line 69 of file setup.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return $value !== false ? self::$validate->is($name, $value) : 
+      self::$validate->get($name);
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1setup_a7e6401bd44979a11d91987321a39be9f}{\index{common\-::user\-::setup@{common\-::user\-::setup}!hash@{hash}}
+\index{hash@{hash}!common::user::setup@{common\-::user\-::setup}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf hash} (
+\begin{DoxyParamCaption}
+\item[{\-Closure \$}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1setup_a7e6401bd44979a11d91987321a39be9f}
+setup hash function
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\-Closure & {\em \$param} & function to call for hash \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 90 of file setup.\-php.
+
+
+\begin{DoxyCode}
+    {
+        self::$hash = $param;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1setup_a716abcfa0c82470936af05770e097fb4}{\index{common\-::user\-::setup@{common\-::user\-::setup}!roles@{roles}}
+\index{roles@{roles}!common::user::setup@{common\-::user\-::setup}}
+\subsubsection[{roles}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf roles} (
+\begin{DoxyParamCaption}
+\item[{\$}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1setup_a716abcfa0c82470936af05770e097fb4}
+setup roles
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\-Closure & {\em \$param} & function to call for role creating \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 79 of file setup.\-php.
+
+
+\begin{DoxyCode}
+    {
+        call_user_func($param, $role = new Roles());
+        self::$role = $role;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1setup_aa314bea9f4df81cbd2cb155678082912}{\index{common\-::user\-::setup@{common\-::user\-::setup}!validate@{validate}}
+\index{validate@{validate}!common::user::setup@{common\-::user\-::setup}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf validate} (
+\begin{DoxyParamCaption}
+\item[{\-Closure \$}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1setup_aa314bea9f4df81cbd2cb155678082912}
+setup validation
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em $\backslash$\-Closure} & \$param function to call for validation \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 32 of file setup.\-php.
+
+
+\begin{DoxyCode}
+    {
+        call_user_func($param, $validation = new Validation());
+        self::$validate = $validation;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1setup_a0d63aec80fb945ee3a1f6043e2156051}{\index{common\-::user\-::setup@{common\-::user\-::setup}!validation@{validation}}
+\index{validation@{validation}!common::user::setup@{common\-::user\-::setup}}
+\subsubsection[{validation}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf validation} (
+\begin{DoxyParamCaption}
+\item[{\$}]{name = {\ttfamily false}, }
+\item[{\$}]{value = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1setup_a0d63aec80fb945ee3a1f6043e2156051}
+do validation
+
+calling without parameters this method returns all validation parameters calling with two parameters this method validate an value
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+bool | string & {\em \$name} & name of field \\
+\hline
+bool | string & {\em \$value} & value of field\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+array$|$string 
+\end{DoxyReturn}
+
+
+\-Definition at line 49 of file setup.\-php.
+
+
+\begin{DoxyCode}
+    {
+        if (!$name && !$value) {
+            return self::$validate->getAll();
+        }
+
+        return self::$validate->validate($name, $value);
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/setup.\-php\end{DoxyCompactItemize}

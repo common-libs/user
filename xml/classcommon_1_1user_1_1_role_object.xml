@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1_role_object" kind="class" prot="public">
+    <compoundname>common::user::RoleObject</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1_role_object_1a1ea903cca285c7c0b4c9203932100309" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$role</definition>
+        <argsstring></argsstring>
+        <name>$role</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/RoleObject.php" line="13" bodyfile="/home/travis/build/common-libs/user/src/RoleObject.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1_role_object_1ab2e7ea95f9f4a5cd2b478f84d5e49784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>(string $string)</argsstring>
+        <name>__construct</name>
+        <param>
+          <type>string $</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classcommon_1_1user_1_1_validation_object" kindref="compound">ValidationObject</ref> constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of role </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/RoleObject.php" line="21" bodyfile="/home/travis/build/common-libs/user/src/RoleObject.php" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1_role_object_1aefb1389158c9ec0d543972e91620ed67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>permissions</definition>
+        <argsstring>(array $permissions)</argsstring>
+        <name>permissions</name>
+        <param>
+          <type>array $</type>
+          <declname>permissions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>add permissions to role</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$permissions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of permissions</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/RoleObject.php" line="33" bodyfile="/home/travis/build/common-libs/user/src/RoleObject.php" bodystart="32" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/RoleObject.php" line="9" bodyfile="/home/travis/build/common-libs/user/src/RoleObject.php" bodystart="8" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1_role_object_1a1ea903cca285c7c0b4c9203932100309" prot="protected" virt="non-virtual"><scope>common::user::RoleObject</scope><name>$role</name></member>
+      <member refid="classcommon_1_1user_1_1_role_object_1ab2e7ea95f9f4a5cd2b478f84d5e49784" prot="public" virt="non-virtual"><scope>common::user::RoleObject</scope><name>__construct</name></member>
+      <member refid="classcommon_1_1user_1_1_role_object_1aefb1389158c9ec0d543972e91620ed67" prot="public" virt="non-virtual"><scope>common::user::RoleObject</scope><name>permissions</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

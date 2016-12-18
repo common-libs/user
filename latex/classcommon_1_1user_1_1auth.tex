@@ -1,0 +1,141 @@
+\hypertarget{classcommon_1_1user_1_1auth}{\section{auth \-Class \-Reference}
+\label{classcommon_1_1user_1_1auth}\index{auth@{auth}}
+}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1auth_a9f0be6ae273d3669e11c29910a0be338}{static \hyperlink{classcommon_1_1user_1_1auth_a9f0be6ae273d3669e11c29910a0be338}{init} ()}\label{classcommon_1_1user_1_1auth_a9f0be6ae273d3669e11c29910a0be338}
+
+\begin{DoxyCompactList}\small\item\em init the class and set php session \end{DoxyCompactList}\item 
+static \hyperlink{classcommon_1_1user_1_1auth_a7949f68385a98a60ff42ea3c3a768ec7}{user} ()
+\item 
+static \hyperlink{classcommon_1_1user_1_1auth_a3d6c9ff1005fcc403d30d5dd8ef70210}{is\-Guest} ()
+\item 
+static \hyperlink{classcommon_1_1user_1_1auth_a6f60964b6e0f9798caaf3c0e7c876326}{login} (string \$username, string \$password)
+\item 
+static \hyperlink{classcommon_1_1user_1_1auth_a1e34160e903835a43123f538e93457a2}{logout} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1auth_a598ca4e71b15a1313ec95f0df1027ca5}{static {\bfseries \$user}}\label{classcommon_1_1user_1_1auth_a598ca4e71b15a1313ec95f0df1027ca5}
+
+\item 
+\hypertarget{classcommon_1_1user_1_1auth_acd6f0a47fb21845165c3716723d50393}{static {\bfseries \$is\-Guest}}\label{classcommon_1_1user_1_1auth_acd6f0a47fb21845165c3716723d50393}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 10 of file auth.\-php.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1auth_a3d6c9ff1005fcc403d30d5dd8ef70210}{\index{common\-::user\-::auth@{common\-::user\-::auth}!is\-Guest@{is\-Guest}}
+\index{is\-Guest@{is\-Guest}!common::user::auth@{common\-::user\-::auth}}
+\subsubsection[{is\-Guest}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf is\-Guest} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1auth_a3d6c9ff1005fcc403d30d5dd8ef70210}
+check if the current user is guest
+
+\begin{DoxyReturn}{\-Returns}
+bool 
+\end{DoxyReturn}
+
+
+\-Definition at line 54 of file auth.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return self::$isGuest;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1auth_a6f60964b6e0f9798caaf3c0e7c876326}{\index{common\-::user\-::auth@{common\-::user\-::auth}!login@{login}}
+\index{login@{login}!common::user::auth@{common\-::user\-::auth}}
+\subsubsection[{login}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf login} (
+\begin{DoxyParamCaption}
+\item[{string \$}]{username, }
+\item[{string \$}]{password}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1auth_a6f60964b6e0f9798caaf3c0e7c876326}
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$username} & username \\
+\hline
+string & {\em \$password} & password\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool 
+\end{DoxyReturn}
+
+
+\-Definition at line 65 of file auth.\-php.
+
+
+\begin{DoxyCode}
+                                                                     : bool
+    {
+        if ($user = user::find($username, $password)) {
+            self::$user    = $user;
+            self::$isGuest = false;
+
+            return true;
+        }
+
+        return false;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1auth_a1e34160e903835a43123f538e93457a2}{\index{common\-::user\-::auth@{common\-::user\-::auth}!logout@{logout}}
+\index{logout@{logout}!common::user::auth@{common\-::user\-::auth}}
+\subsubsection[{logout}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf logout} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1auth_a1e34160e903835a43123f538e93457a2}
+logout the current user 
+
+\-Definition at line 80 of file auth.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $_SESSION = [];
+        session_destroy();
+        session_unset();
+        self::$isGuest = true;
+    }
+\end{DoxyCode}
+\hypertarget{classcommon_1_1user_1_1auth_a7949f68385a98a60ff42ea3c3a768ec7}{\index{common\-::user\-::auth@{common\-::user\-::auth}!user@{user}}
+\index{user@{user}!common::user::auth@{common\-::user\-::auth}}
+\subsubsection[{user}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf user} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1auth_a7949f68385a98a60ff42ea3c3a768ec7}
+get the user
+
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+
+
+\-Definition at line 44 of file auth.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return self::$user;
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/auth.\-php\end{DoxyCompactItemize}

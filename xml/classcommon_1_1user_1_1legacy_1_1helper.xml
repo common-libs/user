@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1legacy_1_1helper" kind="class" prot="public">
+    <compoundname>common::user::legacy::helper</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1helper_1a728d67d856ee2861972bd6382c52bac8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static hash</definition>
+        <argsstring>($str)</argsstring>
+        <name>hash</name>
+        <param>
+          <type>$</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hashes an string/password</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to hash</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/helper.php" line="38" bodyfile="/home/travis/build/common-libs/user/src/legacy/helper.php" bodystart="37" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/helper.php" line="29" bodyfile="/home/travis/build/common-libs/user/src/legacy/helper.php" bodystart="28" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1legacy_1_1helper_1a728d67d856ee2861972bd6382c52bac8" prot="public" virt="non-virtual"><scope>common::user::legacy::helper</scope><name>hash</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

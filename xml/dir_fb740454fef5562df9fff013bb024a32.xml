@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="dir_fb740454fef5562df9fff013bb024a32" kind="dir">
+    <compoundname>src/</compoundname>
+    <innerdir refid="dir_7e4735ac8fafda76147cba9ec50ed235">src/exception/</innerdir>
+    <innerdir refid="dir_7f47d5778ddc5df842f03816ccd04aa5">src/legacy/</innerdir>
+    <innerfile refid="auth_8php">auth.php</innerfile>
+    <innerfile refid="_config_8php">Config.php</innerfile>
+    <innerfile refid="helper_8php">helper.php</innerfile>
+    <innerfile refid="permission_8php">permission.php</innerfile>
+    <innerfile refid="role_8php">role.php</innerfile>
+    <innerfile refid="_role_object_8php">RoleObject.php</innerfile>
+    <innerfile refid="_roles_8php">Roles.php</innerfile>
+    <innerfile refid="setup_8php">setup.php</innerfile>
+    <innerfile refid="user_8php">user.php</innerfile>
+    <innerfile refid="users_8php">users.php</innerfile>
+    <innerfile refid="_validation_8php">Validation.php</innerfile>
+    <innerfile refid="_validation_object_8php">ValidationObject.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/"/>
+  </compounddef>
+</doxygen>

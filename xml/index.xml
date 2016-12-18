@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.7.6.1">
+  <compound refid="classcommon_1_1user_1_1auth" kind="class"><name>common::user::auth</name>
+    <member refid="classcommon_1_1user_1_1auth_1a598ca4e71b15a1313ec95f0df1027ca5" kind="variable"><name>$user</name></member>
+    <member refid="classcommon_1_1user_1_1auth_1acd6f0a47fb21845165c3716723d50393" kind="variable"><name>$isGuest</name></member>
+    <member refid="classcommon_1_1user_1_1auth_1a9f0be6ae273d3669e11c29910a0be338" kind="function"><name>init</name></member>
+    <member refid="classcommon_1_1user_1_1auth_1a7949f68385a98a60ff42ea3c3a768ec7" kind="function"><name>user</name></member>
+    <member refid="classcommon_1_1user_1_1auth_1a3d6c9ff1005fcc403d30d5dd8ef70210" kind="function"><name>isGuest</name></member>
+    <member refid="classcommon_1_1user_1_1auth_1a6f60964b6e0f9798caaf3c0e7c876326" kind="function"><name>login</name></member>
+    <member refid="classcommon_1_1user_1_1auth_1a1e34160e903835a43123f538e93457a2" kind="function"><name>logout</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1auth" kind="class"><name>common::user::legacy::auth</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a598ca4e71b15a1313ec95f0df1027ca5" kind="variable"><name>$user</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1auth_1acd6f0a47fb21845165c3716723d50393" kind="variable"><name>$isGuest</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a9f0be6ae273d3669e11c29910a0be338" kind="function"><name>init</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a7949f68385a98a60ff42ea3c3a768ec7" kind="function"><name>user</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a3d6c9ff1005fcc403d30d5dd8ef70210" kind="function"><name>isGuest</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1auth_1aad19326559a5beda6d7cfc3e83fefd12" kind="function"><name>login</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a1e34160e903835a43123f538e93457a2" kind="function"><name>logout</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1auth_1a7a85e2ad55bb6f47464978a83f3a8924" kind="function"><name>requires</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1auth_1ae0ca697f3332a55efcbb374972946a99" kind="function"><name>required</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1exception_1_1_bad_charactes_username_validation_exception" kind="class"><name>common::user::exception::BadCharactesUsernameValidationException</name>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1_config" kind="class"><name>common::user::Config</name>
+    <member refid="classcommon_1_1user_1_1_config_1a1c276df94c6901e87b364e6302fbd2e4" kind="function"><name>setConfig</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1_config" kind="class"><name>common::user::legacy::Config</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_config_1a1c276df94c6901e87b364e6302fbd2e4" kind="function"><name>setConfig</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1exception_1_1_field_not_allowed_validation_exception" kind="class"><name>common::user::exception::FieldNotAllowedValidationException</name>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1helper" kind="class"><name>common::user::helper</name>
+    <member refid="classcommon_1_1user_1_1helper_1a8ac26ffb82d068a496693fa9ff0848bc" kind="function"><name>hash</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1helper" kind="class"><name>common::user::legacy::helper</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1helper_1a728d67d856ee2861972bd6382c52bac8" kind="function"><name>hash</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1exception_1_1_max_length_validation_exception" kind="class"><name>common::user::exception::MaxLengthValidationException</name>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1exception_1_1_min_length_validation_exception" kind="class"><name>common::user::exception::MinLengthValidationException</name>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1exception_1_1_no_valid_email_validation_exception" kind="class"><name>common::user::exception::NoValidEmailValidationException</name>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1permission" kind="class"><name>common::user::permission</name>
+    <member refid="classcommon_1_1user_1_1permission_1aad04b6f3304fe6a13d5be37f7cd28938" kind="variable"><name>$permission</name></member>
+    <member refid="classcommon_1_1user_1_1permission_1a196b3403dd3fe36fd9617ada22960ff1" kind="function"><name>__construct</name></member>
+    <member refid="classcommon_1_1user_1_1permission_1a478067ecf173884c2ee3e5b94e746200" kind="function"><name>getPermission</name></member>
+    <member refid="classcommon_1_1user_1_1permission_1ac33ee765f5ad9f134540bac393721cfe" kind="function"><name>get</name></member>
+    <member refid="classcommon_1_1user_1_1permission_1a3a934bd1e982502106ee5dfac2e4e2ed" kind="function"><name>check</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1permission" kind="class"><name>common::user::legacy::permission</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1permission_1aad04b6f3304fe6a13d5be37f7cd28938" kind="variable"><name>$permission</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1permission_1a4717bbfc70a40a57ee741ed70766c309" kind="function"><name>__construct</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1permission_1a478067ecf173884c2ee3e5b94e746200" kind="function"><name>getPermission</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1permission_1ac33ee765f5ad9f134540bac393721cfe" kind="function"><name>get</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1permission_1a3a934bd1e982502106ee5dfac2e4e2ed" kind="function"><name>check</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1exception_1_1_required_validation_exception" kind="class"><name>common::user::exception::RequiredValidationException</name>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1role" kind="class"><name>common::user::role</name>
+    <member refid="classcommon_1_1user_1_1role_1a1ea903cca285c7c0b4c9203932100309" kind="variable"><name>$role</name></member>
+    <member refid="classcommon_1_1user_1_1role_1a0fe6fe9dff99830d0b7bb71f2877f3e3" kind="function"><name>__construct</name></member>
+    <member refid="classcommon_1_1user_1_1role_1a96d7229cb9b1d75345cfac9f683ca398" kind="function"><name>equals</name></member>
+    <member refid="classcommon_1_1user_1_1role_1a32bcfee1aac89ef68ed2494b3402ea47" kind="function"><name>addPermissions</name></member>
+    <member refid="classcommon_1_1user_1_1role_1a185e9ed46609058776b2f27429c34fd6" kind="function"><name>addPermission</name></member>
+    <member refid="classcommon_1_1user_1_1role_1a98e8f81c4e0869a6adf4a36ca1a6860a" kind="function"><name>getPermissions</name></member>
+    <member refid="classcommon_1_1user_1_1role_1a0b2e7098f1c48a7439a42bada5b69689" kind="function"><name>getRole</name></member>
+    <member refid="classcommon_1_1user_1_1role_1aaaa6de319c1361e48f90c59048755e86" kind="function"><name>hasPermission</name></member>
+    <member refid="classcommon_1_1user_1_1role_1a2635489967ff48beefcd67afbdcec1ba" kind="function"><name>get</name></member>
+    <member refid="classcommon_1_1user_1_1role_1a3a934bd1e982502106ee5dfac2e4e2ed" kind="function"><name>check</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1role" kind="class"><name>common::user::legacy::role</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1role_1a1ea903cca285c7c0b4c9203932100309" kind="variable"><name>$role</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1role_1a0696987c5e6ce3efd6da1ca1a8d47fcb" kind="function"><name>__construct</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1role_1a63a43d301f3974506cc8942dddc82dff" kind="function"><name>equals</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1role_1a594d31710145cca1611de0f5ac26474b" kind="function"><name>addPermissions</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1role_1acafe18e4082708191900b3a13406a115" kind="function"><name>addPermission</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1role_1a98e8f81c4e0869a6adf4a36ca1a6860a" kind="function"><name>getPermissions</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1role_1a0b2e7098f1c48a7439a42bada5b69689" kind="function"><name>getRole</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1role_1acefac8c3f81c7bd751403a683623fcbf" kind="function"><name>hasPermission</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1role_1a08d78dc7411f3317df9509f962ecccf4" kind="function"><name>get</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1role_1a3a934bd1e982502106ee5dfac2e4e2ed" kind="function"><name>check</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1_role_object" kind="class"><name>common::user::legacy::RoleObject</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_role_object_1a1ea903cca285c7c0b4c9203932100309" kind="variable"><name>$role</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_role_object_1a86d355bfc3694145c81bf7ba65d3cded" kind="function"><name>__construct</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_role_object_1ae0c158f2382ab0c7907921033ccee749" kind="function"><name>permissions</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1_role_object" kind="class"><name>common::user::RoleObject</name>
+    <member refid="classcommon_1_1user_1_1_role_object_1a1ea903cca285c7c0b4c9203932100309" kind="variable"><name>$role</name></member>
+    <member refid="classcommon_1_1user_1_1_role_object_1ab2e7ea95f9f4a5cd2b478f84d5e49784" kind="function"><name>__construct</name></member>
+    <member refid="classcommon_1_1user_1_1_role_object_1aefb1389158c9ec0d543972e91620ed67" kind="function"><name>permissions</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1_roles" kind="class"><name>common::user::legacy::Roles</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_roles_1a1ea903cca285c7c0b4c9203932100309" kind="variable"><name>$role</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_roles_1a3c49872dc41e063d02a5336a54780f15" kind="function"><name>name</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1_roles" kind="class"><name>common::user::Roles</name>
+    <member refid="classcommon_1_1user_1_1_roles_1a1ea903cca285c7c0b4c9203932100309" kind="variable"><name>$role</name></member>
+    <member refid="classcommon_1_1user_1_1_roles_1a678d8bf3db3b3e6c453c1dd55f054482" kind="function"><name>name</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1setup" kind="class"><name>common::user::legacy::setup</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1setup_1a320b75b46e1832c327d9d47b4cea9e7d" kind="variable"><name>$validate</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1setup_1a1ea903cca285c7c0b4c9203932100309" kind="variable"><name>$role</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1setup_1ac9fdf6f2c8fb45c1d3bb9a176802b2ad" kind="variable"><name>$hash</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1setup_1a6594137c5dfb8c7b7aa86268554739f5" kind="function"><name>validate</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1setup_1a0d63aec80fb945ee3a1f6043e2156051" kind="function"><name>validation</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1setup_1a56a894c1e0254e39bad346796912a25f" kind="function"><name>getValidation</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1setup_1a716abcfa0c82470936af05770e097fb4" kind="function"><name>roles</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1setup_1a37f9c9ca7c534dcd0ebc756d02276f4b" kind="function"><name>hash</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1setup_1aea1b41fea0ab30f27a2f08c3f3496aa6" kind="function"><name>doHash</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1setup_1a376787b8c2b00d5181871734ea6c4c06" kind="function"><name>config</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1setup" kind="class"><name>common::user::setup</name>
+    <member refid="classcommon_1_1user_1_1setup_1a320b75b46e1832c327d9d47b4cea9e7d" kind="variable"><name>$validate</name></member>
+    <member refid="classcommon_1_1user_1_1setup_1a1ea903cca285c7c0b4c9203932100309" kind="variable"><name>$role</name></member>
+    <member refid="classcommon_1_1user_1_1setup_1ac9fdf6f2c8fb45c1d3bb9a176802b2ad" kind="variable"><name>$hash</name></member>
+    <member refid="classcommon_1_1user_1_1setup_1aa314bea9f4df81cbd2cb155678082912" kind="function"><name>validate</name></member>
+    <member refid="classcommon_1_1user_1_1setup_1a0d63aec80fb945ee3a1f6043e2156051" kind="function"><name>validation</name></member>
+    <member refid="classcommon_1_1user_1_1setup_1a1f7f0422f10a5b412cc661235b0fda2f" kind="function"><name>getValidation</name></member>
+    <member refid="classcommon_1_1user_1_1setup_1a716abcfa0c82470936af05770e097fb4" kind="function"><name>roles</name></member>
+    <member refid="classcommon_1_1user_1_1setup_1a7e6401bd44979a11d91987321a39be9f" kind="function"><name>hash</name></member>
+    <member refid="classcommon_1_1user_1_1setup_1a192e5e42e0507d342adb1141524723d7" kind="function"><name>doHash</name></member>
+    <member refid="classcommon_1_1user_1_1setup_1a8a811c28ecf188643b22c3f7316855cb" kind="function"><name>config</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1user" kind="class"><name>common::user::legacy::user</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1ad21c156ce4d87fe72c04f9296751352a" kind="variable"><name>$setuped</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1a598ca4e71b15a1313ec95f0df1027ca5" kind="variable"><name>$user</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1a7053d2e0b9d626b7657a8f5077a64879" kind="variable"><name>$created</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1a780067f6f38211821423f8447881479e" kind="function"><name>__construct</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1a0b2e7098f1c48a7439a42bada5b69689" kind="function"><name>getRole</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1aa9233284be00bee150c4982e73785b72" kind="function"><name>setRole</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1a4da2a6a1e77331cc90a7d38bba8c442f" kind="function"><name>hasPermission</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1abc8e9e31bb15c8a44c3210ec551407c8" kind="function"><name>__get</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1a83c2703c91959192f759992ad5640b67" kind="function"><name>__set</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1a421831a265621325e1fdd19aace0c758" kind="function"><name>__destruct</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1aff9a1fb07dca963c2c9a8ffe66b45ded" kind="function"><name>remove</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1a3a934bd1e982502106ee5dfac2e4e2ed" kind="function"><name>check</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1a74af298c89631db5c7cb8322b337427f" kind="function"><name>find</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1user_1add24390720d880435ddea36f244998c7" kind="function"><name>guest</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1user" kind="class"><name>common::user::user</name>
+    <member refid="classcommon_1_1user_1_1user_1ad21c156ce4d87fe72c04f9296751352a" kind="variable"><name>$setuped</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a598ca4e71b15a1313ec95f0df1027ca5" kind="variable"><name>$user</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a7053d2e0b9d626b7657a8f5077a64879" kind="variable"><name>$created</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a23e72c446cb3946f437c096da49c0771" kind="function"><name>__construct</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a0b2e7098f1c48a7439a42bada5b69689" kind="function"><name>getRole</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a693ce7b594330a057ff5e70434a532ac" kind="function"><name>setRole</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a3b22cd89cfbe4b444fdfd54c11f217d2" kind="function"><name>hasPermission</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a0acd7052f38245fd3723ea29c83bf3f3" kind="function"><name>__get</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a2c4e9c30cf213decde815cdcb37e1ac8" kind="function"><name>__set</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a421831a265621325e1fdd19aace0c758" kind="function"><name>__destruct</name></member>
+    <member refid="classcommon_1_1user_1_1user_1aff9a1fb07dca963c2c9a8ffe66b45ded" kind="function"><name>remove</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a3a934bd1e982502106ee5dfac2e4e2ed" kind="function"><name>check</name></member>
+    <member refid="classcommon_1_1user_1_1user_1a60cee38002f8c7486c144fac39fa1b70" kind="function"><name>find</name></member>
+    <member refid="classcommon_1_1user_1_1user_1add24390720d880435ddea36f244998c7" kind="function"><name>guest</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1exception_1_1_username_taken_validation_exception" kind="class"><name>common::user::exception::UsernameTakenValidationException</name>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1users" kind="class"><name>common::user::users</name>
+    <member refid="classcommon_1_1user_1_1users_1a97b9a380b098d79ea69735b68a5b2d1e" kind="function"><name>lists</name></member>
+    <member refid="classcommon_1_1user_1_1users_1acb939963af00a7a18a1a410e356da435" kind="function"><name>isUser</name></member>
+    <member refid="classcommon_1_1user_1_1users_1aec4e30df562c0f23ffab51dcade67279" kind="function"><name>removeByUsername</name></member>
+    <member refid="classcommon_1_1user_1_1users_1aca3d86fc93c50d015432557136427b72" kind="function"><name>removeById</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1users" kind="class"><name>common::user::legacy::users</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1users_1a40b92b73e3f7a98a9ffa658a5fad5a6d" kind="function"><name>lists</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1users_1a6051c5d0c8fad68cb9abb30ea88074b6" kind="function"><name>isUser</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1users_1afbb19ebbe6aa86e0b25248a0826c10d6" kind="function"><name>removeByUsername</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1users_1ace46b3447183597a25fbac394e4151b8" kind="function"><name>removeById</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1_validation" kind="class"><name>common::user::legacy::Validation</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1a8dcd469e6c336555e43c3003b0a0da54" kind="variable"><name>$forms</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1a3c49872dc41e063d02a5336a54780f15" kind="function"><name>name</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1a1ba8ea5a7fb74d491411290ec8c76402" kind="function"><name>validate</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1af5ea6a083ddb07beb8a30dd32e309ceb" kind="function"><name>get</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1af51af2c766e3db5ae103d28479add0db" kind="function"><name>is</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_1aba0d5b303383fb5b1fabb5fd01cd3800" kind="function"><name>getAll</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1_validation" kind="class"><name>common::user::Validation</name>
+    <member refid="classcommon_1_1user_1_1_validation_1a8dcd469e6c336555e43c3003b0a0da54" kind="variable"><name>$forms</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_1a678d8bf3db3b3e6c453c1dd55f054482" kind="function"><name>name</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_1ab52e598c4419ae387fe527c3883ae2c7" kind="function"><name>validate</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_1a004397797e263171281784084cf4a502" kind="function"><name>get</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_1ab2fbcc854e20c3445beb3d3e1f042f8b" kind="function"><name>is</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_1aba0d5b303383fb5b1fabb5fd01cd3800" kind="function"><name>getAll</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1_validation_object" kind="class"><name>common::user::ValidationObject</name>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a56ba76399d12529c48ecea581ecd08cf" kind="variable"><name>$min</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a9fb747ef5633c244639185a7fe54f6b0" kind="variable"><name>$max</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a9df479534ecf05fd7575c6275d381687" kind="variable"><name>$default</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a38addc8a958af4b42bda4fca677b4208" kind="variable"><name>$required</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1ad634f418b20382e2802f80532d76d3cd" kind="variable"><name>$email</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a0eb82aa5f81cf845de4b36cd653c42cf" kind="variable"><name>$username</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a315e8d3dcffff8aee2f2db82e8654d4d" kind="variable"><name>$unique</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a86d355bfc3694145c81bf7ba65d3cded" kind="function"><name>__construct</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1ac484db1921d1bf332bf2057c5d76f00b" kind="function"><name>min</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a828368d4b97de602a22ef361ddc77fbb" kind="function"><name>max</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1aa6f71964368c3c77a22ab04d33916f8c" kind="function"><name>default</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1abd2999eed85fa7437ba20d06fc517623" kind="function"><name>required</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a0814d3be8538f244db1f0f63a9588a30" kind="function"><name>email</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1af692b38313fcd34758e3269d74da796f" kind="function"><name>password</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a7475524fbb2e38dd6c9f7a6661b0bb81" kind="function"><name>username</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1a4687cd60c977d2d7171628bc42c81129" kind="function"><name>unique</name></member>
+    <member refid="classcommon_1_1user_1_1_validation_object_1ac33ee765f5ad9f134540bac393721cfe" kind="function"><name>get</name></member>
+  </compound>
+  <compound refid="classcommon_1_1user_1_1legacy_1_1_validation_object" kind="class"><name>common::user::legacy::ValidationObject</name>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a56ba76399d12529c48ecea581ecd08cf" kind="variable"><name>$min</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a9fb747ef5633c244639185a7fe54f6b0" kind="variable"><name>$max</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a9df479534ecf05fd7575c6275d381687" kind="variable"><name>$default</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a38addc8a958af4b42bda4fca677b4208" kind="variable"><name>$required</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1ad634f418b20382e2802f80532d76d3cd" kind="variable"><name>$email</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a0eb82aa5f81cf845de4b36cd653c42cf" kind="variable"><name>$username</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a315e8d3dcffff8aee2f2db82e8654d4d" kind="variable"><name>$unique</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a86d355bfc3694145c81bf7ba65d3cded" kind="function"><name>__construct</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1ab6a72cde0b8c9e14e033b23eaaddcfd5" kind="function"><name>min</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a19c1576ea97d24111f5323bd81ab280c" kind="function"><name>max</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a1d459dff944c8c8a3e141a68d646a848" kind="function"><name>defaults</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1abd2999eed85fa7437ba20d06fc517623" kind="function"><name>required</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a0814d3be8538f244db1f0f63a9588a30" kind="function"><name>email</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1af692b38313fcd34758e3269d74da796f" kind="function"><name>password</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a7475524fbb2e38dd6c9f7a6661b0bb81" kind="function"><name>username</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a4687cd60c977d2d7171628bc42c81129" kind="function"><name>unique</name></member>
+    <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1ac33ee765f5ad9f134540bac393721cfe" kind="function"><name>get</name></member>
+  </compound>
+  <compound refid="namespace_closure" kind="namespace"><name>Closure</name>
+  </compound>
+  <compound refid="namespacecommon" kind="namespace"><name>common</name>
+  </compound>
+  <compound refid="namespacecommon_1_1storage_1_1file" kind="namespace"><name>common::storage::file</name>
+  </compound>
+  <compound refid="namespacecommon_1_1storage_1_1json" kind="namespace"><name>common::storage::json</name>
+  </compound>
+  <compound refid="namespacecommon_1_1storage_1_1legacy_1_1file" kind="namespace"><name>common::storage::legacy::file</name>
+  </compound>
+  <compound refid="namespacecommon_1_1storage_1_1legacy_1_1json" kind="namespace"><name>common::storage::legacy::json</name>
+  </compound>
+  <compound refid="namespacecommon_1_1storage_1_1legacy_1_1serialize" kind="namespace"><name>common::storage::legacy::serialize</name>
+  </compound>
+  <compound refid="namespacecommon_1_1storage_1_1legacy_1_1storage" kind="namespace"><name>common::storage::legacy::storage</name>
+  </compound>
+  <compound refid="namespacecommon_1_1storage_1_1storage" kind="namespace"><name>common::storage::storage</name>
+  </compound>
+  <compound refid="namespacecommon_1_1user" kind="namespace"><name>common::user</name>
+  </compound>
+  <compound refid="namespacecommon_1_1user_1_1exception" kind="namespace"><name>common::user::exception</name>
+  </compound>
+  <compound refid="namespacecommon_1_1user_1_1exception_1_1_bad_charactes_username_validation_exception" kind="namespace"><name>common::user::exception::BadCharactesUsernameValidationException</name>
+  </compound>
+  <compound refid="namespacecommon_1_1user_1_1exception_1_1_field_not_allowed_validation_exception" kind="namespace"><name>common::user::exception::FieldNotAllowedValidationException</name>
+  </compound>
+  <compound refid="namespacecommon_1_1user_1_1exception_1_1_max_length_validation_exception" kind="namespace"><name>common::user::exception::MaxLengthValidationException</name>
+  </compound>
+  <compound refid="namespacecommon_1_1user_1_1exception_1_1_min_length_validation_exception" kind="namespace"><name>common::user::exception::MinLengthValidationException</name>
+  </compound>
+  <compound refid="namespacecommon_1_1user_1_1exception_1_1_no_valid_email_validation_exception" kind="namespace"><name>common::user::exception::NoValidEmailValidationException</name>
+  </compound>
+  <compound refid="namespacecommon_1_1user_1_1exception_1_1_required_validation_exception" kind="namespace"><name>common::user::exception::RequiredValidationException</name>
+  </compound>
+  <compound refid="namespacecommon_1_1user_1_1exception_1_1_username_taken_validation_exception" kind="namespace"><name>common::user::exception::UsernameTakenValidationException</name>
+  </compound>
+  <compound refid="namespacecommon_1_1user_1_1legacy" kind="namespace"><name>common::user::legacy</name>
+  </compound>
+  <compound refid="namespace_exception" kind="namespace"><name>Exception</name>
+  </compound>
+  <compound refid="namespacejson" kind="namespace"><name>json</name>
+  </compound>
+  <compound refid="namespace_red_bean_p_h_p_1_1_o_o_d_b_bean" kind="namespace"><name>RedBeanPHP::OODBBean</name>
+  </compound>
+  <compound refid="namespace_red_bean_p_h_p_1_1_r" kind="namespace"><name>RedBeanPHP::R</name>
+  </compound>
+  <compound refid="auth_8php" kind="file"><name>auth.php</name>
+  </compound>
+  <compound refid="legacy_2auth_8php" kind="file"><name>auth.php</name>
+  </compound>
+  <compound refid="_config_8php" kind="file"><name>Config.php</name>
+  </compound>
+  <compound refid="legacy_2_config_8php" kind="file"><name>Config.php</name>
+  </compound>
+  <compound refid="_bad_charactes_username_validation_exception_8php" kind="file"><name>BadCharactesUsernameValidationException.php</name>
+  </compound>
+  <compound refid="_field_not_allowed_validation_exception_8php" kind="file"><name>FieldNotAllowedValidationException.php</name>
+  </compound>
+  <compound refid="_max_length_validation_exception_8php" kind="file"><name>MaxLengthValidationException.php</name>
+  </compound>
+  <compound refid="_min_length_validation_exception_8php" kind="file"><name>MinLengthValidationException.php</name>
+  </compound>
+  <compound refid="_no_valid_email_validation_exception_8php" kind="file"><name>NoValidEmailValidationException.php</name>
+  </compound>
+  <compound refid="_required_validation_exception_8php" kind="file"><name>RequiredValidationException.php</name>
+  </compound>
+  <compound refid="_username_taken_validation_exception_8php" kind="file"><name>UsernameTakenValidationException.php</name>
+  </compound>
+  <compound refid="helper_8php" kind="file"><name>helper.php</name>
+  </compound>
+  <compound refid="legacy_2helper_8php" kind="file"><name>helper.php</name>
+  </compound>
+  <compound refid="legacy_2permission_8php" kind="file"><name>permission.php</name>
+  </compound>
+  <compound refid="permission_8php" kind="file"><name>permission.php</name>
+  </compound>
+  <compound refid="legacy_2role_8php" kind="file"><name>role.php</name>
+  </compound>
+  <compound refid="role_8php" kind="file"><name>role.php</name>
+  </compound>
+  <compound refid="legacy_2_role_object_8php" kind="file"><name>RoleObject.php</name>
+  </compound>
+  <compound refid="_role_object_8php" kind="file"><name>RoleObject.php</name>
+  </compound>
+  <compound refid="legacy_2_roles_8php" kind="file"><name>Roles.php</name>
+  </compound>
+  <compound refid="_roles_8php" kind="file"><name>Roles.php</name>
+  </compound>
+  <compound refid="legacy_2setup_8php" kind="file"><name>setup.php</name>
+  </compound>
+  <compound refid="setup_8php" kind="file"><name>setup.php</name>
+  </compound>
+  <compound refid="legacy_2user_8php" kind="file"><name>user.php</name>
+  </compound>
+  <compound refid="user_8php" kind="file"><name>user.php</name>
+  </compound>
+  <compound refid="legacy_2users_8php" kind="file"><name>users.php</name>
+  </compound>
+  <compound refid="users_8php" kind="file"><name>users.php</name>
+  </compound>
+  <compound refid="legacy_2_validation_8php" kind="file"><name>Validation.php</name>
+  </compound>
+  <compound refid="_validation_8php" kind="file"><name>Validation.php</name>
+  </compound>
+  <compound refid="legacy_2_validation_object_8php" kind="file"><name>ValidationObject.php</name>
+  </compound>
+  <compound refid="_validation_object_8php" kind="file"><name>ValidationObject.php</name>
+  </compound>
+  <compound refid="dir_7e4735ac8fafda76147cba9ec50ed235" kind="dir"><name>src/exception/</name>
+  </compound>
+  <compound refid="dir_7f47d5778ddc5df842f03816ccd04aa5" kind="dir"><name>src/legacy/</name>
+  </compound>
+  <compound refid="dir_fb740454fef5562df9fff013bb024a32" kind="dir"><name>src/</name>
+  </compound>
+</doxygenindex>

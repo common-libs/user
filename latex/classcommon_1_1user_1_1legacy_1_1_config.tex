@@ -1,0 +1,47 @@
+\hypertarget{classcommon_1_1user_1_1legacy_1_1_config}{\section{\-Config \-Class \-Reference}
+\label{classcommon_1_1user_1_1legacy_1_1_config}\index{\-Config@{\-Config}}
+}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcommon_1_1user_1_1legacy_1_1_config_a1c276df94c6901e87b364e6302fbd2e4}{set\-Config} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 36 of file \-Config.\-php.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1_config_a1c276df94c6901e87b364e6302fbd2e4}{\index{common\-::user\-::legacy\-::\-Config@{common\-::user\-::legacy\-::\-Config}!set\-Config@{set\-Config}}
+\index{set\-Config@{set\-Config}!common::user::legacy::Config@{common\-::user\-::legacy\-::\-Config}}
+\subsubsection[{set\-Config}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf set\-Config} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classcommon_1_1user_1_1legacy_1_1_config_a1c276df94c6901e87b364e6302fbd2e4}
+\begin{DoxyReturn}{\-Returns}
+\-Closure 
+\end{DoxyReturn}
+
+
+\-Definition at line 42 of file \-Config.\-php.
+
+
+\begin{DoxyCode}
+    {
+        return function ($options) {
+            $options->setCreateIfNotExists(true);
+            $options->setPath(getcwd()."/.common/user/config.json");
+            $options->setCache(true);
+        };
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/legacy/\-Config.\-php\end{DoxyCompactItemize}

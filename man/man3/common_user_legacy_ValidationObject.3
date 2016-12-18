@@ -1,0 +1,280 @@
+.TH "ValidationObject" 3 "Sun Dec 18 2016" "Version 1.0.0 alpha" "Common Libs / User" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ValidationObject \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($string)"
+.br
+.ti -1c
+.RI "\fBmin\fP ($\fBmin\fP)"
+.br
+.ti -1c
+.RI "\fBmax\fP ($\fBmax\fP)"
+.br
+.ti -1c
+.RI "\fBdefaults\fP ($default)"
+.br
+.ti -1c
+.RI "\fBrequired\fP ()"
+.br
+.ti -1c
+.RI "\fBemail\fP ()"
+.br
+.ti -1c
+.RI "\fBpassword\fP ()"
+.br
+.ti -1c
+.RI "\fBusername\fP ()"
+.br
+.ti -1c
+.RI "\fBunique\fP ()"
+.br
+.ti -1c
+.RI "\fBget\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$min\fP = 0"
+.br
+.ti -1c
+.RI "\fB$max\fP = 255"
+.br
+.ti -1c
+.RI "\fB$default\fP = ''"
+.br
+.ti -1c
+.RI "\fB$required\fP = false"
+.br
+.ti -1c
+.RI "\fB$email\fP = false"
+.br
+.ti -1c
+.RI "\fB$password\fP = false"
+.br
+.ti -1c
+.RI "\fB$username\fP = false"
+.br
+.ti -1c
+.RI "\fB$unique\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 27 of file ValidationObject\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fB__construct\fP ($string)"\fBValidationObject\fP constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$string\fP 
+.RE
+.PP
+
+.PP
+Definition at line 67 of file ValidationObject\&.php\&.
+.PP
+.nf
+    {
+        $this->name = $string;
+    }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBdefaults\fP ($default)"if empty set this value
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$default\fP default value
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+$this| 
+.RE
+.PP
+
+.PP
+Definition at line 107 of file ValidationObject\&.php\&.
+.PP
+.nf
+    {
+        $this->default = $default;
+
+        return $this;
+    }
+.fi
+.SS "\fBemail\fP ()"this is email field
+.PP
+\fBReturns:\fP
+.RS 4
+$this| 
+.RE
+.PP
+
+.PP
+Definition at line 131 of file ValidationObject\&.php\&.
+.PP
+.nf
+    {
+        $this->email = true;
+
+        return $this;
+    }
+.fi
+.SS "\fBget\fP ()"\fBReturns:\fP
+.RS 4
+array 
+.RE
+.PP
+
+.PP
+Definition at line 177 of file ValidationObject\&.php\&.
+.PP
+.nf
+    {
+        return [
+            'min'      => $this->min,
+            'max'      => $this->max,
+            'username' => $this->username,
+            'password' => $this->password,
+            'email'    => $this->email,
+            'default'  => $this->default,
+            'required' => $this->required,
+            'unique'   => $this->unique,
+        ];
+    }
+.fi
+.SS "\fBmax\fP ($max)"set max characters
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$max\fP maximum size
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+$this| 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file ValidationObject\&.php\&.
+.PP
+.nf
+    {
+        $this->max = $max;
+
+        return $this;
+    }
+.fi
+.SS "\fBmin\fP ($min)"set min characters
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$min\fP minimum size
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+$this| 
+.RE
+.PP
+
+.PP
+Definition at line 79 of file ValidationObject\&.php\&.
+.PP
+.nf
+    {
+        $this->min = $min;
+
+        return $this;
+    }
+.fi
+.SS "\fBpassword\fP ()"this is password field
+.PP
+\fBReturns:\fP
+.RS 4
+$this| 
+.RE
+.PP
+
+.PP
+Definition at line 143 of file ValidationObject\&.php\&.
+.PP
+.nf
+    {
+        $this->password = true;
+
+        return $this;
+    }
+.fi
+.SS "\fBrequired\fP ()"cannot be empty
+.PP
+\fBReturns:\fP
+.RS 4
+$this| 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file ValidationObject\&.php\&.
+.PP
+.nf
+    {
+        $this->required = true;
+
+        return $this;
+    }
+.fi
+.SS "\fBunique\fP ()"no duplicate of this field in database
+.PP
+\fBReturns:\fP
+.RS 4
+$this| 
+.RE
+.PP
+
+.PP
+Definition at line 167 of file ValidationObject\&.php\&.
+.PP
+.nf
+    {
+        $this->unique = true;
+
+        return $this;
+    }
+.fi
+.SS "\fBusername\fP ()"this is username field
+.PP
+\fBReturns:\fP
+.RS 4
+$this| 
+.RE
+.PP
+
+.PP
+Definition at line 155 of file ValidationObject\&.php\&.
+.PP
+.nf
+    {
+        $this->username = true;
+
+        return $this;
+    }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Common Libs / User from the source code\&.

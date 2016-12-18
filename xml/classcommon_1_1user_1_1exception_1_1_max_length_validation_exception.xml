@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1exception_1_1_max_length_validation_exception" kind="class" prot="public">
+    <compoundname>common::user::exception::MaxLengthValidationException</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/exception/MaxLengthValidationException.php" line="12" bodyfile="/home/travis/build/common-libs/user/src/exception/MaxLengthValidationException.php" bodystart="11" bodyend="14"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

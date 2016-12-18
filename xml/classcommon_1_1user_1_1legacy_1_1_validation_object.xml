@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1legacy_1_1_validation_object" kind="class" prot="public">
+    <compoundname>common::user::legacy::ValidationObject</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a56ba76399d12529c48ecea581ecd08cf" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$min</definition>
+        <argsstring></argsstring>
+        <name>$min</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="32" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a9fb747ef5633c244639185a7fe54f6b0" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$max</definition>
+        <argsstring></argsstring>
+        <name>$max</name>
+        <initializer> 255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="36" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a9df479534ecf05fd7575c6275d381687" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$default</definition>
+        <argsstring></argsstring>
+        <name>$default</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="40" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a38addc8a958af4b42bda4fca677b4208" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$required</definition>
+        <argsstring></argsstring>
+        <name>$required</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="44" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1ad634f418b20382e2802f80532d76d3cd" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$email</definition>
+        <argsstring></argsstring>
+        <name>$email</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="48" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$password</definition>
+        <argsstring></argsstring>
+        <name>$password</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="52" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$username</definition>
+        <argsstring></argsstring>
+        <name>$username</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="56" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a315e8d3dcffff8aee2f2db82e8654d4d" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$unique</definition>
+        <argsstring></argsstring>
+        <name>$unique</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="60" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a86d355bfc3694145c81bf7ba65d3cded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($string)</argsstring>
+        <name>__construct</name>
+        <param>
+          <type>$</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classcommon_1_1user_1_1legacy_1_1_validation_object" kindref="compound">ValidationObject</ref> constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="68" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1ab6a72cde0b8c9e14e033b23eaaddcfd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>min</definition>
+        <argsstring>($min)</argsstring>
+        <name>min</name>
+        <param>
+          <type>$</type>
+          <declname>min</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set min characters</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>int</parametertype>
+<parametername>$min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum size</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="80" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a19c1576ea97d24111f5323bd81ab280c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>max</definition>
+        <argsstring>($max)</argsstring>
+        <name>max</name>
+        <param>
+          <type>$</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set max characters</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>int</parametertype>
+<parametername>$max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum size</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="94" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="93" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a1d459dff944c8c8a3e141a68d646a848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>defaults</definition>
+        <argsstring>($default)</argsstring>
+        <name>defaults</name>
+        <param>
+          <type>$</type>
+          <declname>default</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>if empty set this value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>mixed</parametertype>
+<parametername>$default</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>default value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="108" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="107" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1abd2999eed85fa7437ba20d06fc517623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>required</definition>
+        <argsstring>()</argsstring>
+        <name>required</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>cannot be empty</para><para><simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="120" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="119" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a0814d3be8538f244db1f0f63a9588a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>email</definition>
+        <argsstring>()</argsstring>
+        <name>email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this is email field</para><para><simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="132" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="131" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1af692b38313fcd34758e3269d74da796f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>password</definition>
+        <argsstring>()</argsstring>
+        <name>password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this is password field</para><para><simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="144" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="143" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a7475524fbb2e38dd6c9f7a6661b0bb81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>username</definition>
+        <argsstring>()</argsstring>
+        <name>username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this is username field</para><para><simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="156" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="155" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1a4687cd60c977d2d7171628bc42c81129" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>unique</definition>
+        <argsstring>()</argsstring>
+        <name>unique</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>no duplicate of this field in database</para><para><simplesect kind="return"><para>$this| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="168" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="167" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_validation_object_1ac33ee765f5ad9f134540bac393721cfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>array </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="178" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="177" bodyend="189"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" line="28" bodyfile="/home/travis/build/common-libs/user/src/legacy/ValidationObject.php" bodystart="27" bodyend="190"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a9df479534ecf05fd7575c6275d381687" prot="protected" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>$default</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1ad634f418b20382e2802f80532d76d3cd" prot="protected" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>$email</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a9fb747ef5633c244639185a7fe54f6b0" prot="protected" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>$max</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a56ba76399d12529c48ecea581ecd08cf" prot="protected" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>$min</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="protected" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>$password</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a38addc8a958af4b42bda4fca677b4208" prot="protected" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>$required</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a315e8d3dcffff8aee2f2db82e8654d4d" prot="protected" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>$unique</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="protected" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>$username</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a86d355bfc3694145c81bf7ba65d3cded" prot="public" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>__construct</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a1d459dff944c8c8a3e141a68d646a848" prot="public" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>defaults</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a0814d3be8538f244db1f0f63a9588a30" prot="public" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>email</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1ac33ee765f5ad9f134540bac393721cfe" prot="public" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>get</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a19c1576ea97d24111f5323bd81ab280c" prot="public" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>max</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1ab6a72cde0b8c9e14e033b23eaaddcfd5" prot="public" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>min</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1af692b38313fcd34758e3269d74da796f" prot="public" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>password</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1abd2999eed85fa7437ba20d06fc517623" prot="public" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>required</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a4687cd60c977d2d7171628bc42c81129" prot="public" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>unique</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_validation_object_1a7475524fbb2e38dd6c9f7a6661b0bb81" prot="public" virt="non-virtual"><scope>common::user::legacy::ValidationObject</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1legacy_1_1_roles" kind="class" prot="public">
+    <compoundname>common::user::legacy::Roles</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1legacy_1_1_roles_1a1ea903cca285c7c0b4c9203932100309" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$role</definition>
+        <argsstring></argsstring>
+        <name>$role</name>
+        <initializer> []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/Roles.php" line="13" bodyfile="/home/travis/build/common-libs/user/src/legacy/Roles.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1legacy_1_1_roles_1a3c49872dc41e063d02a5336a54780f15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>name</definition>
+        <argsstring>($string)</argsstring>
+        <name>name</name>
+        <param>
+          <type>$</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>create new role</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of role</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/legacy/Roles.php" line="23" bodyfile="/home/travis/build/common-libs/user/src/legacy/Roles.php" bodystart="22" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/Roles.php" line="9" bodyfile="/home/travis/build/common-libs/user/src/legacy/Roles.php" bodystart="8" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_roles_1a1ea903cca285c7c0b4c9203932100309" prot="protected" virt="non-virtual"><scope>common::user::legacy::Roles</scope><name>$role</name></member>
+      <member refid="classcommon_1_1user_1_1legacy_1_1_roles_1a3c49872dc41e063d02a5336a54780f15" prot="public" virt="non-virtual"><scope>common::user::legacy::Roles</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

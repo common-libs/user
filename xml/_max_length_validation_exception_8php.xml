@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_max_length_validation_exception_8php" kind="file">
+    <compoundname>MaxLengthValidationException.php</compoundname>
+    <innerclass refid="classcommon_1_1user_1_1exception_1_1_max_length_validation_exception" prot="public">common::user::exception::MaxLengthValidationException</innerclass>
+    <innernamespace refid="namespacecommon_1_1user_1_1exception">common::user::exception</innernamespace>
+    <innernamespace refid="namespacecommon">common</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">common\user\exception;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">use<sp/>Exception;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classcommon_1_1user_1_1exception_1_1_max_length_validation_exception" refkind="compound"><highlight class="keyword">class<sp/><sp/></highlight><highlight class="normal"><ref refid="classcommon_1_1user_1_1exception_1_1_max_length_validation_exception" kindref="compound">MaxLengthValidationException</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>Exception</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/travis/build/common-libs/user/src/exception/MaxLengthValidationException.php"/>
+  </compounddef>
+</doxygen>

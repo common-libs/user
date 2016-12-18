@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="namespacecommon_1_1user_1_1legacy" kind="namespace">
+    <compoundname>common::user::legacy</compoundname>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1auth" prot="public">common::user::legacy::auth</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1_config" prot="public">common::user::legacy::Config</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1helper" prot="public">common::user::legacy::helper</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1permission" prot="public">common::user::legacy::permission</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1role" prot="public">common::user::legacy::role</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1_role_object" prot="public">common::user::legacy::RoleObject</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1_roles" prot="public">common::user::legacy::Roles</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1setup" prot="public">common::user::legacy::setup</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1user" prot="public">common::user::legacy::user</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1users" prot="public">common::user::legacy::users</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1_validation" prot="public">common::user::legacy::Validation</innerclass>
+    <innerclass refid="classcommon_1_1user_1_1legacy_1_1_validation_object" prot="public">common::user::legacy::ValidationObject</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright (c) 2016 Profenter Systems</para><para>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</para><para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this program. If not, see &lt;<ulink url="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</ulink>&gt;. </para>    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/legacy/auth.php" line="20"/>
+  </compounddef>
+</doxygen>

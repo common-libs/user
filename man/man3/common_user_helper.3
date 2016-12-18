@@ -1,0 +1,51 @@
+.TH "helper" 3 "Sun Dec 18 2016" "Version 1.0.0 alpha" "Common Libs / User" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+helper \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBhash\fP (string $str)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 11 of file helper\&.php\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBhash\fP (string $str)\fC [static]\fP"Hashes an string/password
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$str\fP String to hash
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+string 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file helper\&.php\&.
+.PP
+.nf
+                                             : string
+    {
+        if (empty(Config::init()->secret)) {
+            Config::init()->secret = uniqid();
+        }
+
+        return hash('sha512', Config::init()->secret \&. $str \&. 'common-libs' \&. $str \&. 'user');
+    }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Common Libs / User from the source code\&.

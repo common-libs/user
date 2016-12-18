@@ -1,0 +1,87 @@
+\hypertarget{classcommon_1_1user_1_1legacy_1_1_role_object}{\section{\-Role\-Object \-Class \-Reference}
+\label{classcommon_1_1user_1_1legacy_1_1_role_object}\index{\-Role\-Object@{\-Role\-Object}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1_role_object_a86d355bfc3694145c81bf7ba65d3cded}{\-\_\-\-\_\-construct} (\$string)
+\item 
+\hyperlink{classcommon_1_1user_1_1legacy_1_1_role_object_ae0c158f2382ab0c7907921033ccee749}{permissions} (\$\hyperlink{classcommon_1_1user_1_1legacy_1_1_role_object_ae0c158f2382ab0c7907921033ccee749}{permissions})
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcommon_1_1user_1_1legacy_1_1_role_object_a1ea903cca285c7c0b4c9203932100309}{{\bfseries \$role}}\label{classcommon_1_1user_1_1legacy_1_1_role_object_a1ea903cca285c7c0b4c9203932100309}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 8 of file \-Role\-Object.\-php.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1_role_object_a86d355bfc3694145c81bf7ba65d3cded}{\index{common\-::user\-::legacy\-::\-Role\-Object@{common\-::user\-::legacy\-::\-Role\-Object}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!common::user::legacy::RoleObject@{common\-::user\-::legacy\-::\-Role\-Object}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-construct} (
+\begin{DoxyParamCaption}
+\item[{\$}]{string}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1_role_object_a86d355bfc3694145c81bf7ba65d3cded}
+\hyperlink{classcommon_1_1user_1_1legacy_1_1_validation_object}{\-Validation\-Object} constructor.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$string} & name of role \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 20 of file \-Role\-Object.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $this->role = new role($string);
+    }
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classcommon_1_1user_1_1legacy_1_1_role_object_ae0c158f2382ab0c7907921033ccee749}{\index{common\-::user\-::legacy\-::\-Role\-Object@{common\-::user\-::legacy\-::\-Role\-Object}!permissions@{permissions}}
+\index{permissions@{permissions}!common::user::legacy::RoleObject@{common\-::user\-::legacy\-::\-Role\-Object}}
+\subsubsection[{permissions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf permissions} (
+\begin{DoxyParamCaption}
+\item[{\$}]{permissions}
+\end{DoxyParamCaption}
+)}}\label{classcommon_1_1user_1_1legacy_1_1_role_object_ae0c158f2382ab0c7907921033ccee749}
+add permissions to role
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+array & {\em \$permissions} & \-Array of permissions\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\$this$|$ 
+\end{DoxyReturn}
+
+
+\-Definition at line 32 of file \-Role\-Object.\-php.
+
+
+\begin{DoxyCode}
+    {
+        $this->role->addPermissions($permissions);
+
+        return $this;
+    }
+\end{DoxyCode}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/legacy/\-Role\-Object.\-php\end{DoxyCompactItemize}

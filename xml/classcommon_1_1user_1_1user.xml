@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classcommon_1_1user_1_1user" kind="class" prot="public">
+    <compoundname>common::user::user</compoundname>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1user_1ad21c156ce4d87fe72c04f9296751352a" prot="protected" static="yes" mutable="no">
+        <type>static</type>
+        <definition>$setuped</definition>
+        <argsstring></argsstring>
+        <name>$setuped</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="17" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcommon_1_1user_1_1user_1a598ca4e71b15a1313ec95f0df1027ca5" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$user</definition>
+        <argsstring></argsstring>
+        <name>$user</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="21" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcommon_1_1user_1_1user_1a7053d2e0b9d626b7657a8f5077a64879" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$created</definition>
+        <argsstring></argsstring>
+        <name>$created</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="25" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1a23e72c446cb3946f437c096da49c0771" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>(string $username, $bean=NULL)</argsstring>
+        <name>__construct</name>
+        <param>
+          <type>string $</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>bean</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>user constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>username </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>null|\RedBeanPHP\OODBBean</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$bean user bean </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="34" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="33" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1a0b2e7098f1c48a7439a42bada5b69689" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getRole</definition>
+        <argsstring>()</argsstring>
+        <name>getRole</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get role of user</para><para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="119" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1a693ce7b594330a057ff5e70434a532ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setRole</definition>
+        <argsstring>(string $role)</argsstring>
+        <name>setRole</name>
+        <param>
+          <type>string $</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set role of user</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rolename </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="129" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="128" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1a3b22cd89cfbe4b444fdfd54c11f217d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hasPermission</definition>
+        <argsstring>(string $permission)</argsstring>
+        <name>hasPermission</name>
+        <param>
+          <type>string $</type>
+          <declname>permission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>checks if user has a permission</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$permission</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>permission name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="142" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="141" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1a0acd7052f38245fd3723ea29c83bf3f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__get</definition>
+        <argsstring>(string $name)</argsstring>
+        <name>__get</name>
+        <param>
+          <type>string $</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>magic field for get value of user</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mixed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="156" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1a2c4e9c30cf213decde815cdcb37e1ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__set</definition>
+        <argsstring>(string $name, $value)</argsstring>
+        <name>__set</name>
+        <param>
+          <type>string $</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>$</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>magic field for add value to user</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>mixed</parametertype>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="167" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="166" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1a421831a265621325e1fdd19aace0c758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__destruct</definition>
+        <argsstring>()</argsstring>
+        <name>__destruct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>auto created missing field </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="177" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="176" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1aff9a1fb07dca963c2c9a8ffe66b45ded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remove</definition>
+        <argsstring>()</argsstring>
+        <name>remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>remove user </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="193" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="193" bodyend="195"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1a3a934bd1e982502106ee5dfac2e4e2ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static check</definition>
+        <argsstring>()</argsstring>
+        <name>check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check if table was created </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="55" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="54" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1a60cee38002f8c7486c144fac39fa1b70" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static find</definition>
+        <argsstring>($usernameOrId, string $password=&quot;&quot;)</argsstring>
+        <name>find</name>
+        <param>
+          <type>$</type>
+          <declname>usernameOrId</declname>
+        </param>
+        <param>
+          <type>string $</type>
+          <declname>password</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>find a user</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$usernameOrId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool| </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="76" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="75" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classcommon_1_1user_1_1user_1add24390720d880435ddea36f244998c7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static guest</definition>
+        <argsstring>()</argsstring>
+        <name>guest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return a guest user</para><para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/build/common-libs/user/src/user.php" line="106" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="105" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/build/common-libs/user/src/user.php" line="13" bodyfile="/home/travis/build/common-libs/user/src/user.php" bodystart="12" bodyend="196"/>
+    <listofallmembers>
+      <member refid="classcommon_1_1user_1_1user_1a7053d2e0b9d626b7657a8f5077a64879" prot="protected" virt="non-virtual"><scope>common::user::user</scope><name>$created</name></member>
+      <member refid="classcommon_1_1user_1_1user_1ad21c156ce4d87fe72c04f9296751352a" prot="protected" virt="non-virtual"><scope>common::user::user</scope><name>$setuped</name></member>
+      <member refid="classcommon_1_1user_1_1user_1a598ca4e71b15a1313ec95f0df1027ca5" prot="protected" virt="non-virtual"><scope>common::user::user</scope><name>$user</name></member>
+      <member refid="classcommon_1_1user_1_1user_1a23e72c446cb3946f437c096da49c0771" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>__construct</name></member>
+      <member refid="classcommon_1_1user_1_1user_1a421831a265621325e1fdd19aace0c758" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>__destruct</name></member>
+      <member refid="classcommon_1_1user_1_1user_1a0acd7052f38245fd3723ea29c83bf3f3" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>__get</name></member>
+      <member refid="classcommon_1_1user_1_1user_1a2c4e9c30cf213decde815cdcb37e1ac8" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>__set</name></member>
+      <member refid="classcommon_1_1user_1_1user_1a3a934bd1e982502106ee5dfac2e4e2ed" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>check</name></member>
+      <member refid="classcommon_1_1user_1_1user_1a60cee38002f8c7486c144fac39fa1b70" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>find</name></member>
+      <member refid="classcommon_1_1user_1_1user_1a0b2e7098f1c48a7439a42bada5b69689" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>getRole</name></member>
+      <member refid="classcommon_1_1user_1_1user_1add24390720d880435ddea36f244998c7" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>guest</name></member>
+      <member refid="classcommon_1_1user_1_1user_1a3b22cd89cfbe4b444fdfd54c11f217d2" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>hasPermission</name></member>
+      <member refid="classcommon_1_1user_1_1user_1aff9a1fb07dca963c2c9a8ffe66b45ded" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>remove</name></member>
+      <member refid="classcommon_1_1user_1_1user_1a693ce7b594330a057ff5e70434a532ac" prot="public" virt="non-virtual"><scope>common::user::user</scope><name>setRole</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

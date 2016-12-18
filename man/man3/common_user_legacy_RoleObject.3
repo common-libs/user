@@ -1,0 +1,76 @@
+.TH "RoleObject" 3 "Sun Dec 18 2016" "Version 1.0.0 alpha" "Common Libs / User" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RoleObject \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($string)"
+.br
+.ti -1c
+.RI "\fBpermissions\fP ($\fBpermissions\fP)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$role\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 8 of file RoleObject\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fB__construct\fP ($string)"\fBValidationObject\fP constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$string\fP name of role 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file RoleObject\&.php\&.
+.PP
+.nf
+    {
+        $this->role = new role($string);
+    }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBpermissions\fP ($permissions)"add permissions to role
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$permissions\fP Array of permissions
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+$this| 
+.RE
+.PP
+
+.PP
+Definition at line 32 of file RoleObject\&.php\&.
+.PP
+.nf
+    {
+        $this->role->addPermissions($permissions);
+
+        return $this;
+    }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Common Libs / User from the source code\&.

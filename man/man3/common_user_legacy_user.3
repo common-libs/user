@@ -1,0 +1,310 @@
+.TH "user" 3 "Sun Dec 18 2016" "Version 1.0.0 alpha" "Common Libs / User" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+user \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($username, $bean=NULL)"
+.br
+.ti -1c
+.RI "\fBgetRole\fP ()"
+.br
+.ti -1c
+.RI "\fBsetRole\fP ($\fBrole\fP)"
+.br
+.ti -1c
+.RI "\fBhasPermission\fP ($\fBpermission\fP)"
+.br
+.ti -1c
+.RI "\fB__get\fP ($name)"
+.br
+.ti -1c
+.RI "\fB__set\fP ($name, $value)"
+.br
+.ti -1c
+.RI "\fB__destruct\fP ()"
+.br
+.ti -1c
+.RI "\fBremove\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBcheck\fP ()"
+.br
+.ti -1c
+.RI "static \fBfind\fP ($usernameOrId, $password='')"
+.br
+.ti -1c
+.RI "static \fBguest\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$user\fP = false"
+.br
+.ti -1c
+.RI "\fB$created\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fB$setuped\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 29 of file user\&.php\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fB__construct\fP ($username, $bean = \fCNULL\fP)"user constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$username\fP username 
+.br
+\fInull|\\RedBeanPHP\\OODBBean\fP $bean user bean 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file user\&.php\&.
+.PP
+.nf
+    {
+        self::check();
+        if (is_null($bean)) {
+            $userdbname = setup::getValidation('username');
+            $this->user = R::findOne('user', ' ' \&. $userdbname \&. ' = ? ', [$username]);
+            if (!setup::getValidation($userdbname, 'unique') || is_null($this->user)) {
+                $this->user                = R::dispense('user');
+                $this->user->{$userdbname} = setup::validation($userdbname, $username);
+                $this->created             = true;
+                R::store($this->user);
+            }
+        }
+        else {
+            $this->user = $bean;
+        }
+    }
+.fi
+.SS "\fB__destruct\fP ()"auto created missing field 
+.PP
+Definition at line 193 of file user\&.php\&.
+.PP
+.nf
+    {
+        if ($this->created && Config::init()->createdMissingUserFields) {
+            $a = [];
+            foreach ($this->user as $id => $properties) {
+                $a[$id] = $properties;
+            }
+            foreach (array_diff_key(setup::validation(), $a) as $id => $item) {
+                $this->user->$id = $item['default'];
+            }
+            R::store($this->user);
+        }
+    }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fB__get\fP ($name)"magic field for get value of user
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$name\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+mixed 
+.RE
+.PP
+
+.PP
+Definition at line 172 of file user\&.php\&.
+.PP
+.nf
+    {
+        return $this->user->$name;
+    }
+.fi
+.SS "\fB__set\fP ($name, $value)"magic field for add value to user
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$name\fP 
+.br
+\fI$value\fP 
+.RE
+.PP
+
+.PP
+Definition at line 183 of file user\&.php\&.
+.PP
+.nf
+    {
+        $this->user->$name = setup::validation($name, $value);
+
+        R::store($this->user);
+    }
+.fi
+.SS "static \fBcheck\fP ()\fC [static]\fP"check if table was created 
+.PP
+Definition at line 71 of file user\&.php\&.
+.PP
+.nf
+    {
+        if (R::count('user') < 1) {
+            $pwdbname             = setup::getValidation('password');
+            $userdbname           = setup::getValidation('username');
+            $guest                = R::dispense('user');
+            $guest->{$userdbname} = 'guest';
+            $guest->{$pwdbname}   = '';
+            $guest->role          = role::get('guest');
+            R::store($guest);
+        }
+    }
+.fi
+.SS "static \fBfind\fP ($usernameOrId, $password = \fC''\fP)\fC [static]\fP"find a user
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$usernameOrId\fP 
+.br
+\fI$password\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool| 
+.RE
+.PP
+
+.PP
+Definition at line 92 of file user\&.php\&.
+.PP
+.nf
+    {
+        self::check();
+        if(is_numeric($usernameOrId)) {
+            $bean = R::load('user',$usernameOrId);
+        } else {
+            $userdbname = setup::getValidation('username');
+            if ($password != '') {
+                $pwdbname = setup::getValidation('password');
+                $bean     = R::findOne('user', ' ' \&. $userdbname \&. ' = ? AND ' \&. $pwdbname \&. ' = ? ', [
+                    $usernameOrId,
+                    helper::hash($password)
+                ]);
+            }
+            else {
+                $bean = R::findOne('user', ' ' \&. $userdbname \&. ' = ? ', [$usernameOrId]);
+            }
+        }
+        if (!is_null($bean)) {
+            return new self('', $bean);
+        }
+
+        return false;
+    }
+.fi
+.SS "\fBgetRole\fP ()"get role of user
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 135 of file user\&.php\&.
+.PP
+.nf
+    {
+        return $this->user->role;
+    }
+.fi
+.SS "static \fBguest\fP ()\fC [static]\fP"return a guest user
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 122 of file user\&.php\&.
+.PP
+.nf
+    {
+        self::check();
+        $userdbname = setup::getValidation('username');
+
+        return new self('', R::findOne('user', ' ' \&. $userdbname \&. ' = ? ', ['guest']));
+    }
+.fi
+.SS "\fBhasPermission\fP ($permission)"checks if user has a permission
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$permission\fP permission name
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Definition at line 158 of file user\&.php\&.
+.PP
+.nf
+    {
+        $role = new role($this->user->role->name);
+
+        return $role->hasPermission($permission);
+    }
+.fi
+.SS "\fBremove\fP ()"remove user 
+.PP
+Definition at line 210 of file user\&.php\&.
+.PP
+.nf
+                             {
+        R::trash($this->user);
+    }
+.fi
+.SS "\fBsetRole\fP ($role)"set role of user
+.PP
+\fBParameters:\fP
+.RS 4
+\fI$role\fP rolename 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file user\&.php\&.
+.PP
+.nf
+    {
+        $this->user->role = role::get($role);
+        R::store($this->user);
+    }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Common Libs / User from the source code\&.
