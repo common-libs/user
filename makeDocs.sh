@@ -8,6 +8,7 @@ cd code_docs
 
 git clone -b gh-pages https://git@$GH_REPO_REF
 cd $GH_REPO_NAME
+ls -l
 
 git config --global push.default simple
 git config user.name "Travis CI"
