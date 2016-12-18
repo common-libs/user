@@ -22,4 +22,4 @@ after_success:
 - chmod +x makeDocs.sh
 - "./makeDocs.sh"
 script:
-  - cd src && find . -type f -name '*.php' -exec php -l {} ; |grep -v "No syntax errors detected"
+  - cd src && find . -type f -name '*.php' -exec php -l {};
