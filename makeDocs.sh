@@ -3,12 +3,16 @@ echo 'Setting up the script...'
 
 set -e
 
+echo "" > .nojekyll
+echo 'Generating Doxygen code documentation...'
+doxygen $DOXYFILE 2>&1 | tee doxygen.log
+
 mkdir code_docs
 cd code_docs
 
 git clone -b gh-pages https://git@$GH_REPO_REF
 cd $GH_REPO_NAME
-ls -l
+
 
 git config --global push.default simple
 git config user.name "Travis CI"
@@ -16,9 +20,7 @@ git config user.email "travis@travis-ci.org"
 
 rm -rf *
 
-echo "" > .nojekyll
-echo 'Generating Doxygen code documentation...'
-doxygen $DOXYFILE 2>&1 | tee doxygen.log
+cp -r ../../docs/* .
 
 if [ -d "html" ] && [ -f "html/index.html" ]; then
 
