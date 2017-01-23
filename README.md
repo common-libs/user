@@ -1,4 +1,4 @@
-# cpmmon-libs/user
+# common-libs/user
 
 Create, manipulate & manage user by using php objects:
 ````php
@@ -15,7 +15,7 @@ echo $u->getRole(); //admin
 
 /* Update */
 $u = user::find("username");
-$u->email = new@web.tld
+$u->email = "new@web.tld";
 
 /* Remove */
 $u = user::find("username");
@@ -25,7 +25,7 @@ $u->remove();
 auth::check(); //is authenticated?
 auth::login($username, $password); //log in a user
 auth::logout(); //log out the current user
-auth::require("role"); //check if current user has role "role"
+auth::require("write"); //check if current user has permission "write"
 ````
 
 Requirements:
