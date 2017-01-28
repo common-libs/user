@@ -26,8 +26,7 @@ use RedBeanPHP\R;
  *
  * @package common\user
  */
-class user
-{
+class user {
 	/**
 	 * @var bool
 	 */
@@ -47,8 +46,7 @@ class user
 	 * @param string                    $username username
 	 * @param null|\RedBeanPHP\OODBBean $bean     user bean
 	 */
-	public function __construct(string $username, $bean = NULL)
-	{
+	public function __construct(string $username, $bean = NULL) {
 		self::check();
 		if (is_null($bean)) {
 			$userdbname = setup::getValidation("username");
@@ -68,8 +66,7 @@ class user
 	/**
 	 * check if table was created
 	 */
-	public static function check()
-	{
+	public static function check() {
 		if (R::count("user") < 1) {
 			$pwdbname             = setup::getValidation("password");
 			$userdbname           = setup::getValidation("username");
@@ -89,38 +86,37 @@ class user
 	 *
 	 * @return bool|\common\user\user
 	 */
-	public static function find($usernameOrId, string $password = "")
-    {
-        self::check();
-        if(is_numeric($usernameOrId)) {
-            $bean = R::load('user',$usernameOrId);
-        } else {
-            $userdbname = setup::getValidation("username");
-            if ($password != "") {
-                $pwdbname = setup::getValidation("password");
-                $bean     = R::findOne('user', ' ' . $userdbname . ' = ? AND ' . $pwdbname . ' = ? ', [
-	                $usernameOrId,
-	                setup::doHash($password)
-                ]);
-            }
-            else {
-                $bean = R::findOne('user', ' ' . $userdbname . ' = ? ', [$usernameOrId]);
-            }
-        }
-        if (!is_null($bean)) {
-            return new self("", $bean);
-        }
+	public static function find($usernameOrId, string $password = "") {
+		self::check();
+		if (is_numeric($usernameOrId)) {
+			$bean = R::load('user', $usernameOrId);
+		}
+		else {
+			$userdbname = setup::getValidation("username");
+			if ($password != "") {
+				$pwdbname = setup::getValidation("password");
+				$bean     = R::findOne('user', ' ' . $userdbname . ' = ? AND ' . $pwdbname . ' = ? ', [
+					$usernameOrId,
+					setup::doHash($password)
+				]);
+			}
+			else {
+				$bean = R::findOne('user', ' ' . $userdbname . ' = ? ', [$usernameOrId]);
+			}
+		}
+		if (!is_null($bean)) {
+			return new self("", $bean);
+		}
 
-        return false;
-    }
+		return false;
+	}
 
 	/**
 	 * return a guest user
 	 *
 	 * @return \common\user\user
 	 */
-	public static function guest() : user
-	{
+	public static function guest(): user {
 		self::check();
 		$userdbname = setup::getValidation("username");
 
@@ -132,8 +128,7 @@ class user
 	 *
 	 * @return \common\user\role
 	 */
-	public function getRole() : role
-	{
+	public function getRole(): role {
 		return $this->user->role;
 	}
 
@@ -142,8 +137,7 @@ class user
 	 *
 	 * @param string $role rolename
 	 */
-	public function setRole(string $role)
-	{
+	public function setRole(string $role) {
 		$this->user->role = role::get($role);
 		R::store($this->user);
 	}
@@ -155,8 +149,7 @@ class user
 	 *
 	 * @return bool
 	 */
-	public function hasPermission(string $permission) : bool
-	{
+	public function hasPermission(string $permission): bool {
 		$role = new role($this->user->role->name);
 
 		return $role->hasPermission($permission);
@@ -169,8 +162,7 @@ class user
 	 *
 	 * @return mixed
 	 */
-	public function __get(string $name)
-	{
+	public function __get(string $name) {
 		return $this->user->$name;
 	}
 
@@ -180,8 +172,7 @@ class user
 	 * @param string $name
 	 * @param mixed  $value
 	 */
-	public function __set(string $name, $value)
-	{
+	public function __set(string $name, $value) {
 		$this->user->$name = setup::validation($name, $value);
 
 		R::store($this->user);
@@ -190,8 +181,7 @@ class user
 	/**
 	 * auto created missing field
 	 */
-	public function __destruct()
-	{
+	public function __destruct() {
 		if ($this->created && Config::init()->createdMissingUserFields) {
 			$a = [];
 			foreach ($this->user as $id => $properties) {
@@ -204,10 +194,10 @@ class user
 		}
 	}
 
-    /**
-     * remove user
-     */
-    public function remove() {
-        R::trash($this->user);
-    }
+	/**
+	 * remove user
+	 */
+	public function remove() {
+		R::trash($this->user);
+	}
 }

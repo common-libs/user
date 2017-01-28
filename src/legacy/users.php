@@ -26,8 +26,7 @@ use RedBeanPHP\Facade as R;
  *
  * @package common\user\legacy
  */
-class users
-{
+class users {
 	/**
 	 * Returns an array of all user beans
 	 *
@@ -35,8 +34,7 @@ class users
 	 *
 	 * @return array
 	 */
-	public static function lists($orderBy = "id")
-	{
+	public static function lists($orderBy = "id") {
 		return R::findAll('user', ' ORDER BY ? ASC ', [$orderBy]);
 	}
 
@@ -47,8 +45,7 @@ class users
 	 *
 	 * @return bool
 	 */
-	public static function isUser($username)
-	{
+	public static function isUser($username) {
 		$userdbname = setup::getValidation("username");
 		if (R::findOne('user', ' ' . $userdbname . ' = ? ', [$username])) {
 			return true;
@@ -62,8 +59,7 @@ class users
 	 *
 	 * @param string $username Username
 	 */
-	public static function removeByUsername($username)
-	{
+	public static function removeByUsername($username) {
 		$userdbname = setup::getValidation("username");
 		if ($user = R::findOne('user', ' ' . $userdbname . ' = ? ', [$username])) {
 			R::trash($user);
@@ -75,8 +71,7 @@ class users
 	 *
 	 * @param integer $id id of user
 	 */
-	public static function removeById($id)
-	{
+	public static function removeById($id) {
 		if ($user = R::findOne('user', ' id = ? ', [$id])) {
 			R::trash($user);
 		}

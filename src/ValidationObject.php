@@ -1,4 +1,22 @@
 <?php
+/**
+ * Copyright (c) 2017 Profenter Systems
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
 namespace common\user;
 
 /**
@@ -6,8 +24,7 @@ namespace common\user;
  *
  * @package common\user
  */
-class ValidationObject
-{
+class ValidationObject {
 	/**
 	 * @var int
 	 */
@@ -46,8 +63,7 @@ class ValidationObject
 	 *
 	 * @param $string
 	 */
-	public function __construct($string)
-	{
+	public function __construct($string) {
 		$this->name = $string;
 	}
 
@@ -58,8 +74,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\ValidationObject
 	 */
-	public function min(int $min) : ValidationObject
-	{
+	public function min(int $min): ValidationObject {
 		$this->min = $min;
 
 		return $this;
@@ -72,8 +87,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\ValidationObject
 	 */
-	public function max(int $max) : ValidationObject
-	{
+	public function max(int $max): ValidationObject {
 		$this->max = $max;
 
 		return $this;
@@ -86,8 +100,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\ValidationObject
 	 */
-	public function default($default): ValidationObject
-	{
+	public function default($default): ValidationObject {
 		$this->default = $default;
 
 		return $this;
@@ -98,8 +111,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\ValidationObject
 	 */
-	public function required(): ValidationObject
-	{
+	public function required(): ValidationObject {
 		$this->required = true;
 
 		return $this;
@@ -110,8 +122,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\ValidationObject
 	 */
-	public function email(): ValidationObject
-	{
+	public function email(): ValidationObject {
 		$this->email = true;
 
 		return $this;
@@ -122,8 +133,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\ValidationObject
 	 */
-	public function password(): ValidationObject
-	{
+	public function password(): ValidationObject {
 		$this->password = true;
 
 		return $this;
@@ -134,8 +144,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\ValidationObject
 	 */
-	public function username(): ValidationObject
-	{
+	public function username(): ValidationObject {
 		$this->username = true;
 
 		return $this;
@@ -146,8 +155,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\ValidationObject
 	 */
-	public function unique(): ValidationObject
-	{
+	public function unique(): ValidationObject {
 		$this->unique = true;
 
 		return $this;
@@ -156,8 +164,7 @@ class ValidationObject
 	/**
 	 * @return array
 	 */
-	public function get() : array
-	{
+	public function get(): array {
 		return [
 			"min"      => $this->min,
 			"max"      => $this->max,

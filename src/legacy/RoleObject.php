@@ -23,8 +23,7 @@ namespace common\user\legacy;
  *
  * @package common\user\legacy
  */
-class RoleObject
-{
+class RoleObject {
 	/**
 	 * @var role
 	 */
@@ -35,8 +34,7 @@ class RoleObject
 	 *
 	 * @param string $string name of role
 	 */
-	public function __construct($string)
-	{
+	public function __construct($string) {
 		$this->role = new role($string);
 	}
 
@@ -47,8 +45,7 @@ class RoleObject
 	 *
 	 * @return $this|\common\user\legacy\RoleObject
 	 */
-	public function permissions($permissions)
-	{
+	public function permissions($permissions) {
 		$this->role->addPermissions($permissions);
 
 		return $this;

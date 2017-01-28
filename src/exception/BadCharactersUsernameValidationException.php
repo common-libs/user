@@ -27,6 +27,5 @@ use Exception;
  *
  * @package common\user\exception
  */
-class BadCharactersUsernameValidationException extends Exception
-{
+class BadCharactersUsernameValidationException extends Exception {
 }

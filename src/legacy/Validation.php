@@ -33,8 +33,7 @@ use RedBeanPHP\R;
  *
  * @package common\userlegacy\
  */
-class Validation
-{
+class Validation {
 	/**
 	 * @var array
 	 */
@@ -47,8 +46,7 @@ class Validation
 	 *
 	 * @return ValidationObject
 	 */
-	public function name($string)
-	{
+	public function name($string) {
 		if (!isset($this->forms[$string])) {
 			$this->forms[$string] = new ValidationObject($string);
 		}
@@ -71,8 +69,7 @@ class Validation
 	 * @throws \common\user\exception\RequiredValidationException
 	 * @throws \common\user\exception\UsernameTakenValidationException
 	 */
-	public function validate($name, $value)
-	{
+	public function validate($name, $value) {
 		if (!isset($this->forms[$name]) && Config::init()->protectUserFields) {
 			throw new FieldNotAllowedValidationException();
 		}
@@ -115,8 +112,7 @@ class Validation
 	 *
 	 * @return string
 	 */
-	public function get($name)
-	{
+	public function get($name) {
 		$forms = $this->forms;
 		foreach ($forms as $id => $item) {
 			$val = $item->get();
@@ -136,8 +132,7 @@ class Validation
 	 *
 	 * @return mixed
 	 */
-	public function is($field, $name)
-	{
+	public function is($field, $name) {
 		return $this->forms[$field]->get()[$name];
 	}
 
@@ -146,8 +141,7 @@ class Validation
 	 *
 	 * @return array
 	 */
-	public function getAll()
-	{
+	public function getAll() {
 		$forms = $this->forms;
 		$a     = [];
 		foreach ($forms as $id => $item) {

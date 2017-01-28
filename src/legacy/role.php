@@ -19,7 +19,6 @@
 
 namespace common\user\legacy;
 
-
 use RedBeanPHP\OODBBean;
 use RedBeanPHP\R;
 
@@ -28,8 +27,7 @@ use RedBeanPHP\R;
  *
  * @package common\user\legacy
  */
-class role
-{
+class role {
 
 	/**
 	 * @var OODBBean
@@ -41,8 +39,7 @@ class role
 	 *
 	 * @param string $roleName
 	 */
-	public function __construct($roleName)
-	{
+	public function __construct($roleName) {
 		self::check();
 		if (!$role = R::findOne("role", " name = ? ", [$roleName])) {
 			$role       = R::dispense("role");
@@ -53,18 +50,39 @@ class role
 	}
 
 	/**
+	 * check if table was created
+	 */
+	public static function check() {
+		if (R::count("role") < 1) {
+			$role                                = R::dispense("role");
+			$role->name                          = "guest";
+			$per                                 = new permission("guest");
+			$role->role->sharedPermissionList [] = $per->get();
+			R::store($role);
+		}
+	}
+
+	/**
 	 * alias for new role($role)
 	 *
 	 * @param string $role role name
 	 *
 	 * @return \RedBeanPHP\OODBBean
 	 */
-	public static function get($role)
-	{
+	public static function get($role) {
 		self::check();
 		$r = new self($role);
 
 		return $r->getRole();
+	}
+
+	/**
+	 * get db role object
+	 *
+	 * @return OODBBean
+	 */
+	public function getRole() {
+		return $this->role;
 	}
 
 	/**
@@ -74,23 +92,8 @@ class role
 	 *
 	 * @return bool
 	 */
-	public function equals($role)
-	{
+	public function equals($role) {
 		return $role->getRole()->id == $this->role->id && $role->getRole()->name == $this->role->name;
-	}
-
-	/**
-	 * check if table was created
-	 */
-	public static function check()
-	{
-		if (R::count("role") < 1) {
-			$role                             = R::dispense("role");
-			$role->name                       = "guest";
-			$per                              = new permission("guest");
-			$role->role->sharedPermissionList [] = $per->get();
-			R::store($role);
-		}
 	}
 
 	/**
@@ -98,10 +101,9 @@ class role
 	 *
 	 * @param array $permissions array of permission names
 	 */
-	public function addPermissions($permissions)
-	{
+	public function addPermissions($permissions) {
 		foreach ($permissions as $permission) {
-			$per                              = new permission($permission);
+			$per                                 = new permission($permission);
 			$this->role->sharedPermissionList [] = $per->get();
 		}
 		R::store($this->role);
@@ -112,9 +114,8 @@ class role
 	 *
 	 * @param string $permission permission name
 	 */
-	public function addPermission($permission)
-	{
-		$per                              = new permission($permission);
+	public function addPermission($permission) {
+		$per                                 = new permission($permission);
 		$this->role->sharedPermissionList [] = $per->get();
 		R::store($this->role);
 	}
@@ -124,8 +125,7 @@ class role
 	 *
 	 * @return array
 	 */
-	public function getPermissions()
-	{
+	public function getPermissions() {
 		$permissions = [];
 		foreach ($this->role->sharedPermissionList as $permission) {
 			$permissions[] = $permission->name;
@@ -135,24 +135,13 @@ class role
 	}
 
 	/**
-	 * get db role object
-	 *
-	 * @return OODBBean
-	 */
-	public function getRole()
-	{
-		return $this->role;
-	}
-
-	/**
 	 * check if a role has a permission
 	 *
 	 * @param string $permissionName name of permission
 	 *
 	 * @return bool
 	 */
-	public function hasPermission($permissionName)
-	{
+	public function hasPermission($permissionName) {
 		foreach ($this->role->sharedPermissionList as $permission) {
 			if ($permission->name == $permissionName) {
 				return true;

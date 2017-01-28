@@ -19,14 +19,12 @@
 
 namespace common\user;
 
-
 /**
  * Class helper
  *
  * @package common\user
  */
-class helper
-{
+class helper {
 	/**
 	 * Hashes an string/password
 	 *
@@ -34,8 +32,7 @@ class helper
 	 *
 	 * @return string
 	 */
-	public static function hash(string $str) : string
-	{
+	public static function hash(string $str): string {
 		if (empty(Config::init()->secret)) {
 			Config::init()->secret = uniqid();
 		}

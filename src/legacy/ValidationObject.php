@@ -24,8 +24,7 @@ namespace common\user\legacy;
  *
  * @package common\user\legacy
  */
-class ValidationObject
-{
+class ValidationObject {
 	/**
 	 * @var int
 	 */
@@ -64,8 +63,7 @@ class ValidationObject
 	 *
 	 * @param $string
 	 */
-	public function __construct($string)
-	{
+	public function __construct($string) {
 		$this->name = $string;
 	}
 
@@ -76,8 +74,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\legacy\ValidationObject
 	 */
-	public function min($min)
-	{
+	public function min($min) {
 		$this->min = $min;
 
 		return $this;
@@ -90,8 +87,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\legacy\ValidationObject
 	 */
-	public function max($max)
-	{
+	public function max($max) {
 		$this->max = $max;
 
 		return $this;
@@ -104,8 +100,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\legacy\ValidationObject
 	 */
-	public function defaults($default)
-	{
+	public function defaults($default) {
 		$this->default = $default;
 
 		return $this;
@@ -116,8 +111,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\legacy\ValidationObject
 	 */
-	public function required()
-	{
+	public function required() {
 		$this->required = true;
 
 		return $this;
@@ -128,8 +122,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\legacy\ValidationObject
 	 */
-	public function email()
-	{
+	public function email() {
 		$this->email = true;
 
 		return $this;
@@ -140,8 +133,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\legacy\ValidationObject
 	 */
-	public function password()
-	{
+	public function password() {
 		$this->password = true;
 
 		return $this;
@@ -152,8 +144,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\legacy\ValidationObject
 	 */
-	public function username()
-	{
+	public function username() {
 		$this->username = true;
 
 		return $this;
@@ -164,8 +155,7 @@ class ValidationObject
 	 *
 	 * @return $this|\common\user\legacy\ValidationObject
 	 */
-	public function unique()
-	{
+	public function unique() {
 		$this->unique = true;
 
 		return $this;
@@ -174,8 +164,7 @@ class ValidationObject
 	/**
 	 * @return array
 	 */
-	public function get()
-	{
+	public function get() {
 		return [
 			"min"      => $this->min,
 			"max"      => $this->max,

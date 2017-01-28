@@ -25,8 +25,7 @@ namespace common\user\legacy;
  *
  * @package common\user\legacy
  */
-class helper
-{
+class helper {
 	/**
 	 * Hashes an string/password
 	 *
@@ -34,8 +33,7 @@ class helper
 	 *
 	 * @return string
 	 */
-	public static function hash($str)
-	{
+	public static function hash($str) {
 		if (empty(Config::init()->secret)) {
 			Config::init()->secret = uniqid();
 		}

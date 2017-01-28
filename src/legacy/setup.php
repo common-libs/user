@@ -26,8 +26,7 @@ use Closure;
  *
  * @package common\user\legacy
  */
-class setup
-{
+class setup {
 	/**
 	 * @var Validation
 	 */
@@ -46,8 +45,7 @@ class setup
 	 *
 	 * @param \Closure $param function to call for validation
 	 */
-	public static function validate($param)
-	{
+	public static function validate($param) {
 		call_user_func($param, $validation = new Validation());
 		self::$validate = $validation;
 	}
@@ -63,8 +61,7 @@ class setup
 	 *
 	 * @return array|string
 	 */
-	public static function validation($name = false, $value = false)
-	{
+	public static function validation($name = false, $value = false) {
 		if (!$name && !$value) {
 			return self::$validate->getAll();
 		}
@@ -83,8 +80,7 @@ class setup
 	 *
 	 * @return mixed|string
 	 */
-	public static function getValidation($name, $value = false)
-	{
+	public static function getValidation($name, $value = false) {
 		return $value !== false ? self::$validate->is($name, $value) : self::$validate->get($name);
 	}
 
@@ -93,8 +89,7 @@ class setup
 	 *
 	 * @param Closure $param function to call for role creating
 	 */
-	public static function roles($param)
-	{
+	public static function roles($param) {
 		call_user_func($param, $role = new Roles());
 		self::$role = $role;
 	}
@@ -104,8 +99,7 @@ class setup
 	 *
 	 * @param Closure $param function to call for hash
 	 */
-	public static function hash($param)
-	{
+	public static function hash($param) {
 		self::$hash = $param;
 	}
 
@@ -116,17 +110,16 @@ class setup
 	 *
 	 * @return string
 	 */
-	public static function doHash($password)
-	{
+	public static function doHash($password) {
 		return call_user_func(self::$hash, $password);
 	}
 
 	/**
 	 * setup config
-	 * @param \Closure $param  function to call for config setup
+	 *
+	 * @param \Closure $param function to call for config setup
 	 */
-	public static function config($param)
-	{
+	public static function config($param) {
 		call_user_func($param, new Config());
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2016 Profenter Systems
+ * Copyright (c) 2017 Profenter Systems
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,10 +18,10 @@
  */
 
 namespace common\user\legacy;
+
 use Closure;
-use common\storage\legacy\storage;
-use common\storage\legacy\file;
 use common\storage\legacy\json;
+use common\storage\legacy\storage;
 
 
 /**
@@ -33,17 +33,16 @@ use common\storage\legacy\json;
  * @property bool   createdMissingUserFields
  * @property string secret
  */
-class Config extends storage
-{
+class Config extends storage {
 	use json;
+
 	/**
 	 * @return Closure
 	 */
-	public static function setConfig()
-	{
+	public static function setConfig() {
 		return function ($options) {
 			$options->setCreateIfNotExists(true);
-			$options->setPath(getcwd()."/.common/user/config.json");
+			$options->setPath(getcwd() . "/.common/user/config.json");
 			$options->setCache(true);
 		};
 	}

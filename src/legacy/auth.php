@@ -24,8 +24,7 @@ namespace common\user\legacy;
  *
  * @package common\user\legacy
  */
-class auth
-{
+class auth {
 	/**
 	 * @var user user object
 	 */
@@ -38,8 +37,7 @@ class auth
 	/**
 	 * @brief init the class and set php session
 	 */
-	public static function init()
-	{
+	public static function init() {
 		if (session_status() == PHP_SESSION_NONE) {
 			session_start();
 		}
@@ -58,8 +56,7 @@ class auth
 	 *
 	 * @return \common\user\legacy\user
 	 */
-	public static function user()
-	{
+	public static function user() {
 		return self::$user;
 	}
 
@@ -68,8 +65,7 @@ class auth
 	 *
 	 * @return bool
 	 */
-	public static function isGuest()
-	{
+	public static function isGuest() {
 		return self::$isGuest;
 	}
 
@@ -79,11 +75,10 @@ class auth
 	 *
 	 * @return bool
 	 */
-	public static function login($username, $password)
-	{
+	public static function login($username, $password) {
 		if ($user = user::find($username, $password)) {
-			self::$user    = $user;
-			self::$isGuest = false;
+			self::$user           = $user;
+			self::$isGuest        = false;
 			$_SESSION["username"] = $username;
 
 			return true;
@@ -95,13 +90,12 @@ class auth
 	/**
 	 * logout the current user
 	 */
-	public static function logout()
-	{
+	public static function logout() {
 		$_SESSION = [];
 		session_destroy();
 		session_unset();
 		self::$isGuest = true;
-        self::$user    = user::guest();
+		self::$user = user::guest();
 	}
 
 	/**
@@ -111,10 +105,11 @@ class auth
 	 *
 	 * @return bool
 	 */
-	public static function requires($permission)
-	{
-	    if(empty($permission))
-	        return true;
+	public static function requires($permission) {
+		if (empty($permission)) {
+			return true;
+		}
+
 		return self::$user->hasPermission($permission);
 	}
 
@@ -124,8 +119,7 @@ class auth
 	 * @param string $permission name of permission
 	 *
 	 */
-	public static function required($permission)
-	{
+	public static function required($permission) {
 		if (!self::$user->hasPermission($permission)) {
 			die("No permission. Quit.");
 		}

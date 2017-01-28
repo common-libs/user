@@ -1,9 +1,24 @@
 <?php
+/**
+ * Copyright (c) 2017 Profenter Systems
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 
 namespace common\user;
 
-
-use common\storage\legacy\serialize;
 use RedBeanPHP\OODBBean;
 use RedBeanPHP\R;
 
@@ -12,8 +27,7 @@ use RedBeanPHP\R;
  *
  * @package common\user
  */
-class role
-{
+class role {
 
 	/**
 	 * @var OODBBean
@@ -25,8 +39,7 @@ class role
 	 *
 	 * @param string $roleName
 	 */
-	public function __construct(string $roleName)
-	{
+	public function __construct(string $roleName) {
 		self::check();
 		if (!$role = R::findOne("role", " name = ? ", [$roleName])) {
 			$role       = R::dispense("role");
@@ -37,18 +50,39 @@ class role
 	}
 
 	/**
+	 * check if table was created
+	 */
+	public static function check() {
+		if (R::count("role") < 1) {
+			$role                                = R::dispense("role");
+			$role->name                          = "guest";
+			$per                                 = new permission("guest");
+			$role->role->sharedPermissionList [] = $per->get();
+			R::store($role);
+		}
+	}
+
+	/**
 	 * alias for new role($role)
 	 *
 	 * @param string $role role name
 	 *
 	 * @return \RedBeanPHP\OODBBean
 	 */
-	public static function get(string $role) : OODBBean
-	{
+	public static function get(string $role): OODBBean {
 		self::check();
 		$r = new self($role);
 
 		return $r->getRole();
+	}
+
+	/**
+	 * get db role object
+	 *
+	 * @return OODBBean
+	 */
+	public function getRole(): OODBBean {
+		return $this->role;
 	}
 
 	/**
@@ -58,23 +92,8 @@ class role
 	 *
 	 * @return bool
 	 */
-	public function equals(role $role) : bool
-	{
+	public function equals(role $role): bool {
 		return $role->getRole()->id == $this->role->id && $role->getRole()->name == $this->role->name;
-	}
-
-	/**
-	 * check if table was created
-	 */
-	public static function check()
-	{
-		if (R::count("role") < 1) {
-			$role                             = R::dispense("role");
-			$role->name                       = "guest";
-			$per                              = new permission("guest");
-            $role->role->sharedPermissionList [] = $per->get();
-			R::store($role);
-		}
 	}
 
 	/**
@@ -82,10 +101,9 @@ class role
 	 *
 	 * @param array $permissions array of permission names
 	 */
-	public function addPermissions(array $permissions)
-	{
+	public function addPermissions(array $permissions) {
 		foreach ($permissions as $permission) {
-			$per                              = new permission($permission);
+			$per                                 = new permission($permission);
 			$this->role->sharedPermissionList [] = $per->get();
 		}
 		R::store($this->role);
@@ -96,9 +114,8 @@ class role
 	 *
 	 * @param string $permission permission name
 	 */
-	public function addPermission(string $permission)
-	{
-		$per                              = new permission($permission);
+	public function addPermission(string $permission) {
+		$per                                 = new permission($permission);
 		$this->role->sharedPermissionList [] = $per->get();
 		R::store($this->role);
 	}
@@ -108,8 +125,7 @@ class role
 	 *
 	 * @return array
 	 */
-	public function getPermissions() : array
-	{
+	public function getPermissions(): array {
 		$permissions = [];
 		foreach ($this->role->sharedPermissionList as $permission) {
 			$permissions[] = $permission->name;
@@ -119,24 +135,13 @@ class role
 	}
 
 	/**
-	 * get db role object
-	 *
-	 * @return OODBBean
-	 */
-	public function getRole(): OODBBean
-	{
-		return $this->role;
-	}
-
-	/**
 	 * check if a role has a permission
 	 *
 	 * @param string $permissionName name of permission
 	 *
 	 * @return bool
 	 */
-	public function hasPermission(string $permissionName) : bool
-	{
+	public function hasPermission(string $permissionName): bool {
 		foreach ($this->role->sharedPermissionList as $permission) {
 			if ($permission->name == $permissionName) {
 				return true;

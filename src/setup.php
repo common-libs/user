@@ -1,4 +1,21 @@
 <?php
+/**
+ * Copyright (c) 2017 Profenter Systems
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 
 namespace common\user;
 
@@ -9,8 +26,7 @@ use Closure;
  *
  * @package common\user
  */
-class setup
-{
+class setup {
 	/**
 	 * @var Validation
 	 */
@@ -29,8 +45,7 @@ class setup
 	 *
 	 * @param \Closure $param function to call for validation
 	 */
-	public static function validate(Closure $param)
-	{
+	public static function validate(Closure $param) {
 		call_user_func($param, $validation = new Validation());
 		self::$validate = $validation;
 	}
@@ -46,8 +61,7 @@ class setup
 	 *
 	 * @return array|string
 	 */
-	public static function validation($name = false, $value = false)
-	{
+	public static function validation($name = false, $value = false) {
 		if (!$name && !$value) {
 			return self::$validate->getAll();
 		}
@@ -66,8 +80,7 @@ class setup
 	 *
 	 * @return mixed|string
 	 */
-	public static function getValidation(string $name, $value = false)
-	{
+	public static function getValidation(string $name, $value = false) {
 		return $value !== false ? self::$validate->is($name, $value) : self::$validate->get($name);
 	}
 
@@ -76,8 +89,7 @@ class setup
 	 *
 	 * @param Closure $param function to call for role creating
 	 */
-	public static function roles($param)
-	{
+	public static function roles($param) {
 		call_user_func($param, $role = new Roles());
 		self::$role = $role;
 	}
@@ -87,8 +99,7 @@ class setup
 	 *
 	 * @param Closure $param function to call for hash
 	 */
-	public static function hash(Closure $param)
-	{
+	public static function hash(Closure $param) {
 		self::$hash = $param;
 	}
 
@@ -99,17 +110,16 @@ class setup
 	 *
 	 * @return string
 	 */
-	public static function doHash(string $password) : string
-	{
+	public static function doHash(string $password): string {
 		return call_user_func(self::$hash, $password);
 	}
 
 	/**
 	 * setup config
-	 * @param \Closure $param  function to call for config setup
+	 *
+	 * @param \Closure $param function to call for config setup
 	 */
-	public static function config(Closure $param)
-	{
+	public static function config(Closure $param) {
 		call_user_func($param, new Config());
 	}
 }

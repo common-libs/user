@@ -19,7 +19,6 @@
 
 namespace common\user;
 
-
 use RedBeanPHP\OODBBean;
 use RedBeanPHP\R;
 
@@ -28,8 +27,7 @@ use RedBeanPHP\R;
  *
  * @package common\user
  */
-class permission
-{
+class permission {
 	/**
 	 * @var \RedBeanPHP\OODBBean
 	 */
@@ -42,8 +40,7 @@ class permission
 	 *
 	 * @param $name
 	 */
-	public function __construct(string $name)
-	{
+	public function __construct(string $name) {
 		self::check();
 		if (!$permission = R::findOne("permission", " name = ? ", [$name])) {
 			$permission       = R::dispense("permission");
@@ -56,8 +53,7 @@ class permission
 	/**
 	 * checks if table is created
 	 */
-	public static function check()
-	{
+	public static function check() {
 		if (R::count("permission") < 1) {
 			$role       = R::dispense("permission");
 			$role->name = "guest";
@@ -66,22 +62,20 @@ class permission
 	}
 
 	/**
-	 * return permission db object
-	 *
-	 * @return \RedBeanPHP\OODBBean
-	 */
-	public function getPermission() : OODBBean
-	{
-		return $this->permission;
-	}
-
-	/**
 	 * alias for getPermission
 	 *
 	 * @return \RedBeanPHP\OODBBean
 	 */
-	public function get() : OODBBean
-	{
+	public function get(): OODBBean {
 		return $this->getPermission();
+	}
+
+	/**
+	 * return permission db object
+	 *
+	 * @return \RedBeanPHP\OODBBean
+	 */
+	public function getPermission(): OODBBean {
+		return $this->permission;
 	}
 }

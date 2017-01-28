@@ -23,8 +23,7 @@ namespace common\user\legacy;
  *
  * @package common\user\legacy
  */
-class Roles
-{
+class Roles {
 	/**
 	 * @var array
 	 */
@@ -37,8 +36,7 @@ class Roles
 	 *
 	 * @return \common\user\legacy\RoleObject
 	 */
-	public function name($string)
-	{
+	public function name($string) {
 		$this->role[] = $role = new RoleObject($string);
 
 		return $role;
