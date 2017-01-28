@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2016 Profenter Systems
+ * Copyright (c) 2017 Profenter Systems
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 
 namespace common\user;
 
-use common\user\exception\BadCharactesUsernameValidationException;
+use common\user\exception\BadCharactersUsernameValidationException;
 use common\user\exception\FieldNotAllowedValidationException;
 use common\user\exception\MaxLengthValidationException;
 use common\user\exception\MinLengthValidationException;
@@ -63,7 +63,7 @@ class Validation
 	 * @param mixed  $value value
 	 *
 	 * @return mixed
-	 * @throws \common\user\exception\BadCharactesUsernameValidationException
+	 * @throws \common\user\exception\BadCharactersUsernameValidationException
 	 * @throws \common\user\exception\FieldNotAllowedValidationException
 	 * @throws \common\user\exception\MaxLengthValidationException
 	 * @throws \common\user\exception\MinLengthValidationException
@@ -87,7 +87,7 @@ class Validation
 			throw new MinLengthValidationException();
 		}
 		if ($val["username"] && preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $value)) {
-			throw new BadCharactesUsernameValidationException();
+			throw new BadCharactersUsernameValidationException();
 		}
 		if ($val["username"] && R::findOne('user', ' username = ? ', [$value])) {
 			throw new UsernameTakenValidationException();

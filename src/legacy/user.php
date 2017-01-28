@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2016 Profenter Systems
+ * Copyright (c) 2017 Profenter Systems
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -84,8 +84,8 @@ class user
 	/**
 	 * find a user
 	 *
-	 * @param string $usernameOrId
-	 * @param string $password
+	 * @param string|int $usernameOrId
+	 * @param string     $password
 	 *
 	 * @return bool|\common\user\legacy\user
 	 */
@@ -99,8 +99,8 @@ class user
             if ($password != "") {
                 $pwdbname = setup::getValidation("password");
                 $bean     = R::findOne('user', ' ' . $userdbname . ' = ? AND ' . $pwdbname . ' = ? ', [
-                    $usernameOrId,
-                    helper::hash($password)
+	                $usernameOrId,
+	                setup::doHash($password)
                 ]);
             }
             else {
